@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Nightwish's Blog</title><link>/</link><description></description><atom:link href="/feeds/nightwish.rss.xml" rel="self"></atom:link><lastBuildDate>Mon, 12 Jan 2015 20:00:00 +0100</lastBuildDate><item><title>netcat 使用笔记</title><link>/netcat-shi-yong-bi-ji.html</link><description>&lt;p&gt;======================&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Nightwish's Blog</title><link>http://zhao-ji.github.io/</link><description></description><atom:link href="http://zhao-ji.github.io/feeds/nightwish.rss.xml" rel="self"></atom:link><lastBuildDate>Mon, 12 Jan 2015 20:00:00 +0100</lastBuildDate><item><title>netcat 使用笔记</title><link>http://zhao-ji.github.io/netcat-shi-yong-bi-ji.html</link><description>&lt;p&gt;======================&lt;/p&gt;
 &lt;h2&gt;netcat 三个例子&lt;/h2&gt;
 &lt;h3&gt;本地 client-server socket 模式&lt;/h3&gt;
 &lt;ul&gt;
@@ -47,7 +47,7 @@
 &lt;li&gt;-w 10 十秒接受不到内容就断开&lt;/li&gt;
 &lt;li&gt;-n 不查询DNS&lt;/li&gt;
 &lt;li&gt;-p 设置源端口&lt;/li&gt;
-&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nightwish</dc:creator><pubDate>Mon, 12 Jan 2015 20:00:00 +0100</pubDate><guid>tag:,2015-01-12:netcat-shi-yong-bi-ji.html</guid></item><item><title>正则表达式</title><link>/zheng-ze-biao-da-shi.html</link><description>&lt;p&gt;================&lt;/p&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nightwish</dc:creator><pubDate>Mon, 12 Jan 2015 20:00:00 +0100</pubDate><guid>tag:zhao-ji.github.io,2015-01-12:netcat-shi-yong-bi-ji.html</guid></item><item><title>正则表达式</title><link>http://zhao-ji.github.io/zheng-ze-biao-da-shi.html</link><description>&lt;p&gt;================&lt;/p&gt;
 &lt;h1&gt;正则表达式&lt;/h1&gt;
 &lt;h2&gt;元字符&lt;/h2&gt;
 &lt;ul&gt;
@@ -92,7 +92,7 @@
 &lt;/ul&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nightwish</dc:creator><pubDate>Sun, 10 Aug 2014 20:30:00 +0200</pubDate><guid>tag:,2014-08-10:zheng-ze-biao-da-shi.html</guid><category>RE</category></item><item><title>Linux命令概要</title><link>/linuxming-ling-gai-yao.html</link><description>&lt;p&gt;====================================&lt;/p&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nightwish</dc:creator><pubDate>Sun, 10 Aug 2014 20:30:00 +0200</pubDate><guid>tag:zhao-ji.github.io,2014-08-10:zheng-ze-biao-da-shi.html</guid><category>RE</category></item><item><title>Linux命令概要</title><link>http://zhao-ji.github.io/linuxming-ling-gai-yao.html</link><description>&lt;p&gt;====================================&lt;/p&gt;
 &lt;h1&gt;Linux命令概要&lt;/h1&gt;
 &lt;h2&gt;帮助命令&lt;/h2&gt;
 &lt;ul&gt;
@@ -226,4 +226,4 @@
 &lt;ul&gt;
 &lt;li&gt;lpt&lt;/li&gt;
 &lt;li&gt;lpstat&lt;/li&gt;
-&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nightwish</dc:creator><pubDate>Sun, 01 Jun 2014 17:30:00 +0200</pubDate><guid>tag:,2014-06-01:linuxming-ling-gai-yao.html</guid><category>Linux</category></item></channel></rss>
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nightwish</dc:creator><pubDate>Sun, 01 Jun 2014 17:30:00 +0200</pubDate><guid>tag:zhao-ji.github.io,2014-06-01:linuxming-ling-gai-yao.html</guid><category>Linux</category></item></channel></rss>
