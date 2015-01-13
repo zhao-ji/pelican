@@ -7,8 +7,8 @@
 &lt;blockquote&gt;
 &lt;p&gt;可重复全排列&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;code&gt;python
-return (
+&lt;p&gt;:::python
+&lt;code&gt;return (
     ''.join(candidate) for candidate in
     chain.from_iterable(
         product(
