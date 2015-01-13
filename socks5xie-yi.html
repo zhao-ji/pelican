@@ -49,40 +49,126 @@
 </ul>
 <h4>握手经过</h4>
 <ul>
-<li>
-<p>客户端发起
-     field1 | field2 | field3 
-     ------|------|------
-     1 byte | 1 byte | 1 byte per method 
-     版本号 | 支持的认证方法数量 | 认证方式代码 
-     \x05   | \x00   | \x00   </p>
-</li>
-<li>
-<p>服务端返回
-    | field1 | field2 |
-    |:------:|:------:|
-    | 1 bytes| 1 bytes|
-    | 版本号 | 认证方式代码 |
-    | \x05   | \x00   |</p>
-</li>
+<li>客户端发起</li>
 </ul>
+<table>
+<thead>
+<tr>
+<th align="center">field1</th>
+<th align="center">field2</th>
+<th align="center">field3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">1 byte</td>
+<td align="center">1 byte</td>
+<td align="center">1 byte per method</td>
+</tr>
+<tr>
+<td align="center">版本号</td>
+<td align="center">支持的认证方法数量</td>
+<td align="center">认证方式代码</td>
+</tr>
+<tr>
+<td align="center">\x05</td>
+<td align="center">\x00</td>
+<td align="center">\x00</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>服务端返回</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">field1</th>
+<th align="center">field2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">1 bytes</td>
+<td align="center">1 bytes</td>
+</tr>
+<tr>
+<td align="center">版本号</td>
+<td align="center">认证方式代码</td>
+</tr>
+<tr>
+<td align="center">\x05</td>
+<td align="center">\x00</td>
+</tr>
+</tbody>
+</table>
 <h4>传送数据</h4>
 <ul>
-<li>
-<p>客户端请求
-    | 协议版本号 | 请求类别 | 保留位 | 地址类型 | 目的地址 | 端口号 |
-    |:------:|:-------:|:-------:|:---------:|:----------:|:----:|
-    | 1 byte | 1 byte | 1 byte|1 byte|dynamic| 2 byte |
- | \x05 | \x01 | \x00 | \x01 | <strong>4 bytes of IPv4</strong> <strong>16bytes of IPv6</strong> <strong>1 byte of name length and the name</strong> | \x08\x00 |</p>
-</li>
-<li>
-<p>服务端返回
-    | 版本号 | 状态 | 保留字段 | 地址类型 | 目的地址 | 端口号 |
-    |:---:|:---:|:---:|:---:|:---:|:---:|
-    |1 byte | 1 byte | 1 byte | 1 byte | 跟客户端请求一致 | 2 bytes |
-    | \x05 | \x00 | \x00 | \x01 | as the client | \x08\x00 |</p>
-</li>
+<li>客户端请求</li>
 </ul>
+<table>
+<thead>
+<tr>
+<th align="center">协议版本号</th>
+<th align="center">请求类别</th>
+<th align="center">保留位</th>
+<th align="center">地址类型</th>
+<th align="center">目的地址</th>
+<th align="center">端口号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">1 byte</td>
+<td align="center">1 byte</td>
+<td align="center">1 byte</td>
+<td align="center">1 byte</td>
+<td align="center">dynamic</td>
+<td align="center">2 byte</td>
+</tr>
+<tr>
+<td align="center">\x05</td>
+<td align="center">\x01</td>
+<td align="center">\x00</td>
+<td align="center">\x01</td>
+<td align="center"><strong>4 bytes of IPv4</strong> <strong>16bytes of IPv6</strong> <strong>1 byte of name length and the name</strong></td>
+<td align="center">\x08\x00</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>服务端返回</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">版本号</th>
+<th align="center">状态</th>
+<th align="center">保留字段</th>
+<th align="center">地址类型</th>
+<th align="center">目的地址</th>
+<th align="center">端口号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">1 byte</td>
+<td align="center">1 byte</td>
+<td align="center">1 byte</td>
+<td align="center">1 byte</td>
+<td align="center">跟客户端请求一致</td>
+<td align="center">2 bytes</td>
+</tr>
+<tr>
+<td align="center">\x05</td>
+<td align="center">\x00</td>
+<td align="center">\x00</td>
+<td align="center">\x01</td>
+<td align="center">as the client</td>
+<td align="center">\x08\x00</td>
+</tr>
+</tbody>
+</table>
     </div><!-- /.entry-content -->
 
   </article>
