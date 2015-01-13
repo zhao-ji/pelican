@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Nightwish's Blog</title><link>http://zhao-ji.github.io/</link><description></description><atom:link href="http://zhao-ji.github.io/feeds/nightwish.rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 13 Jan 2015 12:16:00 +0100</lastBuildDate><item><title>Socks5协议</title><link>http://zhao-ji.github.io/socks5xie-yi.html</link><description>&lt;p&gt;===========================&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Nightwish's Blog</title><link>http://zhao-ji.github.io/</link><description></description><atom:link href="http://zhao-ji.github.io/feeds/nightwish.rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 13 Jan 2015 16:30:00 +0100</lastBuildDate><item><title>一月点滴收集</title><link>http://zhao-ji.github.io/yi-yue-dian-di-shou-ji.html</link><description>&lt;p&gt;=======================&lt;/p&gt;
+&lt;h2&gt;Python Tips&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Python 暴力字典生成（brute 算法）&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;可重复全排列&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;python
+return (
+    ''.join(candidate) for candidate in
+    chain.from_iterable(
+        product(
+            choices,
+            repeat = i,
+        ) for i in range(1, length + 1),
+    )
+)&lt;/code&gt; &lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nightwish</dc:creator><pubDate>Tue, 13 Jan 2015 16:30:00 +0100</pubDate><guid>tag:zhao-ji.github.io,2015-01-13:yi-yue-dian-di-shou-ji.html</guid></item><item><title>Socks5协议</title><link>http://zhao-ji.github.io/socks5xie-yi.html</link><description>&lt;p&gt;===========================&lt;/p&gt;
 &lt;h2&gt;socks5 协议&lt;/h2&gt;
 &lt;h4&gt;特点&lt;/h4&gt;
 &lt;ul&gt;
