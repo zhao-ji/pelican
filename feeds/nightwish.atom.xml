@@ -1,5 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Nightwish's Blog</title><link href="http://zhao-ji.github.io/" rel="alternate"></link><link href="http://zhao-ji.github.io/feeds/nightwish.atom.xml" rel="self"></link><id>http://zhao-ji.github.io/</id><updated>2015-01-12T20:00:00+01:00</updated><entry><title>netcat 使用笔记</title><link href="http://zhao-ji.github.io/netcat-shi-yong-bi-ji.html" rel="alternate"></link><updated>2015-01-12T20:00:00+01:00</updated><author><name>Nightwish</name></author><id>tag:zhao-ji.github.io,2015-01-12:netcat-shi-yong-bi-ji.html</id><summary type="html">&lt;p&gt;======================&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Nightwish's Blog</title><link href="http://zhao-ji.github.io/" rel="alternate"></link><link href="http://zhao-ji.github.io/feeds/nightwish.atom.xml" rel="self"></link><id>http://zhao-ji.github.io/</id><updated>2015-01-13T12:16:00+01:00</updated><entry><title>Socks5协议</title><link href="http://zhao-ji.github.io/socks5xie-yi.html" rel="alternate"></link><updated>2015-01-13T12:16:00+01:00</updated><author><name>Nightwish</name></author><id>tag:zhao-ji.github.io,2015-01-13:socks5xie-yi.html</id><summary type="html">&lt;p&gt;===========================&lt;/p&gt;
+&lt;h2&gt;socks5 协议&lt;/h2&gt;
+&lt;h4&gt;特点&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;标准 RFC1928&lt;/li&gt;
+&lt;li&gt;socks4 的改进版本&lt;/li&gt;
+&lt;li&gt;增加了用户名密码认证&lt;/li&gt;
+&lt;li&gt;增加了DNS域名查询&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;握手经过&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;客户端发起
+    | field1 | field2 | field3 |
+    |:------:|:------:|:------:|
+    | 1 byte | 1 byte | 1 byte per method |
+    | 版本号 | 支持的认证方法数量 | 认证方式代码 |
+    | \x05   | \x00   | \x00   |&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;服务端返回
+    | field1 | field2 |
+    |:------:|:------:|
+    | 1 bytes| 1 bytes|
+    | 版本号 | 认证方式代码 |
+    | \x05   | \x00   |&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;传送数据&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;客户端请求
+    | 协议版本号 | 请求类别 | 保留位 | 地址类型 | 目的地址 | 端口号 |
+    |:------:|:-------:|:-------:|:---------:|:----------:|:----:|
+    | 1 byte | 1 byte | 1 byte|1 byte|dynamic| 2 byte |
+ | \x05 | \x01 | \x00 | \x01 | &lt;strong&gt;4 bytes of IPv4&lt;/strong&gt; &lt;strong&gt;16bytes of IPv6&lt;/strong&gt; &lt;strong&gt;1 byte of name length and the name&lt;/strong&gt; | \x08\x00 |&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;服务端返回
+    | 版本号 | 状态 | 保留字段 | 地址类型 | 目的地址 | 端口号 |
+    |:---:|:---:|:---:|:---:|:---:|:---:|
+    |1 byte | 1 byte | 1 byte | 1 byte | 跟客户端请求一致 | 2 bytes |
+    | \x05 | \x00 | \x00 | \x01 | as the client | \x08\x00 |&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</summary></entry><entry><title>netcat 使用笔记</title><link href="http://zhao-ji.github.io/netcat-shi-yong-bi-ji.html" rel="alternate"></link><updated>2015-01-12T20:00:00+01:00</updated><author><name>Nightwish</name></author><id>tag:zhao-ji.github.io,2015-01-12:netcat-shi-yong-bi-ji.html</id><summary type="html">&lt;p&gt;======================&lt;/p&gt;
 &lt;h2&gt;netcat 三个例子&lt;/h2&gt;
 &lt;h3&gt;本地 client-server socket 模式&lt;/h3&gt;
 &lt;ul&gt;
@@ -92,7 +136,7 @@
 &lt;/ul&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</summary><category term="RE"></category></entry><entry><title>Linux命令概要</title><link href="http://zhao-ji.github.io/linuxming-ling-gai-yao.html" rel="alternate"></link><updated>2014-06-01T17:30:00+02:00</updated><author><name>Nightwish</name></author><id>tag:zhao-ji.github.io,2014-06-01:linuxming-ling-gai-yao.html</id><summary type="html">&lt;p&gt;====================================&lt;/p&gt;
+&lt;/ul&gt;</summary><category term="正则表达式"></category></entry><entry><title>Linux命令概要</title><link href="http://zhao-ji.github.io/linuxming-ling-gai-yao.html" rel="alternate"></link><updated>2014-06-01T17:30:00+02:00</updated><author><name>Nightwish</name></author><id>tag:zhao-ji.github.io,2014-06-01:linuxming-ling-gai-yao.html</id><summary type="html">&lt;p&gt;====================================&lt;/p&gt;
 &lt;h1&gt;Linux命令概要&lt;/h1&gt;
 &lt;h2&gt;帮助命令&lt;/h2&gt;
 &lt;ul&gt;
@@ -226,4 +270,4 @@
 &lt;ul&gt;
 &lt;li&gt;lpt&lt;/li&gt;
 &lt;li&gt;lpstat&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="Linux"></category></entry></feed>
+&lt;/ul&gt;</summary><category term="Linux cheat-sheet"></category></entry></feed>

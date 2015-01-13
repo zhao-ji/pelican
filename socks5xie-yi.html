@@ -2,7 +2,7 @@
 <html lang="zh">
 <head>
         <meta charset="utf-8" />
-        <title>正则表达式</title>
+        <title>Socks5协议</title>
         <link rel="stylesheet" href="http://zhao-ji.github.io/theme/css/main.css" />
 
         <!--[if IE]>
@@ -15,73 +15,72 @@
                 <h1><a href="http://zhao-ji.github.io/">Nightwish's Blog </a></h1>
                 <nav><ul>
                     <li><a href="http://zhao-ji.github.io/category/linux.html">Linux</a></li>
-                    <li><a href="http://zhao-ji.github.io/category/network.html">NetWork</a></li>
-                    <li class="active"><a href="http://zhao-ji.github.io/category/re.html">Re</a></li>
+                    <li class="active"><a href="http://zhao-ji.github.io/category/network.html">NetWork</a></li>
+                    <li><a href="http://zhao-ji.github.io/category/re.html">Re</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 <section id="content" class="body">
   <article>
     <header>
       <h1 class="entry-title">
-        <a href="http://zhao-ji.github.io/zheng-ze-biao-da-shi.html" rel="bookmark"
-           title="Permalink to 正则表达式">正则表达式</a></h1>
+        <a href="http://zhao-ji.github.io/socks5xie-yi.html" rel="bookmark"
+           title="Permalink to Socks5协议">Socks5协议</a></h1>
     </header>
 
     <div class="entry-content">
 <footer class="post-info">
-        <abbr class="published" title="2014-08-10T20:30:00+02:00">
-                Published: 日 10 八月 2014
+        <abbr class="published" title="2015-01-13T12:16:00+01:00">
+                Published: 二 13 一月 2015
         </abbr>
 
         <address class="vcard author">
                 By                         <a class="url fn" href="http://zhao-ji.github.io/author/nightwish.html">Nightwish</a>
         </address>
-<p>In <a href="http://zhao-ji.github.io/category/re.html">Re</a>. </p>
-<p>tags: <a href="http://zhao-ji.github.io/tag/zheng-ze-biao-da-shi.html">正则表达式</a> </p>
-</footer><!-- /.post-info -->      <p>================</p>
-<h1>正则表达式</h1>
-<h2>元字符</h2>
+<p>In <a href="http://zhao-ji.github.io/category/network.html">NetWork</a>. </p>
+
+</footer><!-- /.post-info -->      <p>===========================</p>
+<h2>socks5 协议</h2>
+<h4>特点</h4>
 <ul>
-<li><em>()</em>  <em>[]</em>  <em>{}</em>     捕获器 选择器  次数</li>
-<li><em>*</em> <em>+</em> <em>?</em>  零和任意多次  一次和任意多次  零次和一次</li>
-<li><em>^</em> <em>$</em> 匹配开始 匹配结束</li>
-<li><em>\</em> 转义</li>
-<li><em>|</em> 或</li>
-<li><em>.</em> 匹配任意字符  非换行符</li>
+<li>标准 RFC1928</li>
+<li>socks4 的改进版本</li>
+<li>增加了用户名密码认证</li>
+<li>增加了DNS域名查询</li>
 </ul>
-<h2>匹配案例</h2>
-<h3>类型</h3>
+<h4>握手经过</h4>
 <ul>
-<li><em>\d</em> 匹配数字 </li>
-<li><em>\D</em> 匹配非数字</li>
-<li><em>\s</em> 匹配空白字符</li>
-<li><em>\S</em> 匹配非空白字符</li>
-<li><em>\w</em> 匹配字母和数字</li>
-<li><em>\W</em> 匹配非字母和数字</li>
+<li>
+<p>客户端发起
+    | field1 | field2 | field3 |
+    |:------:|:------:|:------:|
+    | 1 byte | 1 byte | 1 byte per method |
+    | 版本号 | 支持的认证方法数量 | 认证方式代码 |
+    | \x05   | \x00   | \x00   |</p>
+</li>
+<li>
+<p>服务端返回
+    | field1 | field2 |
+    |:------:|:------:|
+    | 1 bytes| 1 bytes|
+    | 版本号 | 认证方式代码 |
+    | \x05   | \x00   |</p>
+</li>
 </ul>
-<h3>次数</h3>
+<h4>传送数据</h4>
 <ul>
-<li><em>{0,}</em> *</li>
-<li><em>{1,}</em> +</li>
-<li><em>{0,1}</em> ?</li>
-</ul>
-<h3>消歧义</h3>
-<ul>
-<li>raw \不用转义</li>
-</ul>
-<h2>Python Re 模块用法</h2>
-<ul>
-<li>Re 方法： search  match findall finditer</li>
-<li>RegexObject 方法 ： group start end span</li>
-<li>compile 选项 ： <blockquote>
-<ul>
-<li>DOTALL S .代表一切字符 包括换行符</li>
-<li>IGNORECASE I 忽略大小写、</li>
-<li>LOCALE L 本地化字符设置</li>
-<li>MULTILINE M 多行匹配 改变^$的行为</li>
-<li>VERBOSE V 分行写RE语句  并可以添加注释</li>
-</ul>
-</blockquote>
+<li>
+<p>客户端请求
+    | 协议版本号 | 请求类别 | 保留位 | 地址类型 | 目的地址 | 端口号 |
+    |:------:|:-------:|:-------:|:---------:|:----------:|:----:|
+    | 1 byte | 1 byte | 1 byte|1 byte|dynamic| 2 byte |
+ | \x05 | \x01 | \x00 | \x01 | <strong>4 bytes of IPv4</strong> <strong>16bytes of IPv6</strong> <strong>1 byte of name length and the name</strong> | \x08\x00 |</p>
+</li>
+<li>
+<p>服务端返回
+    | 版本号 | 状态 | 保留字段 | 地址类型 | 目的地址 | 端口号 |
+    |:---:|:---:|:---:|:---:|:---:|:---:|
+    |1 byte | 1 byte | 1 byte | 1 byte | 跟客户端请求一致 | 2 bytes |
+    | \x05 | \x00 | \x00 | \x01 | as the client | \x08\x00 |</p>
 </li>
 </ul>
     </div><!-- /.entry-content -->

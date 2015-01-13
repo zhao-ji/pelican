@@ -15,13 +15,82 @@
                 <h1><a href="http://zhao-ji.github.io/">Nightwish's Blog </a></h1>
                 <nav><ul>
                     <li><a href="http://zhao-ji.github.io/category/linux.html">Linux</a></li>
-                    <li><a href="http://zhao-ji.github.io/category/re.html">RE</a></li>
+                    <li><a href="http://zhao-ji.github.io/category/network.html">NetWork</a></li>
+                    <li><a href="http://zhao-ji.github.io/category/re.html">Re</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 
             <aside id="featured" class="body">
                 <article>
-                    <h1 class="entry-title"><a href="http://zhao-ji.github.io/netcat-shi-yong-bi-ji.html">netcat 使用笔记</a></h1>
+                    <h1 class="entry-title"><a href="http://zhao-ji.github.io/socks5xie-yi.html">Socks5协议</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2015-01-13T12:16:00+01:00">
+                Published: 二 13 一月 2015
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="http://zhao-ji.github.io/author/nightwish.html">Nightwish</a>
+        </address>
+<p>In <a href="http://zhao-ji.github.io/category/network.html">NetWork</a>. </p>
+
+</footer><!-- /.post-info --><p>===========================</p>
+<h2>socks5 协议</h2>
+<h4>特点</h4>
+<ul>
+<li>标准 RFC1928</li>
+<li>socks4 的改进版本</li>
+<li>增加了用户名密码认证</li>
+<li>增加了DNS域名查询</li>
+</ul>
+<h4>握手经过</h4>
+<ul>
+<li>
+<p>客户端发起
+    | field1 | field2 | field3 |
+    |:------:|:------:|:------:|
+    | 1 byte | 1 byte | 1 byte per method |
+    | 版本号 | 支持的认证方法数量 | 认证方式代码 |
+    | \x05   | \x00   | \x00   |</p>
+</li>
+<li>
+<p>服务端返回
+    | field1 | field2 |
+    |:------:|:------:|
+    | 1 bytes| 1 bytes|
+    | 版本号 | 认证方式代码 |
+    | \x05   | \x00   |</p>
+</li>
+</ul>
+<h4>传送数据</h4>
+<ul>
+<li>
+<p>客户端请求
+    | 协议版本号 | 请求类别 | 保留位 | 地址类型 | 目的地址 | 端口号 |
+    |:------:|:-------:|:-------:|:---------:|:----------:|:----:|
+    | 1 byte | 1 byte | 1 byte|1 byte|dynamic| 2 byte |
+ | \x05 | \x01 | \x00 | \x01 | <strong>4 bytes of IPv4</strong> <strong>16bytes of IPv6</strong> <strong>1 byte of name length and the name</strong> | \x08\x00 |</p>
+</li>
+<li>
+<p>服务端返回
+    | 版本号 | 状态 | 保留字段 | 地址类型 | 目的地址 | 端口号 |
+    |:---:|:---:|:---:|:---:|:---:|:---:|
+    |1 byte | 1 byte | 1 byte | 1 byte | 跟客户端请求一致 | 2 bytes |
+    | \x05 | \x00 | \x00 | \x01 | as the client | \x08\x00 |</p>
+</li>
+</ul>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="http://zhao-ji.github.io/netcat-shi-yong-bi-ji.html" rel="bookmark"
+                           title="Permalink to netcat 使用笔记">netcat 使用笔记</a></h1>
+                </header>
+
+                <div class="entry-content">
 <footer class="post-info">
         <abbr class="published" title="2015-01-12T20:00:00+01:00">
                 Published: 一 12 一月 2015
@@ -30,9 +99,9 @@
         <address class="vcard author">
                 By                         <a class="url fn" href="http://zhao-ji.github.io/author/nightwish.html">Nightwish</a>
         </address>
-<p>In <a href="http://zhao-ji.github.io/category/linux.html">Linux</a>. </p>
+<p>In <a href="http://zhao-ji.github.io/category/network.html">NetWork</a>. </p>
 
-</footer><!-- /.post-info --><p>======================</p>
+</footer><!-- /.post-info -->                <p>======================</p>
 <h2>netcat 三个例子</h2>
 <h3>本地 client-server socket 模式</h3>
 <ul>
@@ -57,35 +126,10 @@
 </ul>
 <h3>端口扫描</h3>
 <ul>
-<li><code>nc -zv example.com 1-65536 2&gt;&amp;1| grep succee</code></li>
-</ul>
-<h3>服务端启用执行 SHELL</h3>
-<ul>
-<li>服务端
-    nc -l 666 -e /bin/sh</li>
-</ul>
-<h2>netcat 参数详解</h2>
-<h3>两端都适用的参数</h3>
-<ul>
-<li>-u UDP连接</li>
-<li>-4 IPV4 -6 IPV6</li>
-<li>-d 不接受 stdin 的输入</li>
-</ul>
-<h3>服务端适用的参数</h3>
-<ul>
-<li>-k 即使客户端断开，服务端也不断</li>
-</ul>
-<h3>客户端适用的参数</h3>
-<ul>
-<li>-w 10 十秒接受不到内容就断开</li>
-<li>-n 不查询DNS</li>
-<li>-p 设置源端口</li>
-</ul>                </article>
-            </aside><!-- /#featured -->
-                <section id="content" class="body">
-                    <h1>Other articles</h1>
-                    <hr />
-                    <ol id="posts-list" class="hfeed">
+<li><code>nc -zv example.com 1-65536 2&gt;&amp;1| grep ...</code></li></ul>
+                <a class="readmore" href="http://zhao-ji.github.io/netcat-shi-yong-bi-ji.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
 
             <li><article class="hentry">
                 <header>
@@ -102,8 +146,8 @@
         <address class="vcard author">
                 By                         <a class="url fn" href="http://zhao-ji.github.io/author/nightwish.html">Nightwish</a>
         </address>
-<p>In <a href="http://zhao-ji.github.io/category/re.html">RE</a>. </p>
-<p>tags: <a href="http://zhao-ji.github.io/tag/re.html">RE</a> </p>
+<p>In <a href="http://zhao-ji.github.io/category/re.html">Re</a>. </p>
+<p>tags: <a href="http://zhao-ji.github.io/tag/zheng-ze-biao-da-shi.html">正则表达式</a> </p>
 </footer><!-- /.post-info -->                <p>a look of re</p>
                 <a class="readmore" href="http://zhao-ji.github.io/zheng-ze-biao-da-shi.html">read more</a>
                 </div><!-- /.entry-content -->
@@ -125,7 +169,7 @@
                 By                         <a class="url fn" href="http://zhao-ji.github.io/author/nightwish.html">Nightwish</a>
         </address>
 <p>In <a href="http://zhao-ji.github.io/category/linux.html">Linux</a>. </p>
-<p>tags: <a href="http://zhao-ji.github.io/tag/linux.html">Linux</a> </p>
+<p>tags: <a href="http://zhao-ji.github.io/tag/linux-cheat-sheet.html">Linux cheat-sheet</a> </p>
 </footer><!-- /.post-info -->                <p>some command of Linux</p>
                 <a class="readmore" href="http://zhao-ji.github.io/linuxming-ling-gai-yao.html">read more</a>
                 </div><!-- /.entry-content -->

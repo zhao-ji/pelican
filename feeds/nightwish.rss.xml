@@ -1,5 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Nightwish's Blog</title><link>http://zhao-ji.github.io/</link><description></description><atom:link href="http://zhao-ji.github.io/feeds/nightwish.rss.xml" rel="self"></atom:link><lastBuildDate>Mon, 12 Jan 2015 20:00:00 +0100</lastBuildDate><item><title>netcat 使用笔记</title><link>http://zhao-ji.github.io/netcat-shi-yong-bi-ji.html</link><description>&lt;p&gt;======================&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Nightwish's Blog</title><link>http://zhao-ji.github.io/</link><description></description><atom:link href="http://zhao-ji.github.io/feeds/nightwish.rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 13 Jan 2015 12:16:00 +0100</lastBuildDate><item><title>Socks5协议</title><link>http://zhao-ji.github.io/socks5xie-yi.html</link><description>&lt;p&gt;===========================&lt;/p&gt;
+&lt;h2&gt;socks5 协议&lt;/h2&gt;
+&lt;h4&gt;特点&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;标准 RFC1928&lt;/li&gt;
+&lt;li&gt;socks4 的改进版本&lt;/li&gt;
+&lt;li&gt;增加了用户名密码认证&lt;/li&gt;
+&lt;li&gt;增加了DNS域名查询&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;握手经过&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;客户端发起
+    | field1 | field2 | field3 |
+    |:------:|:------:|:------:|
+    | 1 byte | 1 byte | 1 byte per method |
+    | 版本号 | 支持的认证方法数量 | 认证方式代码 |
+    | \x05   | \x00   | \x00   |&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;服务端返回
+    | field1 | field2 |
+    |:------:|:------:|
+    | 1 bytes| 1 bytes|
+    | 版本号 | 认证方式代码 |
+    | \x05   | \x00   |&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;传送数据&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;客户端请求
+    | 协议版本号 | 请求类别 | 保留位 | 地址类型 | 目的地址 | 端口号 |
+    |:------:|:-------:|:-------:|:---------:|:----------:|:----:|
+    | 1 byte | 1 byte | 1 byte|1 byte|dynamic| 2 byte |
+ | \x05 | \x01 | \x00 | \x01 | &lt;strong&gt;4 bytes of IPv4&lt;/strong&gt; &lt;strong&gt;16bytes of IPv6&lt;/strong&gt; &lt;strong&gt;1 byte of name length and the name&lt;/strong&gt; | \x08\x00 |&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;服务端返回
+    | 版本号 | 状态 | 保留字段 | 地址类型 | 目的地址 | 端口号 |
+    |:---:|:---:|:---:|:---:|:---:|:---:|
+    |1 byte | 1 byte | 1 byte | 1 byte | 跟客户端请求一致 | 2 bytes |
+    | \x05 | \x00 | \x00 | \x01 | as the client | \x08\x00 |&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nightwish</dc:creator><pubDate>Tue, 13 Jan 2015 12:16:00 +0100</pubDate><guid>tag:zhao-ji.github.io,2015-01-13:socks5xie-yi.html</guid></item><item><title>netcat 使用笔记</title><link>http://zhao-ji.github.io/netcat-shi-yong-bi-ji.html</link><description>&lt;p&gt;======================&lt;/p&gt;
 &lt;h2&gt;netcat 三个例子&lt;/h2&gt;
 &lt;h3&gt;本地 client-server socket 模式&lt;/h3&gt;
 &lt;ul&gt;
@@ -92,7 +136,7 @@
 &lt;/ul&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nightwish</dc:creator><pubDate>Sun, 10 Aug 2014 20:30:00 +0200</pubDate><guid>tag:zhao-ji.github.io,2014-08-10:zheng-ze-biao-da-shi.html</guid><category>RE</category></item><item><title>Linux命令概要</title><link>http://zhao-ji.github.io/linuxming-ling-gai-yao.html</link><description>&lt;p&gt;====================================&lt;/p&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nightwish</dc:creator><pubDate>Sun, 10 Aug 2014 20:30:00 +0200</pubDate><guid>tag:zhao-ji.github.io,2014-08-10:zheng-ze-biao-da-shi.html</guid><category>正则表达式</category></item><item><title>Linux命令概要</title><link>http://zhao-ji.github.io/linuxming-ling-gai-yao.html</link><description>&lt;p&gt;====================================&lt;/p&gt;
 &lt;h1&gt;Linux命令概要&lt;/h1&gt;
 &lt;h2&gt;帮助命令&lt;/h2&gt;
 &lt;ul&gt;
@@ -226,4 +270,4 @@
 &lt;ul&gt;
 &lt;li&gt;lpt&lt;/li&gt;
 &lt;li&gt;lpstat&lt;/li&gt;
-&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nightwish</dc:creator><pubDate>Sun, 01 Jun 2014 17:30:00 +0200</pubDate><guid>tag:zhao-ji.github.io,2014-06-01:linuxming-ling-gai-yao.html</guid><category>Linux</category></item></channel></rss>
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Nightwish</dc:creator><pubDate>Sun, 01 Jun 2014 17:30:00 +0200</pubDate><guid>tag:zhao-ji.github.io,2014-06-01:linuxming-ling-gai-yao.html</guid><category>Linux cheat-sheet</category></item></channel></rss>
