@@ -15,7 +15,7 @@ Released   : 20100928
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<title>写博客也要讲基本法 - NetWork</title>
+<title>写博客也要讲基本法 - Articles by 海江田万里</title>
 <link href="/theme/css/style.css" rel="stylesheet" type="text/css" media="screen" />
 <link href="/" type="application/atom+xml" rel="alternate" title="写博客也要讲基本法 ATOM Feed" />
 </head>
@@ -28,9 +28,43 @@ Released   : 20100928
         
 				<div id="content">
 					<div class="post">
-						<h2 class="title"><a href="/2015/socks5xie-yi.html">Socks5协议</a></h2>
-						<p class="meta"><span class="date">Le  </span><span class="posted">Par <a href="#">海江田万里</a></span><span>&nbsp; | Catégorie : <a href="/category/network.html">NetWork</a></span></p>
+						<h2 class="title"><a href="/2015/yi-yue-dian-di-shou-ji.html">一月点滴收集</a></h2>
+						<p class="meta"><span class="date">Le  </span><span class="posted">Par <a href="#">海江田万里</a></span><span>&nbsp; | Catégorie : <a href="/category/tips.html">Tips</a></span></p>
 					<p class="meta">Tags : </p>
+						<div style="clear: both;">&nbsp;</div>
+						<div class="entry">
+						 <p>=======================</p>
+<h2>Python Tips</h2>
+<ul>
+<li>Python 暴力字典生成（brute 算法）<blockquote>
+<p>可重复全排列</p>
+</blockquote>
+<div class="highlight"><pre><span class="k">def</span> <span class="nf">brute</span><span class="p">(</span><span class="n">choices</span><span class="p">,</span> <span class="n">length</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">(</span>
+        <span class="s">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">candidate</span><span class="p">)</span> <span class="k">for</span> <span class="n">candidate</span> <span class="ow">in</span>
+        <span class="n">chain</span><span class="o">.</span><span class="n">from_iterable</span><span class="p">(</span>
+            <span class="n">product</span><span class="p">(</span>
+                <span class="n">choices</span><span class="p">,</span>
+                <span class="n">repeat</span> <span class="o">=</span> <span class="n">i</span><span class="p">,</span>
+            <span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">length</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span>
+        <span class="p">)</span>
+    <span class="p">)</span>
+</pre></div>
+
+
+</li>
+</ul>	
+						</div>
+					</div>
+	
+			                <div class="post">
+			                        <h2 class="title">Autres articles</h2>
+			                </div>
+        
+ 
+			                <div class="post summary">
+						<h2 class="title"><a href="/2015/socks5xie-yi.html">Socks5协议</a></h2>
+						<p class="meta"><span class="date">Le 二 13 一月 2015</span><span class="posted">Par <a href="#">海江田万里</a></span></p>
 						<div style="clear: both;">&nbsp;</div>
 						<div class="entry">
 						 <p>===========================</p>
@@ -115,61 +149,10 @@ Released   : 20100928
 <tbody>
 <tr>
 <td align="center">1 byte</td>
-<td align="center">1 byte</td>
-<td align="center">1 byte</td>
-<td align="center">1 byte</td>
-<td align="center">dynamic</td>
-<td align="center">2 byte</td>
-</tr>
-<tr>
-<td align="center">\x05</td>
-<td align="center">\x01</td>
-<td align="center">\x00</td>
-<td align="center">\x01</td>
-<td align="center"><strong>4 bytes of IPv4</strong> <strong>16bytes of IPv6</strong> <strong>1 byte of name length and the name</strong></td>
-<td align="center">\x08\x00</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>服务端返回</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th align="center">版本号</th>
-<th align="center">状态</th>
-<th align="center">保留字段</th>
-<th align="center">地址类型</th>
-<th align="center">目的地址</th>
-<th align="center">端口号</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">1 byte</td>
-<td align="center">1 byte</td>
-<td align="center">1 byte</td>
-<td align="center">1 byte</td>
-<td align="center">跟客户端请求一致</td>
-<td align="center">2 bytes</td>
-</tr>
-<tr>
-<td align="center">\x05</td>
-<td align="center">\x00</td>
-<td align="center">\x00</td>
-<td align="center">\x01</td>
-<td align="center">as the client</td>
-<td align="center">\x08\x00</td>
-</tr>
-</tbody>
-</table>	
+<td align="center">1 ...</td></tr></tbody></table>	
+						 <a class="readmore" href="/2015/socks5xie-yi.html">Lire la suite …</a>
 						</div>
 					</div>
-	
-			                <div class="post">
-			                        <h2 class="title">Autres articles</h2>
-			                </div>
         
  
 			                <div class="post summary">
@@ -179,6 +162,28 @@ Released   : 20100928
 						<div class="entry">
 						 <p>the Linux Command NetCat</p>	
 						 <a class="readmore" href="/2015/netcat-shi-yong-bi-ji.html">Lire la suite …</a>
+						</div>
+					</div>
+        
+ 
+			                <div class="post summary">
+						<h2 class="title"><a href="/2014/zheng-ze-biao-da-shi.html">正则表达式</a></h2>
+						<p class="meta"><span class="date">Le 日 10 八月 2014</span><span class="posted">Par <a href="#">海江田万里</a></span></p>
+						<div style="clear: both;">&nbsp;</div>
+						<div class="entry">
+						 <p>a summary of Regular Expression</p>	
+						 <a class="readmore" href="/2014/zheng-ze-biao-da-shi.html">Lire la suite …</a>
+						</div>
+					</div>
+        
+ 
+			                <div class="post summary">
+						<h2 class="title"><a href="/2014/linuxming-ling-gai-yao.html">Linux命令概要</a></h2>
+						<p class="meta"><span class="date">Le 日 01 六月 2014</span><span class="posted">Par <a href="#">海江田万里</a></span></p>
+						<div style="clear: both;">&nbsp;</div>
+						<div class="entry">
+						 <p>Command Summary of Linux</p>	
+						 <a class="readmore" href="/2014/linuxming-ling-gai-yao.html">Lire la suite …</a>
 						</div>
 					</div>
 					<div style="clear: both;">&nbsp;</div>
@@ -200,7 +205,7 @@ Released   : 20100928
 							<ul>
 								 <li ><a href="/category/tips.html">Tips</a></li>
 								 <li ><a href="/category/re.html">Re</a></li>
-								 <li class="active"><a href="/category/network.html">NetWork</a></li>
+								 <li ><a href="/category/network.html">NetWork</a></li>
 								 <li ><a href="/category/linux.html">Linux</a></li>
 							</ul>
 						</li>
