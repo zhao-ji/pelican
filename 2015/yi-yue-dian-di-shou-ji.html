@@ -2,7 +2,7 @@
 <html lang="zh">
 <head>
         <meta charset="utf-8" />
-        <title>Nightwish's Blog - 正则表达式</title>
+        <title>一月点滴收集</title>
         <link rel="stylesheet" href="http://zhao-ji.github.io/theme/css/main.css" />
         <link href="http://zhao-ji.github.io/feeds/all.rss.xml" type="application/atom+xml" rel="alternate" title="Nightwish's Blog Atom Feed" />
 
@@ -19,76 +19,71 @@
                 <h1><a href="http://zhao-ji.github.io/">Nightwish's Blog </a></h1>
                 <nav><ul>
                     <li><a href="http://zhao-ji.github.io/pages/about.html">About</a></li>
-                    <li><a href="http://zhao-ji.github.io/category/tips.html">Tips</a></li>
+                    <li class="active"><a href="http://zhao-ji.github.io/category/tips.html">Tips</a></li>
                     <li><a href="http://zhao-ji.github.io/category/re.html">Re</a></li>
                     <li><a href="http://zhao-ji.github.io/category/network.html">NetWork</a></li>
                     <li><a href="http://zhao-ji.github.io/category/linux.html">Linux</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
+<section id="content" class="body">
+  <article>
+    <header>
+      <h1 class="entry-title">
+        <a href="http://zhao-ji.github.io/2015/yi-yue-dian-di-shou-ji.html" rel="bookmark"
+           title="Permalink to 一月点滴收集">一月点滴收集</a></h1>
+    </header>
 
-            <aside id="featured" class="body">
-                <article>
-                    <h1 class="entry-title"><a href="http://zhao-ji.github.io/2014/zheng-ze-biao-da-shi.html">正则表达式</a></h1>
+    <div class="entry-content">
 <footer class="post-info">
-        <abbr class="published" title="2014-08-10T20:30:00+08:00">
-                Published: 日 10 八月 2014
+        <abbr class="published" title="2015-01-13T16:30:00+08:00">
+                Published: 二 13 一月 2015
         </abbr>
 
         <address class="vcard author">
                 By                         <a class="url fn" href="http://zhao-ji.github.io/author/nightwish.html">Nightwish</a>
         </address>
-<p>In <a href="http://zhao-ji.github.io/category/re.html">Re</a>. </p>
-<p>tags: <a href="http://zhao-ji.github.io/tag/zheng-ze-biao-da-shi.html">正则表达式</a> </p>
-</footer><!-- /.post-info --><p>================</p>
-<h1>正则表达式</h1>
-<h2>元字符</h2>
+<p>In <a href="http://zhao-ji.github.io/category/tips.html">Tips</a>. </p>
+
+</footer><!-- /.post-info -->      <p>=======================</p>
+<h2>Python Tips</h2>
 <ul>
-<li><em>()</em>  <em>[]</em>  <em>{}</em>     捕获器 选择器  次数</li>
-<li><em>*</em> <em>+</em> <em>?</em>  零和任意多次  一次和任意多次  零次和一次</li>
-<li><em>^</em> <em>$</em> 匹配开始 匹配结束</li>
-<li><em>\</em> 转义</li>
-<li><em>|</em> 或</li>
-<li><em>.</em> 匹配任意字符  非换行符</li>
-</ul>
-<h2>匹配案例</h2>
-<h3>类型</h3>
-<ul>
-<li><em>\d</em> 匹配数字 </li>
-<li><em>\D</em> 匹配非数字</li>
-<li><em>\s</em> 匹配空白字符</li>
-<li><em>\S</em> 匹配非空白字符</li>
-<li><em>\w</em> 匹配字母和数字</li>
-<li><em>\W</em> 匹配非字母和数字</li>
-</ul>
-<h3>次数</h3>
-<ul>
-<li><em>{0,}</em> *</li>
-<li><em>{1,}</em> +</li>
-<li><em>{0,1}</em> ?</li>
-</ul>
-<h3>消歧义</h3>
-<ul>
-<li>raw \不用转义</li>
-</ul>
-<h2>Python Re 模块用法</h2>
-<ul>
-<li>Re 方法： search  match findall finditer</li>
-<li>RegexObject 方法 ： group start end span</li>
-<li>compile 选项 ： <blockquote>
-<ul>
-<li>DOTALL S .代表一切字符 包括换行符</li>
-<li>IGNORECASE I 忽略大小写、</li>
-<li>LOCALE L 本地化字符设置</li>
-<li>MULTILINE M 多行匹配 改变^$的行为</li>
-<li>VERBOSE V 分行写RE语句  并可以添加注释</li>
-</ul>
+<li>Python 暴力字典生成（brute 算法）<blockquote>
+<p>可重复全排列</p>
 </blockquote>
+<div class="highlight"><pre><span class="k">def</span> <span class="nf">brute</span><span class="p">(</span><span class="n">choices</span><span class="p">,</span> <span class="n">length</span><span class="p">):</span>
+    <span class="k">return</span> <span class="p">(</span>
+        <span class="s">&#39;&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">candidate</span><span class="p">)</span> <span class="k">for</span> <span class="n">candidate</span> <span class="ow">in</span>
+        <span class="n">chain</span><span class="o">.</span><span class="n">from_iterable</span><span class="p">(</span>
+            <span class="n">product</span><span class="p">(</span>
+                <span class="n">choices</span><span class="p">,</span>
+                <span class="n">repeat</span> <span class="o">=</span> <span class="n">i</span><span class="p">,</span>
+            <span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">length</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span>
+        <span class="p">)</span>
+    <span class="p">)</span>
+</pre></div>
+
+
 </li>
-</ul><p>There are <a href="http://zhao-ji.github.io/2014/zheng-ze-biao-da-shi.html#disqus_thread">comments</a>.</p>                </article>
-<p class="paginator">
-    Page 1 / 1
-</p>
-            </aside><!-- /#featured -->
+</ul>
+    </div><!-- /.entry-content -->
+    <div class="comments">
+      <h2>Comments !</h2>
+      <div id="disqus_thread"></div>
+      <script type="text/javascript">
+        var disqus_shortname = 'zhaoji';
+        var disqus_identifier = '2015/yi-yue-dian-di-shou-ji.html';
+        var disqus_url = 'http://zhao-ji.github.io/2015/yi-yue-dian-di-shou-ji.html';
+        (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//zhaoji.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      </script>
+      <noscript>Please enable JavaScript to view the comments.</noscript>
+    </div>
+
+  </article>
+</section>
         <section id="extras" class="body">
                 <div class="blogroll">
                         <h2>blogroll</h2>
