@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Nightwish's Blog</title><link>http://zhao-ji.github.io/</link><description></description><atom:link href="http://zhao-ji.github.io/feeds/nightwish.rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 13 Jan 2015 16:30:00 +0800</lastBuildDate><item><title>一月点滴收集</title><link>http://zhao-ji.github.io/2015/yi-yue-dian-di-shou-ji.html</link><description>&lt;p&gt;=======================&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>写博客也要讲基本法</title><link>http://zhao-ji.github.io/</link><description></description><atom:link href="http://zhao-ji.github.io/feeds/nightwish.rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 13 Jan 2015 16:30:00 +0800</lastBuildDate><item><title>一月点滴收集</title><link>http://zhao-ji.github.io/2015/yi-yue-dian-di-shou-ji.html</link><description>&lt;p&gt;=======================&lt;/p&gt;
 &lt;h2&gt;Python Tips&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;Python 暴力字典生成（brute 算法）&lt;blockquote&gt;

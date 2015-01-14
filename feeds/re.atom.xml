@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Nightwish's Blog</title><link href="http://zhao-ji.github.io/" rel="alternate"></link><link href="http://zhao-ji.github.io/feeds/re.atom.xml" rel="self"></link><id>http://zhao-ji.github.io/</id><updated>2014-08-10T20:30:00+08:00</updated><entry><title>正则表达式</title><link href="http://zhao-ji.github.io/2014/zheng-ze-biao-da-shi.html" rel="alternate"></link><updated>2014-08-10T20:30:00+08:00</updated><author><name>Nightwish</name></author><id>tag:zhao-ji.github.io,2014-08-10:2014/zheng-ze-biao-da-shi.html</id><summary type="html">&lt;p&gt;================&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>写博客也要讲基本法</title><link href="http://zhao-ji.github.io/" rel="alternate"></link><link href="http://zhao-ji.github.io/feeds/re.atom.xml" rel="self"></link><id>http://zhao-ji.github.io/</id><updated>2014-08-10T20:30:00+08:00</updated><entry><title>正则表达式</title><link href="http://zhao-ji.github.io/2014/zheng-ze-biao-da-shi.html" rel="alternate"></link><updated>2014-08-10T20:30:00+08:00</updated><author><name>Nightwish</name></author><id>tag:zhao-ji.github.io,2014-08-10:2014/zheng-ze-biao-da-shi.html</id><summary type="html">&lt;p&gt;================&lt;/p&gt;
 &lt;h1&gt;正则表达式&lt;/h1&gt;
 &lt;h2&gt;元字符&lt;/h2&gt;
 &lt;ul&gt;
