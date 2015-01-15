@@ -18,12 +18,13 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
 &lt;h4&gt;isinstance 用法&lt;/h4&gt;
 &lt;blockquote&gt;
 &lt;p&gt;isinstance(...)
    isinstance(object, class-or-type-or-tuple) -&amp;gt; bool&lt;/p&gt;
 &lt;p&gt;Return whether an object is an instance of a class or of a subclass thereof.
-   With a type as second argument, return whether that is the object's type.
+   With a type as second argument, return whether that is the objects type.
    The form using a tuple, isinstance(x, (A, B, ...)), is a shortcut for
    isinstance(x, A) or isinstance(x, B) or ... (etc.).&lt;/p&gt;
 &lt;blockquote&gt;
@@ -40,6 +41,7 @@ Out[6]: True&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;isinstance 的第二个参数可以是 类型、类、包含类型或类的元祖。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
 &lt;h4&gt;How to flatten arbitrarily nested lists in Python?&lt;/h4&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="n"&gt;nested_list&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;],[&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;hi&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]],&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[[[&lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;hello&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]]]]]&lt;/span&gt;
 
@@ -54,7 +56,22 @@ Out[6]: True&lt;/p&gt;
     &lt;span class="n"&gt;print&lt;/span&gt; &lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;flatten&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;nested_list&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
 
     &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;hi&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;hello&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</summary></entry><entry><title>Socks5协议</title><link href="http://zhao-ji.github.io/2015/socks5xie-yi.html" rel="alternate"></link><updated>2015-01-13T12:16:00+08:00</updated><author><name>海江田万里</name></author><id>tag:zhao-ji.github.io,2015-01-13:2015/socks5xie-yi.html</id><summary type="html">&lt;p&gt;===========================&lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;h2&gt;VIM Tips&lt;/h2&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h4&gt;以普通用户身份打开的文件需要以sudo身份保存&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;:w !sudo tee %&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h4&gt;插入模式 自动补全&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;CTRL + N&lt;/p&gt;
+&lt;/blockquote&gt;</summary></entry><entry><title>Socks5协议</title><link href="http://zhao-ji.github.io/2015/socks5xie-yi.html" rel="alternate"></link><updated>2015-01-13T12:16:00+08:00</updated><author><name>海江田万里</name></author><id>tag:zhao-ji.github.io,2015-01-13:2015/socks5xie-yi.html</id><summary type="html">&lt;p&gt;===========================&lt;/p&gt;
 &lt;h2&gt;socks5 协议&lt;/h2&gt;
 &lt;h4&gt;特点&lt;/h4&gt;
 &lt;ul&gt;

@@ -51,12 +51,13 @@ Released   : 20100928
 </pre></div>
 
 
+<p><br></p>
 <h4>isinstance 用法</h4>
 <blockquote>
 <p>isinstance(...)
    isinstance(object, class-or-type-or-tuple) -&gt; bool</p>
 <p>Return whether an object is an instance of a class or of a subclass thereof.
-   With a type as second argument, return whether that is the object's type.
+   With a type as second argument, return whether that is the objects type.
    The form using a tuple, isinstance(x, (A, B, ...)), is a shortcut for
    isinstance(x, A) or isinstance(x, B) or ... (etc.).</p>
 <blockquote>
@@ -73,6 +74,7 @@ Out[6]: True</p>
 </blockquote>
 </blockquote>
 <p><strong>isinstance 的第二个参数可以是 类型、类、包含类型或类的元祖。</strong></p>
+<p><br></p>
 <h4>How to flatten arbitrarily nested lists in Python?</h4>
 <div class="highlight"><pre>    <span class="n">nested_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="p">[</span><span class="mi">5</span><span class="p">],[</span><span class="err">&#39;</span><span class="n">hi</span><span class="err">&#39;</span><span class="p">]],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="p">[[[</span><span class="mi">7</span><span class="p">,</span> <span class="err">&#39;</span><span class="n">hello</span><span class="err">&#39;</span><span class="p">]]]]]</span>
 
@@ -87,7 +89,22 @@ Out[6]: True</p>
     <span class="n">print</span> <span class="n">list</span><span class="p">(</span><span class="n">flatten</span><span class="p">(</span><span class="n">nested_list</span><span class="p">))</span>
 
     <span class="o">&gt;</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="err">&#39;</span><span class="n">hi</span><span class="err">&#39;</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="err">&#39;</span><span class="n">hello</span><span class="err">&#39;</span><span class="p">]</span>
-</pre></div>	
+</pre></div>
+
+
+<p><br>
+<br></p>
+<h2>VIM Tips</h2>
+<p><br></p>
+<h4>以普通用户身份打开的文件需要以sudo身份保存</h4>
+<blockquote>
+<p>:w !sudo tee %</p>
+</blockquote>
+<p><br></p>
+<h4>插入模式 自动补全</h4>
+<blockquote>
+<p>CTRL + N</p>
+</blockquote>	
 <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="qinghecha">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 						</div>
 					</div>
