@@ -1,22 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>写博客也要讲基本法</title><link href="http://zhao-ji.github.io/" rel="alternate"></link><link href="http://zhao-ji.github.io/feeds/tips.atom.xml" rel="self"></link><id>http://zhao-ji.github.io/</id><updated>2015-01-13T16:30:00+08:00</updated><entry><title>一月点滴收集</title><link href="http://zhao-ji.github.io/2015/yi-yue-dian-di-shou-ji.html" rel="alternate"></link><updated>2015-01-13T16:30:00+08:00</updated><author><name>Nightwish</name></author><id>tag:zhao-ji.github.io,2015-01-13:2015/yi-yue-dian-di-shou-ji.html</id><summary type="html">&lt;p&gt;=======================&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>写博客也要讲基本法</title><link href="http://zhao-ji.github.io/" rel="alternate"></link><link href="http://zhao-ji.github.io/feeds/tips.atom.xml" rel="self"></link><id>http://zhao-ji.github.io/</id><updated>2015-01-13T16:30:00+08:00</updated><entry><title>一月点滴收集</title><link href="http://zhao-ji.github.io/2015/yi-yue-dian-di-shou-ji.html" rel="alternate"></link><updated>2015-01-13T16:30:00+08:00</updated><author><name>海江田万里</name></author><id>tag:zhao-ji.github.io,2015-01-13:2015/yi-yue-dian-di-shou-ji.html</id><summary type="html">&lt;p&gt;=======================&lt;/p&gt;
 &lt;h2&gt;Python Tips&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Python 暴力字典生成（brute 算法）&lt;blockquote&gt;
+&lt;h4&gt;Python 暴力字典生成（brute 算法）&lt;/h4&gt;
+&lt;blockquote&gt;
 &lt;p&gt;可重复全排列&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;brute&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;choices&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;length&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
-        &lt;span class="s"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;join&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;candidate&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;candidate&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt;
-        &lt;span class="n"&gt;chain&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;from_iterable&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
-            &lt;span class="n"&gt;product&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
-                &lt;span class="n"&gt;choices&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-                &lt;span class="n"&gt;repeat&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-            &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;length&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="o"&gt;:::&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt;
+    &lt;span class="n"&gt;def&lt;/span&gt; &lt;span class="n"&gt;brute&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;choices&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;length&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+            &lt;span class="err"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;join&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;candidate&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;candidate&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt;
+            &lt;span class="n"&gt;chain&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;from_iterable&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+                &lt;span class="n"&gt;product&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+                    &lt;span class="n"&gt;choices&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                    &lt;span class="n"&gt;repeat&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;length&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+            &lt;span class="p"&gt;)&lt;/span&gt;
         &lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;/li&gt;
-&lt;/ul&gt;</summary></entry></feed>
+&lt;h4&gt;isinstance 用法&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;isinstance(...)
+   isinstance(object, class-or-type-or-tuple) -&amp;gt; bool&lt;/p&gt;
+&lt;p&gt;Return whether an object is an instance of a class or of a subclass thereof.
+   With a type as second argument, return whether that is the object's type.
+   The form using a tuple, isinstance(x, (A, B, ...)), is a shortcut for
+   isinstance(x, A) or isinstance(x, B) or ... (etc.).&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In [9]: isinstance("hello", str)
+Out[9]: True&lt;/p&gt;
+&lt;p&gt;In [10]: isinstance(1, (str, int))
+Out[10]: True&lt;/p&gt;
+&lt;p&gt;In [4]: class A:
+   ...:     pass
+   ...: 
+In [5]: a = A()
+In [6]: isinstance(a, A)
+Out[6]: True&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;isinstance 的第二个参数可以是 类型、类、包含类型或类的元祖。&lt;/strong&gt;&lt;/p&gt;</summary></entry></feed>

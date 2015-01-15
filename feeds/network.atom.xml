@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>写博客也要讲基本法</title><link href="http://zhao-ji.github.io/" rel="alternate"></link><link href="http://zhao-ji.github.io/feeds/network.atom.xml" rel="self"></link><id>http://zhao-ji.github.io/</id><updated>2015-01-13T12:16:00+08:00</updated><entry><title>Socks5协议</title><link href="http://zhao-ji.github.io/2015/socks5xie-yi.html" rel="alternate"></link><updated>2015-01-13T12:16:00+08:00</updated><author><name>Nightwish</name></author><id>tag:zhao-ji.github.io,2015-01-13:2015/socks5xie-yi.html</id><summary type="html">&lt;p&gt;===========================&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>写博客也要讲基本法</title><link href="http://zhao-ji.github.io/" rel="alternate"></link><link href="http://zhao-ji.github.io/feeds/network.atom.xml" rel="self"></link><id>http://zhao-ji.github.io/</id><updated>2015-01-13T12:16:00+08:00</updated><entry><title>Socks5协议</title><link href="http://zhao-ji.github.io/2015/socks5xie-yi.html" rel="alternate"></link><updated>2015-01-13T12:16:00+08:00</updated><author><name>海江田万里</name></author><id>tag:zhao-ji.github.io,2015-01-13:2015/socks5xie-yi.html</id><summary type="html">&lt;p&gt;===========================&lt;/p&gt;
 &lt;h2&gt;socks5 协议&lt;/h2&gt;
 &lt;h4&gt;特点&lt;/h4&gt;
 &lt;ul&gt;
@@ -129,7 +129,7 @@
 &lt;td align="center"&gt;\x08\x00&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
-&lt;/table&gt;</summary></entry><entry><title>netcat 使用笔记</title><link href="http://zhao-ji.github.io/2015/netcat-shi-yong-bi-ji.html" rel="alternate"></link><updated>2015-01-12T20:00:00+08:00</updated><author><name>Nightwish</name></author><id>tag:zhao-ji.github.io,2015-01-12:2015/netcat-shi-yong-bi-ji.html</id><summary type="html">&lt;p&gt;======================&lt;/p&gt;
+&lt;/table&gt;</summary></entry><entry><title>netcat 使用笔记</title><link href="http://zhao-ji.github.io/2015/netcat-shi-yong-bi-ji.html" rel="alternate"></link><updated>2015-01-12T20:00:00+08:00</updated><author><name>海江田万里</name></author><id>tag:zhao-ji.github.io,2015-01-12:2015/netcat-shi-yong-bi-ji.html</id><summary type="html">&lt;p&gt;======================&lt;/p&gt;
 &lt;h2&gt;netcat 三个例子&lt;/h2&gt;
 &lt;h3&gt;本地 client-server socket 模式&lt;/h3&gt;
 &lt;ul&gt;

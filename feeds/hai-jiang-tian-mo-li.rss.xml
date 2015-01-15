@@ -1,25 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>写博客也要讲基本法</title><link>/</link><description></description><atom:link href="/feeds/hai-jiang-tian-mo-li.rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 13 Jan 2015 16:30:00 +0800</lastBuildDate><item><title>一月点滴收集</title><link>/2015/yi-yue-dian-di-shou-ji.html</link><description>&lt;p&gt;=======================&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>写博客也要讲基本法</title><link>http://zhao-ji.github.io/</link><description></description><atom:link href="http://zhao-ji.github.io/feeds/hai-jiang-tian-mo-li.rss.xml" rel="self"></atom:link><lastBuildDate>Tue, 13 Jan 2015 16:30:00 +0800</lastBuildDate><item><title>一月点滴收集</title><link>http://zhao-ji.github.io/2015/yi-yue-dian-di-shou-ji.html</link><description>&lt;p&gt;=======================&lt;/p&gt;
 &lt;h2&gt;Python Tips&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;Python 暴力字典生成（brute 算法）&lt;blockquote&gt;
+&lt;h4&gt;Python 暴力字典生成（brute 算法）&lt;/h4&gt;
+&lt;blockquote&gt;
 &lt;p&gt;可重复全排列&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;brute&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;choices&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;length&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
-        &lt;span class="s"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;join&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;candidate&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;candidate&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt;
-        &lt;span class="n"&gt;chain&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;from_iterable&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
-            &lt;span class="n"&gt;product&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
-                &lt;span class="n"&gt;choices&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-                &lt;span class="n"&gt;repeat&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-            &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;length&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="o"&gt;:::&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt;
+    &lt;span class="n"&gt;def&lt;/span&gt; &lt;span class="n"&gt;brute&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;choices&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;length&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
+            &lt;span class="err"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;join&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;candidate&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;candidate&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt;
+            &lt;span class="n"&gt;chain&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;from_iterable&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+                &lt;span class="n"&gt;product&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
+                    &lt;span class="n"&gt;choices&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                    &lt;span class="n"&gt;repeat&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;length&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+            &lt;span class="p"&gt;)&lt;/span&gt;
         &lt;span class="p"&gt;)&lt;/span&gt;
-    &lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;/li&gt;
-&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">海江田万里</dc:creator><pubDate>Tue, 13 Jan 2015 16:30:00 +0800</pubDate><guid>tag:,2015-01-13:2015/yi-yue-dian-di-shou-ji.html</guid></item><item><title>Socks5协议</title><link>/2015/socks5xie-yi.html</link><description>&lt;p&gt;===========================&lt;/p&gt;
+&lt;h4&gt;isinstance 用法&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;isinstance(...)
+   isinstance(object, class-or-type-or-tuple) -&amp;gt; bool&lt;/p&gt;
+&lt;p&gt;Return whether an object is an instance of a class or of a subclass thereof.
+   With a type as second argument, return whether that is the object's type.
+   The form using a tuple, isinstance(x, (A, B, ...)), is a shortcut for
+   isinstance(x, A) or isinstance(x, B) or ... (etc.).&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In [9]: isinstance("hello", str)
+Out[9]: True&lt;/p&gt;
+&lt;p&gt;In [10]: isinstance(1, (str, int))
+Out[10]: True&lt;/p&gt;
+&lt;p&gt;In [4]: class A:
+   ...:     pass
+   ...: 
+In [5]: a = A()
+In [6]: isinstance(a, A)
+Out[6]: True&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;isinstance 的第二个参数可以是 类型、类、包含类型或类的元祖。&lt;/strong&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">海江田万里</dc:creator><pubDate>Tue, 13 Jan 2015 16:30:00 +0800</pubDate><guid>tag:zhao-ji.github.io,2015-01-13:2015/yi-yue-dian-di-shou-ji.html</guid></item><item><title>Socks5协议</title><link>http://zhao-ji.github.io/2015/socks5xie-yi.html</link><description>&lt;p&gt;===========================&lt;/p&gt;
 &lt;h2&gt;socks5 协议&lt;/h2&gt;
 &lt;h4&gt;特点&lt;/h4&gt;
 &lt;ul&gt;
@@ -149,7 +170,7 @@
 &lt;td align="center"&gt;\x08\x00&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
-&lt;/table&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">海江田万里</dc:creator><pubDate>Tue, 13 Jan 2015 12:16:00 +0800</pubDate><guid>tag:,2015-01-13:2015/socks5xie-yi.html</guid></item><item><title>netcat 使用笔记</title><link>/2015/netcat-shi-yong-bi-ji.html</link><description>&lt;p&gt;======================&lt;/p&gt;
+&lt;/table&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">海江田万里</dc:creator><pubDate>Tue, 13 Jan 2015 12:16:00 +0800</pubDate><guid>tag:zhao-ji.github.io,2015-01-13:2015/socks5xie-yi.html</guid></item><item><title>netcat 使用笔记</title><link>http://zhao-ji.github.io/2015/netcat-shi-yong-bi-ji.html</link><description>&lt;p&gt;======================&lt;/p&gt;
 &lt;h2&gt;netcat 三个例子&lt;/h2&gt;
 &lt;h3&gt;本地 client-server socket 模式&lt;/h3&gt;
 &lt;ul&gt;
@@ -197,7 +218,7 @@
 &lt;li&gt;-w 10 十秒接受不到内容就断开&lt;/li&gt;
 &lt;li&gt;-n 不查询DNS&lt;/li&gt;
 &lt;li&gt;-p 设置源端口&lt;/li&gt;
-&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">海江田万里</dc:creator><pubDate>Mon, 12 Jan 2015 20:00:00 +0800</pubDate><guid>tag:,2015-01-12:2015/netcat-shi-yong-bi-ji.html</guid></item><item><title>正则表达式</title><link>/2014/zheng-ze-biao-da-shi.html</link><description>&lt;p&gt;================&lt;/p&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">海江田万里</dc:creator><pubDate>Mon, 12 Jan 2015 20:00:00 +0800</pubDate><guid>tag:zhao-ji.github.io,2015-01-12:2015/netcat-shi-yong-bi-ji.html</guid></item><item><title>正则表达式</title><link>http://zhao-ji.github.io/2014/zheng-ze-biao-da-shi.html</link><description>&lt;p&gt;================&lt;/p&gt;
 &lt;h1&gt;正则表达式&lt;/h1&gt;
 &lt;h2&gt;元字符&lt;/h2&gt;
 &lt;ul&gt;
@@ -242,7 +263,7 @@
 &lt;/ul&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">海江田万里</dc:creator><pubDate>Sun, 10 Aug 2014 20:30:00 +0800</pubDate><guid>tag:,2014-08-10:2014/zheng-ze-biao-da-shi.html</guid><category>正则表达式</category></item><item><title>Linux命令概要</title><link>/2014/linuxming-ling-gai-yao.html</link><description>&lt;p&gt;====================================&lt;/p&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">海江田万里</dc:creator><pubDate>Sun, 10 Aug 2014 20:30:00 +0800</pubDate><guid>tag:zhao-ji.github.io,2014-08-10:2014/zheng-ze-biao-da-shi.html</guid><category>正则表达式</category></item><item><title>Linux命令概要</title><link>http://zhao-ji.github.io/2014/linuxming-ling-gai-yao.html</link><description>&lt;p&gt;====================================&lt;/p&gt;
 &lt;h1&gt;Linux命令概要&lt;/h1&gt;
 &lt;h2&gt;帮助命令&lt;/h2&gt;
 &lt;ul&gt;
@@ -376,4 +397,4 @@
 &lt;ul&gt;
 &lt;li&gt;lpt&lt;/li&gt;
 &lt;li&gt;lpstat&lt;/li&gt;
-&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">海江田万里</dc:creator><pubDate>Sun, 01 Jun 2014 17:30:00 +0800</pubDate><guid>tag:,2014-06-01:2014/linuxming-ling-gai-yao.html</guid><category>Linux cheat-sheet</category></item></channel></rss>
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">海江田万里</dc:creator><pubDate>Sun, 01 Jun 2014 17:30:00 +0800</pubDate><guid>tag:zhao-ji.github.io,2014-06-01:2014/linuxming-ling-gai-yao.html</guid><category>Linux cheat-sheet</category></item></channel></rss>
