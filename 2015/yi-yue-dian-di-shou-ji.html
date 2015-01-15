@@ -73,7 +73,23 @@ In [6]: isinstance(a, A)
 Out[6]: True</p>
 </blockquote>
 </blockquote>
-<p><strong>isinstance 的第二个参数可以是 类型、类、包含类型或类的元祖。</strong></p>	
+<p><strong>isinstance 的第二个参数可以是 类型、类、包含类型或类的元祖。</strong></p>
+<h4>How to flatten arbitrarily nested lists in Python?</h4>
+<div class="highlight"><pre>    <span class="o">:::</span><span class="n">python</span>
+    <span class="n">nested_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="p">[</span><span class="mi">5</span><span class="p">],[</span><span class="err">&#39;</span><span class="n">hi</span><span class="err">&#39;</span><span class="p">]],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="p">[[[</span><span class="mi">7</span><span class="p">,</span> <span class="err">&#39;</span><span class="n">hello</span><span class="err">&#39;</span><span class="p">]]]]]</span>
+
+    <span class="n">def</span> <span class="n">flatten</span><span class="p">(</span><span class="n">nested</span><span class="p">)</span><span class="o">:</span>
+        <span class="k">for</span> <span class="n">item</span> <span class="n">in</span> <span class="n">nested</span><span class="o">:</span>
+            <span class="k">if</span> <span class="n">isinstance</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">list</span><span class="p">)</span> <span class="n">or</span> <span class="n">isinstance</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">tuple</span><span class="p">)</span><span class="o">:</span>
+                <span class="k">for</span> <span class="n">element</span> <span class="n">in</span> <span class="n">flatten</span><span class="p">(</span><span class="n">item</span><span class="p">)</span><span class="o">:</span>
+                    <span class="n">yield</span> <span class="n">element</span>
+            <span class="nl">else:</span>
+                <span class="n">yield</span> <span class="n">item</span>
+
+    <span class="n">print</span> <span class="n">list</span><span class="p">(</span><span class="n">flatten</span><span class="p">(</span><span class="n">nested_list</span><span class="p">))</span>
+
+    <span class="o">&gt;</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="err">&#39;</span><span class="n">hi</span><span class="err">&#39;</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="err">&#39;</span><span class="n">hello</span><span class="err">&#39;</span><span class="p">]</span>
+</pre></div>	
 <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="qinghecha">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 						</div>
 					</div>
