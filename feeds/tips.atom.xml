@@ -163,4 +163,10 @@ in redis.conf &lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 &lt;h4&gt;unalias 删除alias后的命令， 'ls' 和 \ls 能强制调用原始ls命令&lt;/h4&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h4&gt;禁用ubuntu内部错误报告&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;sudo service apport stop&lt;/p&gt;
+&lt;p&gt;vim /etc/default/apport enabled=0&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;</summary></entry></feed>
