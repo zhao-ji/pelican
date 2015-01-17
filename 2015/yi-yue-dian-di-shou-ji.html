@@ -92,6 +92,18 @@ Out[6]: True</p>
 </pre></div>
 
 
+<p><br></p>
+<h4>map 传参数可以设置默认参数，和使用*方法</h4>
+<blockquote>
+<p>In [1]: sum_5 = lambda x, y=5: x+y</p>
+<p>In [2]: sum_5(4)
+Out[2]: 9</p>
+<p>In [3]: sum_5(4, 3)
+Out[3]: 7</p>
+<p>In [6]: sum_new = lambda *args: sum(args)</p>
+<p>In [7]: sum_new(1,2,3,4)
+Out[7]: 10</p>
+</blockquote>
 <p><br>
 <br></p>
 <h2>VIM Tips</h2>
@@ -111,6 +123,19 @@ Out[6]: True</p>
 <p>au BufReadPost * if line("'\"") &gt; 0|if line("'\"") &lt;= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif</p>
 </blockquote>
 <p><br></p>
+<h4>代码折叠</h4>
+<blockquote>
+<p>V模式选择文本，可以使用%快速匹配括号, zf 折叠
+zo 打开折叠
+zc 关闭折叠</p>
+</blockquote>
+<p><br></p>
+<h3>HML 分别将光标移至屏幕最上、正中、最下</h3>
+<p><br></p>
+<h3>IrA 列选择后分别在前面、当下、后面修改或添加</h3>
+<p><br></p>
+<h3>将光标所在行移至屏幕正中: z.</h3>
+<p><br></p>
 <h3>书签使用</h3>
 <h4>命令模式</h4>
 <blockquote>
@@ -124,7 +149,32 @@ Out[6]: True</p>
 <p>'a 回到A书签所在行</p>
 <p>`. 回到上次编辑位置所在行所在列</p>
 <p>'. 回到上次编辑位置所在行</p>
-</blockquote>	
+</blockquote>
+<p><br>
+<br></p>
+<h2>Shell Tips</h2>
+<h4>查看当前目录文件夹大小</h4>
+<blockquote>
+<p>du -h --max-depth=1 ./</p>
+</blockquote>
+<p><br></p>
+<h4>修改系统默认编辑器</h4>
+<blockquote>
+<p>sudo update-alternatives --config editor</p>
+</blockquote>
+<p><br></p>
+<h4>redis 开启远端访问</h4>
+<blockquote>
+<p>remove the "bind 127.0.0.1" 
+set password after "requirepass" 
+in redis.conf </p>
+</blockquote>
+<p><br></p>
+<h4>mongo 修改字段名</h4>
+<blockquote>
+<p>db.collection.update({}, {$rename: {old_name: new_name}})</p>
+</blockquote>
+<p><br></p>	
 <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="qinghecha">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 						</div>
 					</div>

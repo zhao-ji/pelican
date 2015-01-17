@@ -69,6 +69,18 @@ Out[6]: True&lt;/p&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h4&gt;map 传参数可以设置默认参数，和使用*方法&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In [1]: sum_5 = lambda x, y=5: x+y&lt;/p&gt;
+&lt;p&gt;In [2]: sum_5(4)
+Out[2]: 9&lt;/p&gt;
+&lt;p&gt;In [3]: sum_5(4, 3)
+Out[3]: 7&lt;/p&gt;
+&lt;p&gt;In [6]: sum_new = lambda *args: sum(args)&lt;/p&gt;
+&lt;p&gt;In [7]: sum_new(1,2,3,4)
+Out[7]: 10&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;&lt;br&gt;
 &lt;br&gt;&lt;/p&gt;
 &lt;h2&gt;VIM Tips&lt;/h2&gt;
@@ -88,6 +100,19 @@ Out[6]: True&lt;/p&gt;
 &lt;p&gt;au BufReadPost * if line("'\"") &amp;gt; 0|if line("'\"") &amp;lt;= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h4&gt;代码折叠&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;V模式选择文本，可以使用%快速匹配括号, zf 折叠
+zo 打开折叠
+zc 关闭折叠&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h3&gt;HML 分别将光标移至屏幕最上、正中、最下&lt;/h3&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h3&gt;IrA 列选择后分别在前面、当下、后面修改或添加&lt;/h3&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h3&gt;将光标所在行移至屏幕正中: z.&lt;/h3&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
 &lt;h3&gt;书签使用&lt;/h3&gt;
 &lt;h4&gt;命令模式&lt;/h4&gt;
 &lt;blockquote&gt;
@@ -101,7 +126,32 @@ Out[6]: True&lt;/p&gt;
 &lt;p&gt;'a 回到A书签所在行&lt;/p&gt;
 &lt;p&gt;`. 回到上次编辑位置所在行所在列&lt;/p&gt;
 &lt;p&gt;'. 回到上次编辑位置所在行&lt;/p&gt;
-&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">海江田万里</dc:creator><pubDate>Tue, 13 Jan 2015 16:30:00 +0800</pubDate><guid>tag:zhao-ji.github.io,2015-01-13:2015/yi-yue-dian-di-shou-ji.html</guid></item><item><title>Socks5协议</title><link>http://zhao-ji.github.io/2015/socks5xie-yi.html</link><description>&lt;p&gt;===========================&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;h2&gt;Shell Tips&lt;/h2&gt;
+&lt;h4&gt;查看当前目录文件夹大小&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;du -h --max-depth=1 ./&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h4&gt;修改系统默认编辑器&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;sudo update-alternatives --config editor&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h4&gt;redis 开启远端访问&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;remove the "bind 127.0.0.1" 
+set password after "requirepass" 
+in redis.conf &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h4&gt;mongo 修改字段名&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;db.collection.update({}, {$rename: {old_name: new_name}})&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">海江田万里</dc:creator><pubDate>Tue, 13 Jan 2015 16:30:00 +0800</pubDate><guid>tag:zhao-ji.github.io,2015-01-13:2015/yi-yue-dian-di-shou-ji.html</guid></item><item><title>Socks5协议</title><link>http://zhao-ji.github.io/2015/socks5xie-yi.html</link><description>&lt;p&gt;===========================&lt;/p&gt;
 &lt;h2&gt;socks5 协议&lt;/h2&gt;
 &lt;h4&gt;特点&lt;/h4&gt;
 &lt;ul&gt;
