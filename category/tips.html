@@ -203,7 +203,12 @@ in redis.conf </p>
 <p>sudo service apport stop</p>
 <p>vim /etc/default/apport enabled=0</p>
 </blockquote>
-<p><br></p>	
+<p><br></p>
+<h4>设置服务器不回应PING</h4>
+<blockquote>
+<p>echo 1 &gt; /proc/sys/net/ipv4/icmp_echo_ignore_all</p>
+<p>回应则设为0</p>
+</blockquote>	
 <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="qinghecha">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 						</div>
 					</div>

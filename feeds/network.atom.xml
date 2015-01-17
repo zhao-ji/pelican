@@ -177,4 +177,8 @@
 &lt;li&gt;-w 10 十秒接受不到内容就断开&lt;/li&gt;
 &lt;li&gt;-n 不查询DNS&lt;/li&gt;
 &lt;li&gt;-p 设置源端口&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;netcat 蜜罐&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;netcat -l -p 442 实时监听442端口&lt;/li&gt;
 &lt;/ul&gt;</summary></entry></feed>

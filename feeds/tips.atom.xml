@@ -169,4 +169,9 @@ in redis.conf &lt;/p&gt;
 &lt;p&gt;sudo service apport stop&lt;/p&gt;
 &lt;p&gt;vim /etc/default/apport enabled=0&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;</summary></entry></feed>
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h4&gt;设置服务器不回应PING&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;echo 1 &amp;gt; /proc/sys/net/ipv4/icmp_echo_ignore_all&lt;/p&gt;
+&lt;p&gt;回应则设为0&lt;/p&gt;
+&lt;/blockquote&gt;</summary></entry></feed>
