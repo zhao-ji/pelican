@@ -111,18 +111,19 @@ Out[6]: True</p>
 <p>au BufReadPost * if line("'\"") &gt; 0|if line("'\"") &lt;= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif</p>
 </blockquote>
 <p><br></p>
-<h4>书签使用</h4>
-<h6>命令模式</h6>
+<h3>书签使用</h3>
+<h4>命令模式</h4>
 <blockquote>
-<p>marks 显示所有书签
-marks a 显示A书签的详细信息</p>
+<p>marks 显示所有书签</p>
+<p>marks a 显示A书签的详细信息</p>
 </blockquote>
-<h6>普通模式</h6>
+<h4>普通模式</h4>
 <blockquote>
-<p>ma 在当前位置设置A书签, 大写字母为全局书签，小写字母为局部书签
-<code>a 回到A书签所在行所在列
-'a 回到A书签所在行</code>. 回到上次编辑位置所在行所在列
-'. 回到上次编辑位置所在行</p>
+<p>ma 在当前位置设置A书签, 大写字母为全局书签，小写字母为局部书签</p>
+<p>`a 回到A书签所在行所在列</p>
+<p>'a 回到A书签所在行</p>
+<p>`. 回到上次编辑位置所在行所在列</p>
+<p>'. 回到上次编辑位置所在行</p>
 </blockquote>	
 <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="qinghecha">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 						</div>
