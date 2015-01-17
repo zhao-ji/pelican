@@ -81,6 +81,25 @@ Out[6]: True&lt;/p&gt;
 &lt;h4&gt;插入模式 自动补全&lt;/h4&gt;
 &lt;blockquote&gt;
 &lt;p&gt;CTRL + N&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h4&gt;打开文件自动回到上次编辑位置&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;au BufReadPost * if line("'\"") &amp;gt; 0|if line("'\"") &amp;lt;= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h4&gt;书签使用&lt;/h4&gt;
+&lt;h6&gt;命令模式&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;p&gt;marks 显示所有书签
+marks a 显示A书签的详细信息&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h6&gt;普通模式&lt;/h6&gt;
+&lt;blockquote&gt;
+&lt;p&gt;ma 在当前位置设置A书签, 大写字母为全局书签，小写字母为局部书签
+&lt;code&gt;a 回到A书签所在行所在列
+'a 回到A书签所在行&lt;/code&gt;. 回到上次编辑位置所在行所在列
+'. 回到上次编辑位置所在行&lt;/p&gt;
 &lt;/blockquote&gt;</summary></entry><entry><title>Socks5协议</title><link href="http://zhao-ji.github.io/2015/socks5xie-yi.html" rel="alternate"></link><updated>2015-01-13T12:16:00+08:00</updated><author><name>海江田万里</name></author><id>tag:zhao-ji.github.io,2015-01-13:2015/socks5xie-yi.html</id><summary type="html">&lt;p&gt;===========================&lt;/p&gt;
 &lt;h2&gt;socks5 协议&lt;/h2&gt;
 &lt;h4&gt;特点&lt;/h4&gt;
