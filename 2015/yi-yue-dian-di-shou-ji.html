@@ -104,6 +104,26 @@ Out[3]: 7</p>
 <p>In [7]: sum_new(1,2,3,4)
 Out[7]: 10</p>
 </blockquote>
+<p><br></p>
+<h4>bisect 模块二分查找，作用对象：字符串、列表</h4>
+<blockquote>
+<p>In [1]: from bisect import bisect, insort</p>
+<p>In [2]: a = [1,2,3,4,5,7,8,9]</p>
+<p>In [3]: insort(a, 6)</p>
+<p>In [4]: a
+Out[4]: [1, 2, 3, 4, 5, 6, 7, 8, 9]</p>
+<p>In [5]: bisect(a, 6)
+Out[5]: 6</p>
+</blockquote>
+<p><br></p>
+<h4>unidecode 将汉字转为拼音</h4>
+<blockquote>
+<p>In [8]: from unidecode import unidecode</p>
+<p>In [9]: unidecode(u'你好')
+Out[9]: 'Ni Hao '</p>
+</blockquote>
+<p><br></p>
+<h4>iter(func(), value) : make the iterator of func() until func()==value</h4>
 <p><br>
 <br></p>
 <h2>VIM Tips</h2>
@@ -174,6 +194,8 @@ in redis.conf </p>
 <blockquote>
 <p>db.collection.update({}, {$rename: {old_name: new_name}})</p>
 </blockquote>
+<p><br></p>
+<h4>unalias 删除alias后的命令， 'ls' 和 \ls 能强制调用原始ls命令</h4>
 <p><br></p>	
 <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="qinghecha">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 						</div>
