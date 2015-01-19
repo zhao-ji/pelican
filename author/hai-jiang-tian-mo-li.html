@@ -28,22 +28,56 @@ Released   : 20100928
         
 				<div id="content">
 					<div class="post">
-						<h2 class="title"><a href="http://zhao-ji.github.io/2015/python-zi-fu-chuan-ti-huan.html">Python 字符串替换</a></h2>
-						<p class="meta"><span class="date">Le  </span><span class="posted">Par <a href="#">海江田万里</a></span><span>&nbsp; | Catégorie : <a href="http://zhao-ji.github.io/category/python.html">Python</a></span></p>
+						<h2 class="title"><a href="http://zhao-ji.github.io/2015/nmap-shi-yong.html">NMap 使用</a></h2>
+						<p class="meta"><span class="date">Le  </span><span class="posted">Par <a href="#">海江田万里</a></span><span>&nbsp; | Catégorie : <a href="http://zhao-ji.github.io/category/linux-network.html">Linux Network</a></span></p>
 					<p class="meta">Tags : </p>
 						<div style="clear: both;">&nbsp;</div>
 						<div class="entry">
-						 <p>=================================</p>
-<h2>字符串替换</h2>
-<div class="highlight"><pre><span class="n">def</span> <span class="n">replace_words</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">word_dic</span><span class="p">)</span><span class="o">:</span> 
-    <span class="n">yo</span> <span class="o">=</span> <span class="n">re</span><span class="p">.</span><span class="n">compile</span><span class="p">(</span><span class="sc">&#39;|&#39;</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">map</span><span class="p">(</span><span class="n">re</span><span class="p">.</span><span class="n">escape</span><span class="p">,</span> <span class="n">word_dic</span><span class="p">)))</span> 
-    <span class="n">def</span> <span class="n">translate</span><span class="p">(</span><span class="n">mat</span><span class="p">)</span><span class="o">:</span> 
-        <span class="k">return</span> <span class="n">word_dic</span><span class="p">[</span><span class="n">mat</span><span class="p">.</span><span class="n">group</span><span class="p">(</span><span class="mi">0</span><span class="p">)]</span> 
-    <span class="k">return</span> <span class="n">yo</span><span class="p">.</span><span class="n">sub</span><span class="p">(</span><span class="n">translate</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
-</pre></div>
-
-
-<p>链接： <a href="http://segmentfault.com/q/1010000002474308">请教：Python字符串替换的一个问题</a></p>	
+						 <p>================================</p>
+<h2>nmap 简介</h2>
+<h3>概要</h3>
+<ul>
+<li>
+<p>nmap (network mapper)</p>
+<ul>
+<li>nmap -A targetip (全面进攻型扫描)</li>
+</ul>
+</li>
+<li>
+<p>nmap 主要功能</p>
+<ul>
+<li>
+<p>Host Discovery(主机发现)</p>
+<blockquote>
+<p>nmap -sn 192.168.1.1/24</p>
+</blockquote>
+</li>
+<li>
+<p>Port Scanning(端口扫描)</p>
+<blockquote>
+<p>nmap -F 192.168.1.250(快速扫描前100个热门端口)
+nmap 192.168.1.250 -p 80 (指定端口扫描)
+nmap -r 192.168.1.1 (以随机顺序扫描端口)</p>
+</blockquote>
+</li>
+<li>
+<p>Version Detection(版本侦测)</p>
+<blockquote>
+<p>nmap -sV 192.168.1.250</p>
+</blockquote>
+</li>
+<li>
+<p>OS Detection(操作系统侦测)</p>
+<blockquote>
+<p>sudo nmap -O 192.168.1.250(需要超级用户权限)</p>
+</blockquote>
+</li>
+<li>
+<p>FireWall/IDS evasion(防火墙/IDS避规)</p>
+</li>
+</ul>
+</li>
+</ul>	
 <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="qinghecha">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 						</div>
 					</div>
@@ -51,6 +85,17 @@ Released   : 20100928
 			                <div class="post">
 			                        <h2 class="title">Autres articles</h2>
 			                </div>
+        
+ 
+			                <div class="post summary">
+						<h2 class="title"><a href="http://zhao-ji.github.io/2015/python-zi-fu-chuan-ti-huan.html">Python 字符串替换</a></h2>
+						<p class="meta"><span class="date">Le 四 15 一月 2015</span><span class="posted">Par <a href="#">海江田万里</a></span></p>
+						<div style="clear: both;">&nbsp;</div>
+						<div class="entry">
+						 <p>String Replace In Python</p>	
+						 <a class="readmore" href="http://zhao-ji.github.io/2015/python-zi-fu-chuan-ti-huan.html">Lire la suite …</a>
+						</div>
+					</div>
         
  
 			                <div class="post summary">
@@ -209,6 +254,7 @@ Released   : 20100928
 								 <li ><a href="http://zhao-ji.github.io/category/re.html">Re</a></li>
 								 <li ><a href="http://zhao-ji.github.io/category/python.html">Python</a></li>
 								 <li ><a href="http://zhao-ji.github.io/category/network.html">NetWork</a></li>
+								 <li ><a href="http://zhao-ji.github.io/category/linux-network.html">Linux Network</a></li>
 								 <li ><a href="http://zhao-ji.github.io/category/linux.html">Linux</a></li>
 							</ul>
 						</li>
