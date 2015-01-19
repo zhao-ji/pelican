@@ -133,6 +133,11 @@ zc 关闭折叠&lt;/p&gt;
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 &lt;h3&gt;将光标所在行移至屏幕正中: z.&lt;/h3&gt;
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h3&gt;编辑远程文件&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;vim scp://root@baidu.com:12345//etc/nginx/nginx.conf&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
 &lt;h3&gt;书签使用&lt;/h3&gt;
 &lt;h4&gt;命令模式&lt;/h4&gt;
 &lt;blockquote&gt;
@@ -411,7 +416,7 @@ in redis.conf &lt;/p&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</summary><category term="正则表达式"></category></entry><entry><title>Linux命令概要</title><link href="http://zhao-ji.github.io/2014/linuxming-ling-gai-yao.html" rel="alternate"></link><updated>2014-06-01T17:30:00+08:00</updated><author><name>海江田万里</name></author><id>tag:zhao-ji.github.io,2014-06-01:2014/linuxming-ling-gai-yao.html</id><summary type="html">&lt;p&gt;====================================&lt;/p&gt;
+&lt;/ul&gt;</summary></entry><entry><title>Linux命令概要</title><link href="http://zhao-ji.github.io/2014/linuxming-ling-gai-yao.html" rel="alternate"></link><updated>2014-06-01T17:30:00+08:00</updated><author><name>海江田万里</name></author><id>tag:zhao-ji.github.io,2014-06-01:2014/linuxming-ling-gai-yao.html</id><summary type="html">&lt;p&gt;====================================&lt;/p&gt;
 &lt;h1&gt;Linux命令概要&lt;/h1&gt;
 &lt;h2&gt;帮助命令&lt;/h2&gt;
 &lt;ul&gt;
@@ -545,4 +550,4 @@ in redis.conf &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;lpt&lt;/li&gt;
 &lt;li&gt;lpstat&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="Linux cheat-sheet"></category></entry></feed>
+&lt;/ul&gt;</summary></entry></feed>
