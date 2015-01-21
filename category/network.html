@@ -28,9 +28,68 @@ Released   : 20100928
         
 				<div id="content">
 					<div class="post">
-						<h2 class="title"><a href="http://zhao-ji.github.io/2015/socks5xie-yi.html">Socks5协议</a></h2>
-						<p class="meta"><span class="date">Le  </span><span class="posted">Par <a href="#">海江田万里</a></span><span>&nbsp; | Catégorie : <a href="http://zhao-ji.github.io/category/network.html">NetWork</a></span></p>
+						<h2 class="title"><a href="http://zhao-ji.github.io/2015/nmap-shi-yong.html">NMap 使用</a></h2>
+						<p class="meta"><span class="date">Le  </span><span class="posted">Par <a href="#">海江田万里</a></span><span>&nbsp; | Catégorie : <a href="http://zhao-ji.github.io/category/network.html">Network</a></span></p>
 					<p class="meta">Tags : </p>
+						<div style="clear: both;">&nbsp;</div>
+						<div class="entry">
+						 <p>================================</p>
+<h2>nmap 简介</h2>
+<h3>概要</h3>
+<ul>
+<li>
+<p>nmap (network mapper)</p>
+<ul>
+<li>nmap -A targetip (全面进攻型扫描)</li>
+</ul>
+</li>
+<li>
+<p>nmap 主要功能</p>
+<ul>
+<li>
+<p>Host Discovery(主机发现)</p>
+<blockquote>
+<p>nmap -sn 192.168.1.1/24</p>
+</blockquote>
+</li>
+<li>
+<p>Port Scanning(端口扫描)</p>
+<blockquote>
+<p>nmap -F 192.168.1.250(快速扫描前100个热门端口)
+nmap 192.168.1.250 -p 80 (指定端口扫描)
+nmap -r 192.168.1.1 (顺序扫描端口)</p>
+</blockquote>
+</li>
+<li>
+<p>Version Detection(版本侦测)</p>
+<blockquote>
+<p>nmap -sV 192.168.1.250</p>
+</blockquote>
+</li>
+<li>
+<p>OS Detection(操作系统侦测)</p>
+<blockquote>
+<p>sudo nmap -O 192.168.1.250(需要超级用户权限)</p>
+</blockquote>
+</li>
+<li>
+<p>FireWall/IDS evasion(防火墙/IDS避规)</p>
+</li>
+</ul>
+</li>
+</ul>	
+<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="qinghecha">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+						</div>
+					</div>
+	
+			                <div class="post">
+			                        <h2 class="title">Autres articles</h2>
+			                </div>
+        
+ 
+			                <div class="post summary">
+						<h2 class="title"><a href="http://zhao-ji.github.io/2015/socks5xie-yi.html">Socks5协议</a></h2>
+						<p class="meta"><span class="date">Le 二 13 一月 2015</span><span class="posted">Par <a href="#">海江田万里</a></span></p>
 						<div style="clear: both;">&nbsp;</div>
 						<div class="entry">
 						 <p>===========================</p>
@@ -115,62 +174,10 @@ Released   : 20100928
 <tbody>
 <tr>
 <td align="center">1 byte</td>
-<td align="center">1 byte</td>
-<td align="center">1 byte</td>
-<td align="center">1 byte</td>
-<td align="center">dynamic</td>
-<td align="center">2 byte</td>
-</tr>
-<tr>
-<td align="center">\x05</td>
-<td align="center">\x01</td>
-<td align="center">\x00</td>
-<td align="center">\x01</td>
-<td align="center"><strong>4 bytes of IPv4</strong> <strong>16bytes of IPv6</strong> <strong>1 byte of name length and the name</strong></td>
-<td align="center">\x08\x00</td>
-</tr>
-</tbody>
-</table>
-<ul>
-<li>服务端返回</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th align="center">版本号</th>
-<th align="center">状态</th>
-<th align="center">保留字段</th>
-<th align="center">地址类型</th>
-<th align="center">目的地址</th>
-<th align="center">端口号</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="center">1 byte</td>
-<td align="center">1 byte</td>
-<td align="center">1 byte</td>
-<td align="center">1 byte</td>
-<td align="center">跟客户端请求一致</td>
-<td align="center">2 bytes</td>
-</tr>
-<tr>
-<td align="center">\x05</td>
-<td align="center">\x00</td>
-<td align="center">\x00</td>
-<td align="center">\x01</td>
-<td align="center">as the client</td>
-<td align="center">\x08\x00</td>
-</tr>
-</tbody>
-</table>	
-<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="qinghecha">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+<td align="center">1 ...</td></tr></tbody></table>	
+						 <a class="readmore" href="http://zhao-ji.github.io/2015/socks5xie-yi.html">Lire la suite …</a>
 						</div>
 					</div>
-	
-			                <div class="post">
-			                        <h2 class="title">Autres articles</h2>
-			                </div>
         
  
 			                <div class="post summary">
@@ -204,7 +211,6 @@ Released   : 20100928
 								 <li ><a href="http://zhao-ji.github.io/category/qian-duan.html">前端</a></li>
 								 <li ><a href="http://zhao-ji.github.io/category/python.html">Python</a></li>
 								 <li class="active"><a href="http://zhao-ji.github.io/category/network.html">NetWork</a></li>
-								 <li ><a href="http://zhao-ji.github.io/category/linux-network.html">Linux, Network</a></li>
 								 <li ><a href="http://zhao-ji.github.io/category/linux.html">Linux</a></li>
 							</ul>
 						</li>
