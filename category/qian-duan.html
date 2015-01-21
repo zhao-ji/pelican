@@ -15,7 +15,7 @@ Released   : 20100928
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<title>netcat 使用笔记</title>
+<title>写博客也要讲基本法 - 前端</title>
 <link href="http://zhao-ji.github.io/theme/css/style.css" rel="stylesheet" type="text/css" media="screen" />
 <link href="http://zhao-ji.github.io/" type="application/atom+xml" rel="alternate" title="写博客也要讲基本法 ATOM Feed" />
 </head>
@@ -24,86 +24,37 @@ Released   : 20100928
 	<div id="page">
 		<div id="page-bgtop">
 			<div id="page-bgbtm">
-    
-                        	<div id="content">
+ 
+        
+				<div id="content">
 					<div class="post">
-						<h2 class="title"><a href="2015/netcat-shi-yong-bi-ji.html">netcat 使用笔记</a></h2>
-						<p class="meta"><span class="date">Le 一 12 一月 2015 </span><span class="posted">Par <a href="#">海江田万里</a></span><span>&nbsp; | Catégorie : <a href="http://zhao-ji.github.io/category/network.html">NetWork</a></span></p>
-					<p class="meta">Tags : </p>	
+						<h2 class="title"><a href="http://zhao-ji.github.io/2015/html5-shi-yong-viewportzi-gua-ying-ping-mu.html">HTML5 使用viewport自适应屏幕</a></h2>
+						<p class="meta"><span class="date">Le  </span><span class="posted">Par <a href="#">海江田万里</a></span><span>&nbsp; | Catégorie : <a href="http://zhao-ji.github.io/category/qian-duan.html">前端</a></span></p>
+					<p class="meta">Tags : </p>
 						<div style="clear: both;">&nbsp;</div>
 						<div class="entry">
-						 <p>======================</p>
-<h2>netcat 三个例子</h2>
-<h3>本地 client-server socket 模式</h3>
-<ul>
-<li>服务端：
-    nc -l 666</li>
-<li>客户端：
-    nc localhost 666</li>
-</ul>
-<h3>用 nc 传送文件</h3>
-<ul>
-<li>服务端：
-    nc -l 666 | tee new_file.txt</li>
-<li>客户端：
-    cat file.txt | nc localhost 666</li>
-</ul>
-<h3>永不断开的服务端</h3>
-<ul>
-<li>服务端：
-    nc -k -l 666</li>
-<li>客户端：
-    nc localhost 666</li>
-</ul>
-<h3>端口扫描</h3>
-<ul>
-<li><code>nc -zv example.com 1-65536 2&gt;&amp;1| grep succee</code></li>
-</ul>
-<h3>服务端启用执行 SHELL</h3>
-<ul>
-<li>服务端
-    nc -l 666 -e /bin/sh</li>
-</ul>
-<h2>netcat 参数详解</h2>
-<h3>两端都适用的参数</h3>
-<ul>
-<li>-u UDP连接</li>
-<li>-4 IPV4 -6 IPV6</li>
-<li>-d 不接受 stdin 的输入</li>
-</ul>
-<h3>服务端适用的参数</h3>
-<ul>
-<li>-k 即使客户端断开，服务端也不断</li>
-</ul>
-<h3>客户端适用的参数</h3>
-<ul>
-<li>-w 10 十秒接受不到内容就断开</li>
-<li>-n 不查询DNS</li>
-<li>-p 设置源端口</li>
-</ul>
-<h3>netcat 蜜罐</h3>
-<ul>
-<li>netcat -l -p 442 实时监听442端口</li>
-</ul>	
+						 <p>====================================</p>
+<h4>使用viewport自适应屏幕</h4>
+<blockquote>
+<p>https://gist.github.com/c34c44f9555e6646875c</p>
+</blockquote>
+<div class="highlight"><pre> <span class="c">&lt;!--在html代码的&lt;head&gt;...&lt;/head&gt;中嵌入下面代码--&gt;</span>
+ <span class="nt">&lt;meta</span> <span class="na">name=</span><span class="s">&quot;viewport&quot;</span>
+ <span class="na">content=</span><span class="s">&quot;</span>
+<span class="s"> height = </span><span class="cp">[</span><span class="nx">pixel_value</span> <span class="o">|</span> <span class="nx">device</span><span class="na">-height</span><span class="cp">]</span><span class="s"> ,</span>
+<span class="s"> width = </span><span class="cp">[</span><span class="nx">pixel_value</span> <span class="o">|</span> <span class="nx">device</span><span class="na">-width</span> <span class="cp">]</span><span class="s"> ,</span>
+<span class="s"> initial-scale = 0.5 ,</span>
+<span class="s"> minimum-scale = float_value ,</span>
+<span class="s"> maximum-scale = float_value ,</span>
+<span class="s"> user-scalable = </span><span class="cp">[</span><span class="nx">yes</span> <span class="o">|</span> <span class="nx">no</span><span class="cp">]</span><span class="s"> ,</span>
+<span class="s"> &quot;</span>
+ <span class="nt">/&gt;</span>
+</pre></div>	
 <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="qinghecha">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 						</div>
 					</div>
-			      
 					<div style="clear: both;">&nbsp;</div>
-                                        <div class="post">
-                                        <h2 class="title">Commentaires !</h2>
-                                            <div id="disqus_thread"></div>
-                                            <script type="text/javascript">
-                                               var disqus_identifier = "2015/netcat-shi-yong-bi-ji.html";
-                                               (function() {
-                                               var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                                               dsq.src = 'http://zhaoji.disqus.com/embed.js';
-                                               (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-                                              })();
-                                            </script>
-                                        </div>
 				</div>
-				<!-- end #content -->
 				<div id="sidebar">
 					<div id="logo">
 						<h1><a href="http://zhao-ji.github.io">写博客也要讲基本法</h1>
@@ -121,9 +72,9 @@ Released   : 20100928
 							<ul>
 								 <li ><a href="http://zhao-ji.github.io/category/tips.html">Tips</a></li>
 								 <li ><a href="http://zhao-ji.github.io/category/re.html">Re</a></li>
-								 <li ><a href="http://zhao-ji.github.io/category/qian-duan.html">前端</a></li>
+								 <li class="active"><a href="http://zhao-ji.github.io/category/qian-duan.html">前端</a></li>
 								 <li ><a href="http://zhao-ji.github.io/category/python.html">Python</a></li>
-								 <li class="active"><a href="http://zhao-ji.github.io/category/network.html">NetWork</a></li>
+								 <li ><a href="http://zhao-ji.github.io/category/network.html">NetWork</a></li>
 								 <li ><a href="http://zhao-ji.github.io/category/linux-network.html">Linux, Network</a></li>
 								 <li ><a href="http://zhao-ji.github.io/category/linux.html">Linux</a></li>
 							</ul>

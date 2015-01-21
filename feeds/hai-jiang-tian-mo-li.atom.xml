@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>写博客也要讲基本法</title><link href="http://zhao-ji.github.io/" rel="alternate"></link><link href="http://zhao-ji.github.io/feeds/hai-jiang-tian-mo-li.atom.xml" rel="self"></link><id>http://zhao-ji.github.io/</id><updated>2015-01-19T14:40:00+08:00</updated><entry><title>NMap 使用</title><link href="http://zhao-ji.github.io/2015/nmap-shi-yong.html" rel="alternate"></link><updated>2015-01-19T14:40:00+08:00</updated><author><name>海江田万里</name></author><id>tag:zhao-ji.github.io,2015-01-19:2015/nmap-shi-yong.html</id><summary type="html">&lt;p&gt;================================&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>写博客也要讲基本法</title><link href="http://zhao-ji.github.io/" rel="alternate"></link><link href="http://zhao-ji.github.io/feeds/hai-jiang-tian-mo-li.atom.xml" rel="self"></link><id>http://zhao-ji.github.io/</id><updated>2015-01-21T17:15:00+08:00</updated><entry><title>HTML5 使用viewport自适应屏幕</title><link href="http://zhao-ji.github.io/2015/html5-shi-yong-viewportzi-gua-ying-ping-mu.html" rel="alternate"></link><updated>2015-01-21T17:15:00+08:00</updated><author><name>海江田万里</name></author><id>tag:zhao-ji.github.io,2015-01-21:2015/html5-shi-yong-viewportzi-gua-ying-ping-mu.html</id><summary type="html">&lt;p&gt;====================================&lt;/p&gt;
+&lt;h4&gt;使用viewport自适应屏幕&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;https://gist.github.com/c34c44f9555e6646875c&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt; &lt;span class="c"&gt;&amp;lt;!--在html代码的&amp;lt;head&amp;gt;...&amp;lt;/head&amp;gt;中嵌入下面代码--&amp;gt;&lt;/span&gt;
+ &lt;span class="nt"&gt;&amp;lt;meta&lt;/span&gt; &lt;span class="na"&gt;name=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;viewport&amp;quot;&lt;/span&gt;
+ &lt;span class="na"&gt;content=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;
+&lt;span class="s"&gt; height = &lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;pixel_value&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="nx"&gt;device&lt;/span&gt;&lt;span class="na"&gt;-height&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="s"&gt; ,&lt;/span&gt;
+&lt;span class="s"&gt; width = &lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;pixel_value&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="nx"&gt;device&lt;/span&gt;&lt;span class="na"&gt;-width&lt;/span&gt; &lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="s"&gt; ,&lt;/span&gt;
+&lt;span class="s"&gt; initial-scale = 0.5 ,&lt;/span&gt;
+&lt;span class="s"&gt; minimum-scale = float_value ,&lt;/span&gt;
+&lt;span class="s"&gt; maximum-scale = float_value ,&lt;/span&gt;
+&lt;span class="s"&gt; user-scalable = &lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;yes&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="nx"&gt;no&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="s"&gt; ,&lt;/span&gt;
+&lt;span class="s"&gt; &amp;quot;&lt;/span&gt;
+ &lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary></entry><entry><title>NMap 使用</title><link href="http://zhao-ji.github.io/2015/nmap-shi-yong.html" rel="alternate"></link><updated>2015-01-19T14:40:00+08:00</updated><author><name>海江田万里</name></author><id>tag:zhao-ji.github.io,2015-01-19:2015/nmap-shi-yong.html</id><summary type="html">&lt;p&gt;================================&lt;/p&gt;
 &lt;h2&gt;nmap 简介&lt;/h2&gt;
 &lt;h3&gt;概要&lt;/h3&gt;
 &lt;ul&gt;
