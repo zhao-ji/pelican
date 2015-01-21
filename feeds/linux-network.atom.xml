@@ -23,7 +23,7 @@
 &lt;blockquote&gt;
 &lt;p&gt;nmap -F 192.168.1.250(快速扫描前100个热门端口)
 nmap 192.168.1.250 -p 80 (指定端口扫描)
-nmap -r 192.168.1.1 (以随机顺序扫描端口)&lt;/p&gt;
+nmap -r 192.168.1.1 (顺序扫描端口)&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;

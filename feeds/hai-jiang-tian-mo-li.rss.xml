@@ -23,7 +23,7 @@
 &lt;blockquote&gt;
 &lt;p&gt;nmap -F 192.168.1.250(快速扫描前100个热门端口)
 nmap 192.168.1.250 -p 80 (指定端口扫描)
-nmap -r 192.168.1.1 (以随机顺序扫描端口)&lt;/p&gt;
+nmap -r 192.168.1.1 (顺序扫描端口)&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
 &lt;li&gt;
@@ -233,6 +233,15 @@ in redis.conf &lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;echo 1 &amp;gt; /proc/sys/net/ipv4/icmp_echo_ignore_all&lt;/p&gt;
 &lt;p&gt;回应则设为0&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4&gt;用户管理&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;useradd -d /home/nightwish -g root nightwish
+添加用户 nightwish, home目录为 /home/nightwish 用户组为 root&lt;/p&gt;
+&lt;p&gt;userdel -r nigthwish 
+连同HOME目录一同删除&lt;/p&gt;
+&lt;p&gt;usermod -g hello nightwish
+修改用户&lt;/p&gt;
 &lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">海江田万里</dc:creator><pubDate>Tue, 13 Jan 2015 16:30:00 +0800</pubDate><guid>tag:zhao-ji.github.io,2015-01-13:2015/yi-yue-dian-di-shou-ji.html</guid></item><item><title>Socks5协议</title><link>http://zhao-ji.github.io/2015/socks5xie-yi.html</link><description>&lt;p&gt;===========================&lt;/p&gt;
 &lt;h2&gt;socks5 协议&lt;/h2&gt;
 &lt;h4&gt;特点&lt;/h4&gt;

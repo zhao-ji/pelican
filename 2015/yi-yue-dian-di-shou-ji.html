@@ -212,6 +212,15 @@ in redis.conf </p>
 <blockquote>
 <p>echo 1 &gt; /proc/sys/net/ipv4/icmp_echo_ignore_all</p>
 <p>回应则设为0</p>
+</blockquote>
+<h4>用户管理</h4>
+<blockquote>
+<p>useradd -d /home/nightwish -g root nightwish
+添加用户 nightwish, home目录为 /home/nightwish 用户组为 root</p>
+<p>userdel -r nigthwish 
+连同HOME目录一同删除</p>
+<p>usermod -g hello nightwish
+修改用户</p>
 </blockquote>	
 <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="qinghecha">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 						</div>
