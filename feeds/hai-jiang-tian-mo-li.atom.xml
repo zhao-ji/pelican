@@ -161,6 +161,22 @@ Out[9]: 'Ni Hao '&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 &lt;h4&gt;iter(func(), value) : make the iterator of func() until func()==value&lt;/h4&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h4&gt;条件判断&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In [1]: a = 3&lt;/p&gt;
+&lt;p&gt;In [2]: if 1&amp;lt; a&amp;lt; 4:
+   ...:     print 4
+   ...:   &lt;br /&gt;
+        4&lt;/p&gt;
+&lt;p&gt;In [3]: if not (1 &amp;lt; a &amp;lt; 4):
+   ...:     print 4
+   ...:     &lt;/p&gt;
+&lt;p&gt;In [4]: if not 4&amp;lt;a&amp;lt;5:
+   ...:     print 4
+   ...:   &lt;br /&gt;
+        4&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;&lt;br&gt;
 &lt;br&gt;&lt;/p&gt;
 &lt;h2&gt;VIM Tips&lt;/h2&gt;
@@ -258,6 +274,15 @@ in redis.conf &lt;/p&gt;
 连同HOME目录一同删除&lt;/p&gt;
 &lt;p&gt;usermod -g hello nightwish
 修改用户&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;br&gt;
+&lt;br&gt;&lt;/p&gt;
+&lt;h2&gt;前端 Tips&lt;/h2&gt;
+&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;h4&gt;移动端设置 viewport 使网页自适应&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;&lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;&lt;code&gt;
+&lt;a href="http://www.ruanyifeng.com/blog/2012/05/responsive_web_design.html"&gt;网页自适应--软一峰&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;</summary></entry><entry><title>Socks5协议</title><link href="http://zhao-ji.github.io/2015/socks5xie-yi.html" rel="alternate"></link><updated>2015-01-13T12:16:00+08:00</updated><author><name>海江田万里</name></author><id>tag:zhao-ji.github.io,2015-01-13:2015/socks5xie-yi.html</id><summary type="html">&lt;p&gt;===========================&lt;/p&gt;
 &lt;h2&gt;socks5 协议&lt;/h2&gt;
 &lt;h4&gt;特点&lt;/h4&gt;
