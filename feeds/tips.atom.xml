@@ -7,7 +7,7 @@
 &lt;/blockquote&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="n"&gt;def&lt;/span&gt; &lt;span class="n"&gt;brute&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;choices&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;length&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
         &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
-            &lt;span class="err"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;join&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;candidate&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;candidate&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt;
+            &lt;span class="err"&gt;''&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;join&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;candidate&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;candidate&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt;
             &lt;span class="n"&gt;chain&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;from_iterable&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
                 &lt;span class="n"&gt;product&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
                     &lt;span class="n"&gt;choices&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
@@ -16,9 +16,7 @@
             &lt;span class="p"&gt;)&lt;/span&gt;
         &lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
 &lt;h4&gt;isinstance 用法&lt;/h4&gt;
 &lt;blockquote&gt;
 &lt;p&gt;isinstance(...)
@@ -41,9 +39,9 @@ Out[6]: True&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;strong&gt;isinstance 的第二个参数可以是 类型、类、包含类型或类的元祖。&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
 &lt;h4&gt;How to flatten arbitrarily nested lists in Python?&lt;/h4&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="n"&gt;nested_list&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;],[&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;hi&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]],&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[[[&lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;hello&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]]]]]&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="n"&gt;nested_list&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;],[&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;hi&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="p"&gt;]],&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[[[&lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;hello&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="p"&gt;]]]]]&lt;/span&gt;
 
     &lt;span class="n"&gt;def&lt;/span&gt; &lt;span class="n"&gt;flatten&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;nested&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
         &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;item&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;nested&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
@@ -55,11 +53,9 @@ Out[6]: True&lt;/p&gt;
 
     &lt;span class="n"&gt;print&lt;/span&gt; &lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;flatten&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;nested_list&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
 
-    &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;hi&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;hello&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+    &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;hi&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;hello&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
 &lt;h4&gt;map 传参数可以设置默认参数，和使用*方法&lt;/h4&gt;
 &lt;blockquote&gt;
 &lt;p&gt;In [1]: sum_5 = lambda x, y=5: x+y&lt;/p&gt;
@@ -71,7 +67,7 @@ Out[3]: 7&lt;/p&gt;
 &lt;p&gt;In [7]: sum_new(1,2,3,4)
 Out[7]: 10&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
 &lt;h4&gt;bisect 模块二分查找，作用对象：字符串、列表&lt;/h4&gt;
 &lt;blockquote&gt;
 &lt;p&gt;In [1]: from bisect import bisect, insort&lt;/p&gt;
@@ -82,68 +78,68 @@ Out[4]: [1, 2, 3, 4, 5, 6, 7, 8, 9]&lt;/p&gt;
 &lt;p&gt;In [5]: bisect(a, 6)
 Out[5]: 6&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
 &lt;h4&gt;unidecode 将汉字转为拼音&lt;/h4&gt;
 &lt;blockquote&gt;
 &lt;p&gt;In [8]: from unidecode import unidecode&lt;/p&gt;
 &lt;p&gt;In [9]: unidecode(u'你好')
 Out[9]: 'Ni Hao '&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
 &lt;h4&gt;iter(func(), value) : make the iterator of func() until func()==value&lt;/h4&gt;
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
 &lt;h4&gt;条件判断&lt;/h4&gt;
 &lt;blockquote&gt;
 &lt;p&gt;In [1]: a = 3&lt;/p&gt;
 &lt;p&gt;In [2]: if 1&amp;lt; a&amp;lt; 4:
    ...:     print 4
-   ...:   &lt;br /&gt;
+   ...:   &lt;br/&gt;
         4&lt;/p&gt;
 &lt;p&gt;In [3]: if not (1 &amp;lt; a &amp;lt; 4):
    ...:     print 4
    ...:     &lt;/p&gt;
 &lt;p&gt;In [4]: if not 4&amp;lt;a&amp;lt;5:
    ...:     print 4
-   ...:   &lt;br /&gt;
+   ...:   &lt;br/&gt;
         4&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;br&gt;
-&lt;br&gt;&lt;/p&gt;
+&lt;br/&gt;&lt;/br&gt;&lt;/p&gt;
 &lt;h2&gt;VIM Tips&lt;/h2&gt;
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
 &lt;h4&gt;以普通用户身份打开的文件需要以sudo身份保存&lt;/h4&gt;
 &lt;blockquote&gt;
 &lt;p&gt;:w !sudo tee %&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
 &lt;h4&gt;插入模式 自动补全&lt;/h4&gt;
 &lt;blockquote&gt;
 &lt;p&gt;CTRL + N&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
 &lt;h4&gt;打开文件自动回到上次编辑位置&lt;/h4&gt;
 &lt;blockquote&gt;
 &lt;p&gt;au BufReadPost * if line("'\"") &amp;gt; 0|if line("'\"") &amp;lt;= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
 &lt;h4&gt;代码折叠&lt;/h4&gt;
 &lt;blockquote&gt;
 &lt;p&gt;V模式选择文本，可以使用%快速匹配括号, zf 折叠
 zo 打开折叠
 zc 关闭折叠&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
 &lt;h3&gt;HML 分别将光标移至屏幕最上、正中、最下&lt;/h3&gt;
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
 &lt;h3&gt;IrA 列选择后分别在前面、当下、后面修改或添加&lt;/h3&gt;
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
 &lt;h3&gt;将光标所在行移至屏幕正中: z.&lt;/h3&gt;
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
 &lt;h3&gt;编辑远程文件&lt;/h3&gt;
 &lt;blockquote&gt;
 &lt;p&gt;vim scp://root@baidu.com:12345//etc/nginx/nginx.conf&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
 &lt;h3&gt;书签使用&lt;/h3&gt;
 &lt;h4&gt;命令模式&lt;/h4&gt;
 &lt;blockquote&gt;
@@ -159,38 +155,38 @@ zc 关闭折叠&lt;/p&gt;
 &lt;p&gt;'. 回到上次编辑位置所在行&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;br&gt;
-&lt;br&gt;&lt;/p&gt;
+&lt;br/&gt;&lt;/br&gt;&lt;/p&gt;
 &lt;h2&gt;Shell Tips&lt;/h2&gt;
 &lt;h4&gt;查看当前目录文件夹大小&lt;/h4&gt;
 &lt;blockquote&gt;
 &lt;p&gt;du -h --max-depth=1 ./&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
 &lt;h4&gt;修改系统默认编辑器&lt;/h4&gt;
 &lt;blockquote&gt;
 &lt;p&gt;sudo update-alternatives --config editor&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
 &lt;h4&gt;redis 开启远端访问&lt;/h4&gt;
 &lt;blockquote&gt;
 &lt;p&gt;remove the "bind 127.0.0.1" 
 set password after "requirepass" 
 in redis.conf &lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
 &lt;h4&gt;mongo 修改字段名&lt;/h4&gt;
 &lt;blockquote&gt;
 &lt;p&gt;db.collection.update({}, {$rename: {old_name: new_name}})&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
 &lt;h4&gt;unalias 删除alias后的命令， 'ls' 和 \ls 能强制调用原始ls命令&lt;/h4&gt;
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
 &lt;h4&gt;禁用ubuntu内部错误报告&lt;/h4&gt;
 &lt;blockquote&gt;
 &lt;p&gt;sudo service apport stop&lt;/p&gt;
 &lt;p&gt;vim /etc/default/apport enabled=0&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
 &lt;h4&gt;设置服务器不回应PING&lt;/h4&gt;
 &lt;blockquote&gt;
 &lt;p&gt;echo 1 &amp;gt; /proc/sys/net/ipv4/icmp_echo_ignore_all&lt;/p&gt;
@@ -206,11 +202,11 @@ in redis.conf &lt;/p&gt;
 修改用户&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;&lt;br&gt;
-&lt;br&gt;&lt;/p&gt;
+&lt;br/&gt;&lt;/br&gt;&lt;/p&gt;
 &lt;h2&gt;前端 Tips&lt;/h2&gt;
-&lt;p&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br/&gt;&lt;/p&gt;
 &lt;h4&gt;移动端设置 viewport 使网页自适应&lt;/h4&gt;
 &lt;blockquote&gt;
-&lt;p&gt;&lt;code&gt;&lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;&lt;code&gt;
-&lt;a href="http://www.ruanyifeng.com/blog/2012/05/responsive_web_design.html"&gt;网页自适应--软一峰&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;&lt;meta content="width=device-width, initial-scale=1" name="viewport"/&gt;&lt;code&gt;
+&lt;a href="http://www.ruanyifeng.com/blog/2012/05/responsive_web_design.html"&gt;网页自适应--软一峰&lt;/a&gt;&lt;/code&gt;&lt;/code&gt;&lt;/p&gt;
 &lt;/blockquote&gt;</summary></entry></feed>

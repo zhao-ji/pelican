@@ -3,7 +3,7 @@
 &lt;h1&gt;正则表达式&lt;/h1&gt;
 &lt;h2&gt;元字符&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;em&gt;()&lt;/em&gt;  &lt;em&gt;[]&lt;/em&gt;  &lt;em&gt;{}&lt;/em&gt;     捕获器 选择器  次数&lt;/li&gt;
+&lt;li&gt;&lt;em&gt;()&lt;/em&gt; &lt;em&gt;[]&lt;/em&gt; &lt;em&gt;{}&lt;/em&gt;     捕获器 选择器  次数&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;*&lt;/em&gt; &lt;em&gt;+&lt;/em&gt; &lt;em&gt;?&lt;/em&gt;  零和任意多次  一次和任意多次  零次和一次&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;^&lt;/em&gt; &lt;em&gt;$&lt;/em&gt; 匹配开始 匹配结束&lt;/li&gt;
 &lt;li&gt;&lt;em&gt;\&lt;/em&gt; 转义&lt;/li&gt;
