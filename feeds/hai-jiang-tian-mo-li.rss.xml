@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>写博客也要讲基本法</title><link>http://zhao-ji.github.io/</link><description></description><atom:link href="http://zhao-ji.github.io/feeds/hai-jiang-tian-mo-li.rss.xml" rel="self"></atom:link><lastBuildDate>Fri, 23 Jan 2015 14:30:00 +0800</lastBuildDate><item><title>12306 数据分析</title><link>http://zhao-ji.github.io/2015/12306-shu-ju-fen-xi.html</link><description>&lt;p&gt;============================================&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>写博客也要讲基本法</title><link>http://zhao-ji.github.io/</link><description></description><atom:link href="http://zhao-ji.github.io/feeds/hai-jiang-tian-mo-li.rss.xml" rel="self"></atom:link><lastBuildDate>Wed, 04 Feb 2015 19:00:00 +0800</lastBuildDate><item><title>二月点滴收集</title><link>http://zhao-ji.github.io/2015/er-yue-dian-di-shou-ji.html</link><description>&lt;p&gt;=======================&lt;/p&gt;
+&lt;h2&gt;Shell Tips&lt;/h2&gt;
+&lt;h4&gt;dig 用法&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;dig @server name type&lt;/li&gt;
+&lt;li&gt;+TCP 使用TCP查询&lt;/li&gt;
+&lt;li&gt;+short 简要答复&lt;/li&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">海江田万里</dc:creator><pubDate>Wed, 04 Feb 2015 19:00:00 +0800</pubDate><guid>tag:zhao-ji.github.io,2015-02-04:2015/er-yue-dian-di-shou-ji.html</guid></item><item><title>12306 数据分析</title><link>http://zhao-ji.github.io/2015/12306-shu-ju-fen-xi.html</link><description>&lt;p&gt;============================================&lt;/p&gt;
 &lt;h2&gt;样本说明&lt;/h2&gt;
 &lt;p&gt;收集到12306泄漏数据共&lt;strong&gt;131653&lt;/strong&gt;条，每条有&lt;strong&gt;7&lt;/strong&gt;列数据，这七列数据分别为：
     - 姓名
