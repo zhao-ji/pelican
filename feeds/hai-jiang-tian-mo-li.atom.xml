@@ -6,7 +6,8 @@
 &lt;li&gt;dig @server name type&lt;/li&gt;
 &lt;li&gt;+TCP 使用TCP查询&lt;/li&gt;
 &lt;li&gt;+short 简要答复&lt;/li&gt;
-&lt;/ul&gt;</summary></entry><entry><title>12306 数据分析</title><link href="http://zhao-ji.github.io/2015/12306-shu-ju-fen-xi.html" rel="alternate"></link><updated>2015-01-23T14:30:00+08:00</updated><author><name>海江田万里</name></author><id>tag:zhao-ji.github.io,2015-01-23:2015/12306-shu-ju-fen-xi.html</id><summary type="html">&lt;p&gt;============================================&lt;/p&gt;
+&lt;/ul&gt;
+&lt;h4&gt;look  查询相同起始的单词&lt;/h4&gt;</summary></entry><entry><title>12306 数据分析</title><link href="http://zhao-ji.github.io/2015/12306-shu-ju-fen-xi.html" rel="alternate"></link><updated>2015-01-23T14:30:00+08:00</updated><author><name>海江田万里</name></author><id>tag:zhao-ji.github.io,2015-01-23:2015/12306-shu-ju-fen-xi.html</id><summary type="html">&lt;p&gt;============================================&lt;/p&gt;
 &lt;h2&gt;样本说明&lt;/h2&gt;
 &lt;p&gt;收集到12306泄漏数据共&lt;strong&gt;131653&lt;/strong&gt;条，每条有&lt;strong&gt;7&lt;/strong&gt;列数据，这七列数据分别为：
     - 姓名
