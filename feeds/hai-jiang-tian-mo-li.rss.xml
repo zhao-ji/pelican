@@ -7,7 +7,14 @@
 &lt;li&gt;+TCP 使用TCP查询&lt;/li&gt;
 &lt;li&gt;+short 简要答复&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4&gt;look  查询相同起始的单词&lt;/h4&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">海江田万里</dc:creator><pubDate>Wed, 04 Feb 2015 19:00:00 +0800</pubDate><guid>tag:zhao-ji.github.io,2015-02-04:2015/er-yue-dian-di-shou-ji.html</guid></item><item><title>12306 数据分析</title><link>http://zhao-ji.github.io/2015/12306-shu-ju-fen-xi.html</link><description>&lt;p&gt;============================================&lt;/p&gt;
+&lt;h4&gt;look  查询相同起始的单词&lt;/h4&gt;
+&lt;h2&gt;Python Tips&lt;/h2&gt;
+&lt;h4&gt;shell 彩色输出&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="n"&gt;from&lt;/span&gt; &lt;span class="n"&gt;termcolor&lt;/span&gt; &lt;span class="n"&gt;import&lt;/span&gt; &lt;span class="n"&gt;colored&lt;/span&gt;
+
+    &lt;span class="n"&gt;print&lt;/span&gt; &lt;span class="n"&gt;colored&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;Hello&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;blue&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s"&gt;", "&lt;/span&gt; \
+        &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;colored&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;V2EX&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;cyan&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;attrs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;bold&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">海江田万里</dc:creator><pubDate>Wed, 04 Feb 2015 19:00:00 +0800</pubDate><guid>tag:zhao-ji.github.io,2015-02-04:2015/er-yue-dian-di-shou-ji.html</guid></item><item><title>12306 数据分析</title><link>http://zhao-ji.github.io/2015/12306-shu-ju-fen-xi.html</link><description>&lt;p&gt;============================================&lt;/p&gt;
 &lt;h2&gt;样本说明&lt;/h2&gt;
 &lt;p&gt;收集到12306泄漏数据共&lt;strong&gt;131653&lt;/strong&gt;条，每条有&lt;strong&gt;7&lt;/strong&gt;列数据，这七列数据分别为：
     - 姓名

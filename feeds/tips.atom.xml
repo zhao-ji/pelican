@@ -7,7 +7,14 @@
 &lt;li&gt;+TCP 使用TCP查询&lt;/li&gt;
 &lt;li&gt;+short 简要答复&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h4&gt;look  查询相同起始的单词&lt;/h4&gt;</summary></entry><entry><title>一月点滴收集</title><link href="http://zhao-ji.github.io/2015/yi-yue-dian-di-shou-ji.html" rel="alternate"></link><updated>2015-01-13T16:30:00+08:00</updated><author><name>海江田万里</name></author><id>tag:zhao-ji.github.io,2015-01-13:2015/yi-yue-dian-di-shou-ji.html</id><summary type="html">&lt;p&gt;=======================&lt;/p&gt;
+&lt;h4&gt;look  查询相同起始的单词&lt;/h4&gt;
+&lt;h2&gt;Python Tips&lt;/h2&gt;
+&lt;h4&gt;shell 彩色输出&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="n"&gt;from&lt;/span&gt; &lt;span class="n"&gt;termcolor&lt;/span&gt; &lt;span class="n"&gt;import&lt;/span&gt; &lt;span class="n"&gt;colored&lt;/span&gt;
+
+    &lt;span class="n"&gt;print&lt;/span&gt; &lt;span class="n"&gt;colored&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;Hello&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;blue&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s"&gt;", "&lt;/span&gt; \
+        &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;colored&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;V2EX&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;cyan&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;attrs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;bold&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary></entry><entry><title>一月点滴收集</title><link href="http://zhao-ji.github.io/2015/yi-yue-dian-di-shou-ji.html" rel="alternate"></link><updated>2015-01-13T16:30:00+08:00</updated><author><name>海江田万里</name></author><id>tag:zhao-ji.github.io,2015-01-13:2015/yi-yue-dian-di-shou-ji.html</id><summary type="html">&lt;p&gt;=======================&lt;/p&gt;
 &lt;h2&gt;Python Tips&lt;/h2&gt;
 &lt;h4&gt;Python 暴力字典生成（brute 算法）&lt;/h4&gt;
 &lt;blockquote&gt;
