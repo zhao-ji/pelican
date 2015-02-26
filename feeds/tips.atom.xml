@@ -8,6 +8,7 @@
 &lt;li&gt;+short 简要答复&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h4&gt;look  查询相同起始的单词&lt;/h4&gt;
+&lt;h4&gt;普通用户和超级用户 以提示符（prompt）$和#区分&lt;/h4&gt;
 &lt;h2&gt;Python Tips&lt;/h2&gt;
 &lt;h4&gt;shell 彩色输出&lt;/h4&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="n"&gt;from&lt;/span&gt; &lt;span class="n"&gt;termcolor&lt;/span&gt; &lt;span class="n"&gt;import&lt;/span&gt; &lt;span class="n"&gt;colored&lt;/span&gt;
