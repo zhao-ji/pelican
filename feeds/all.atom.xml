@@ -1,5 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>写博客也要讲基本法</title><link href="http://zhao-ji.github.io/" rel="alternate"></link><link href="http://zhao-ji.github.io/feeds/all.atom.xml" rel="self"></link><id>http://zhao-ji.github.io/</id><updated>2015-02-04T19:00:00+08:00</updated><entry><title>二月点滴收集</title><link href="http://zhao-ji.github.io/2015/er-yue-dian-di-shou-ji.html" rel="alternate"></link><updated>2015-02-04T19:00:00+08:00</updated><author><name>海江田万里</name></author><id>tag:zhao-ji.github.io,2015-02-04:2015/er-yue-dian-di-shou-ji.html</id><summary type="html">&lt;p&gt;=======================&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>写博客也要讲基本法</title><link href="http://zhao-ji.github.io/" rel="alternate"></link><link href="http://zhao-ji.github.io/feeds/all.atom.xml" rel="self"></link><id>http://zhao-ji.github.io/</id><updated>2015-03-12T16:30:00+08:00</updated><entry><title>IPython 使用笔记</title><link href="http://zhao-ji.github.io/2015/ipython-shi-yong-bi-ji.html" rel="alternate"></link><updated>2015-03-12T16:30:00+08:00</updated><author><name>海江田万里</name></author><id>tag:zhao-ji.github.io,2015-03-12:2015/ipython-shi-yong-bi-ji.html</id><summary type="html">&lt;p&gt;====================================&lt;/p&gt;
+&lt;h4&gt;主要功能&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;IPython 结合了shell的方便特性和输入输出的历史记录机制&lt;/li&gt;
+&lt;li&gt;进入标准python帮助系统，help()进入，quit退出&lt;/li&gt;
+&lt;li&gt;魔法命令: %magic 可查看魔法子系统&lt;/li&gt;
+&lt;li&gt;系统命令别名: %alias 查看&lt;/li&gt;
+&lt;li&gt;对象帮助: &lt;ul&gt;
+&lt;li&gt;?word or word? 对象信息&lt;/li&gt;
+&lt;li&gt;??word or word?? 对象详细信息&lt;/li&gt;
+&lt;li&gt;%pdoc object 显示对象doc-string&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;自动补全： TAB 或者 Ctrl+p/Ctrl+n 或者 Ctrl+r 或者 %hist&lt;/li&gt;
+&lt;li&gt;跨会话永久命令历史&lt;/li&gt;
+&lt;li&gt;工作记录保存和恢复&lt;/li&gt;
+&lt;li&gt;module deep-reload&lt;/li&gt;
+&lt;li&gt;彩色输出&lt;/li&gt;
+&lt;li&gt;获得输入历史 _i _ii _iii&lt;/li&gt;
+&lt;li&gt;获得输出历史 _ __ ___&lt;/li&gt;
+&lt;li&gt;括号引号自动补全&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Tips&lt;/h2&gt;</summary></entry><entry><title>二月点滴收集</title><link href="http://zhao-ji.github.io/2015/er-yue-dian-di-shou-ji.html" rel="alternate"></link><updated>2015-02-04T19:00:00+08:00</updated><author><name>海江田万里</name></author><id>tag:zhao-ji.github.io,2015-02-04:2015/er-yue-dian-di-shou-ji.html</id><summary type="html">&lt;p&gt;=======================&lt;/p&gt;
 &lt;h2&gt;Shell Tips&lt;/h2&gt;
 &lt;h4&gt;dig 用法&lt;/h4&gt;
 &lt;ul&gt;

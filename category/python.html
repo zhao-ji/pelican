@@ -28,21 +28,50 @@ Released   : 20100928
         
 				<div id="content">
 					<div class="post">
-						<h2 class="title"><a href="http://zhao-ji.github.io/2015/python-zi-fu-chuan-ti-huan.html">Python 字符串替换</a></h2>
+						<h2 class="title"><a href="http://zhao-ji.github.io/2015/ipython-shi-yong-bi-ji.html">IPython 使用笔记</a></h2>
 						<p class="meta"><span class="date">Le  </span><span class="posted">Par <a href="#">海江田万里</a></span><span>&nbsp; | Catégorie : <a href="http://zhao-ji.github.io/category/python.html">Python</a></span></p>
 					<p class="meta">Tags : </p>
 						<div style="clear: both;">&nbsp;</div>
 						<div class="entry">
-						 <p>=================================</p>
-<h2>字符串替换</h2>
-<div class="highlight"><pre><span class="n">def</span> <span class="n">replace_words</span><span class="p">(</span><span class="n">text</span><span class="p">,</span> <span class="n">word_dic</span><span class="p">)</span><span class="o">:</span> 
-    <span class="n">yo</span> <span class="o">=</span> <span class="n">re</span><span class="p">.</span><span class="n">compile</span><span class="p">(</span><span class="sc">'|'</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">map</span><span class="p">(</span><span class="n">re</span><span class="p">.</span><span class="n">escape</span><span class="p">,</span> <span class="n">word_dic</span><span class="p">)))</span> 
-    <span class="n">def</span> <span class="n">translate</span><span class="p">(</span><span class="n">mat</span><span class="p">)</span><span class="o">:</span> 
-        <span class="k">return</span> <span class="n">word_dic</span><span class="p">[</span><span class="n">mat</span><span class="p">.</span><span class="n">group</span><span class="p">(</span><span class="mi">0</span><span class="p">)]</span> 
-    <span class="k">return</span> <span class="n">yo</span><span class="p">.</span><span class="n">sub</span><span class="p">(</span><span class="n">translate</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
-</pre></div>
-<p>链接： <a href="http://segmentfault.com/q/1010000002474308">请教：Python字符串替换的一个问题</a></p>	
+						 <p>====================================</p>
+<h4>主要功能</h4>
+<ul>
+<li>IPython 结合了shell的方便特性和输入输出的历史记录机制</li>
+<li>进入标准python帮助系统，help()进入，quit退出</li>
+<li>魔法命令: %magic 可查看魔法子系统</li>
+<li>系统命令别名: %alias 查看</li>
+<li>对象帮助: <ul>
+<li>?word or word? 对象信息</li>
+<li>??word or word?? 对象详细信息</li>
+<li>%pdoc object 显示对象doc-string</li>
+</ul>
+</li>
+<li>自动补全： TAB 或者 Ctrl+p/Ctrl+n 或者 Ctrl+r 或者 %hist</li>
+<li>跨会话永久命令历史</li>
+<li>工作记录保存和恢复</li>
+<li>module deep-reload</li>
+<li>彩色输出</li>
+<li>获得输入历史 _i _ii _iii</li>
+<li>获得输出历史 _ __ ___</li>
+<li>括号引号自动补全</li>
+</ul>
+<h2>Tips</h2>	
 <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="qinghecha">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+						</div>
+					</div>
+	
+			                <div class="post">
+			                        <h2 class="title">Autres articles</h2>
+			                </div>
+        
+ 
+			                <div class="post summary">
+						<h2 class="title"><a href="http://zhao-ji.github.io/2015/python-zi-fu-chuan-ti-huan.html">Python 字符串替换</a></h2>
+						<p class="meta"><span class="date">Le 四 15 一月 2015</span><span class="posted">Par <a href="#">海江田万里</a></span></p>
+						<div style="clear: both;">&nbsp;</div>
+						<div class="entry">
+						 <p>String Replace In Python</p>	
+						 <a class="readmore" href="http://zhao-ji.github.io/2015/python-zi-fu-chuan-ti-huan.html">Lire la suite …</a>
 						</div>
 					</div>
 					<div style="clear: both;">&nbsp;</div>
