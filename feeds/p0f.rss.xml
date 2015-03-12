@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>写博客也要讲基本法</title><link>http://zhao-ji.github.io/</link><description></description><atom:link href="http://zhao-ji.github.io/feeds/hai-jiang-tian-mo-li.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 12 Mar 2015 16:30:00 +0800</lastBuildDate><item><title>IPython 使用笔记</title><link>http://zhao-ji.github.io/2015/ipython-shi-yong-bi-ji.html</link><description>&lt;p&gt;====================================&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>写博客也要讲基本法</title><link>http://zhao-ji.github.io/</link><description></description><atom:link href="http://zhao-ji.github.io/feeds/p0f.rss.xml" rel="self"></atom:link><lastBuildDate>Thu, 12 Mar 2015 16:30:00 +0800</lastBuildDate><item><title>IPython 使用笔记</title><link>http://zhao-ji.github.io/2015/ipython-shi-yong-bi-ji.html</link><description>&lt;p&gt;====================================&lt;/p&gt;
 &lt;h4&gt;主要功能&lt;/h4&gt;
 &lt;ul&gt;
 &lt;li&gt;IPython 结合了shell的方便特性和输入输出的历史记录机制&lt;/li&gt;
@@ -21,7 +21,7 @@
 &lt;li&gt;获得输出历史 _ __ ___&lt;/li&gt;
 &lt;li&gt;括号引号自动补全&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;Tips&lt;/h2&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">海江田万里</dc:creator><pubDate>Thu, 12 Mar 2015 16:30:00 +0800</pubDate><guid>tag:zhao-ji.github.io,2015-03-12:2015/ipython-shi-yong-bi-ji.html</guid></item><item><title>二月点滴收集</title><link>http://zhao-ji.github.io/2015/er-yue-dian-di-shou-ji.html</link><description>&lt;p&gt;=======================&lt;/p&gt;
+&lt;h2&gt;Tips&lt;/h2&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">p0f</dc:creator><pubDate>Thu, 12 Mar 2015 16:30:00 +0800</pubDate><guid>tag:zhao-ji.github.io,2015-03-12:2015/ipython-shi-yong-bi-ji.html</guid></item><item><title>二月点滴收集</title><link>http://zhao-ji.github.io/2015/er-yue-dian-di-shou-ji.html</link><description>&lt;p&gt;=======================&lt;/p&gt;
 &lt;h2&gt;Shell Tips&lt;/h2&gt;
 &lt;h4&gt;dig 用法&lt;/h4&gt;
 &lt;ul&gt;
@@ -48,7 +48,7 @@
 &lt;p&gt;Command Mode: :20,30y &lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2&gt;二月份春节假期和手术准备，所以blog和github更新很少&lt;/h2&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">海江田万里</dc:creator><pubDate>Wed, 04 Feb 2015 19:00:00 +0800</pubDate><guid>tag:zhao-ji.github.io,2015-02-04:2015/er-yue-dian-di-shou-ji.html</guid></item><item><title>12306 数据分析</title><link>http://zhao-ji.github.io/2015/12306-shu-ju-fen-xi.html</link><description>&lt;p&gt;============================================&lt;/p&gt;
+&lt;h2&gt;二月份春节假期和手术准备，所以blog和github更新很少&lt;/h2&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">p0f</dc:creator><pubDate>Wed, 04 Feb 2015 19:00:00 +0800</pubDate><guid>tag:zhao-ji.github.io,2015-02-04:2015/er-yue-dian-di-shou-ji.html</guid></item><item><title>12306 数据分析</title><link>http://zhao-ji.github.io/2015/12306-shu-ju-fen-xi.html</link><description>&lt;p&gt;============================================&lt;/p&gt;
 &lt;h2&gt;样本说明&lt;/h2&gt;
 &lt;p&gt;收集到12306泄漏数据共&lt;strong&gt;131653&lt;/strong&gt;条，每条有&lt;strong&gt;7&lt;/strong&gt;列数据，这七列数据分别为：
     - 姓名
@@ -659,7 +659,7 @@
 &lt;td&gt;&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
-&lt;/table&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">海江田万里</dc:creator><pubDate>Fri, 23 Jan 2015 14:30:00 +0800</pubDate><guid>tag:zhao-ji.github.io,2015-01-23:2015/12306-shu-ju-fen-xi.html</guid></item><item><title>HTML5 使用viewport自适应屏幕</title><link>http://zhao-ji.github.io/2015/html5-shi-yong-viewportzi-gua-ying-ping-mu.html</link><description>&lt;p&gt;====================================&lt;/p&gt;
+&lt;/table&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">p0f</dc:creator><pubDate>Fri, 23 Jan 2015 14:30:00 +0800</pubDate><guid>tag:zhao-ji.github.io,2015-01-23:2015/12306-shu-ju-fen-xi.html</guid></item><item><title>HTML5 使用viewport自适应屏幕</title><link>http://zhao-ji.github.io/2015/html5-shi-yong-viewportzi-gua-ying-ping-mu.html</link><description>&lt;p&gt;====================================&lt;/p&gt;
 &lt;h4&gt;使用viewport自适应屏幕&lt;/h4&gt;
 &lt;blockquote&gt;
 &lt;p&gt;https://gist.github.com/c34c44f9555e6646875c&lt;/p&gt;
@@ -675,7 +675,7 @@
 &lt;span class="s"&gt; user-scalable = &lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;yes&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="nx"&gt;no&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="s"&gt; ,&lt;/span&gt;
 &lt;span class="s"&gt; "&lt;/span&gt;
  &lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">海江田万里</dc:creator><pubDate>Wed, 21 Jan 2015 17:15:00 +0800</pubDate><guid>tag:zhao-ji.github.io,2015-01-21:2015/html5-shi-yong-viewportzi-gua-ying-ping-mu.html</guid></item><item><title>NMap 使用</title><link>http://zhao-ji.github.io/2015/nmap-shi-yong.html</link><description>&lt;p&gt;================================&lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">p0f</dc:creator><pubDate>Wed, 21 Jan 2015 17:15:00 +0800</pubDate><guid>tag:zhao-ji.github.io,2015-01-21:2015/html5-shi-yong-viewportzi-gua-ying-ping-mu.html</guid></item><item><title>NMap 使用</title><link>http://zhao-ji.github.io/2015/nmap-shi-yong.html</link><description>&lt;p&gt;================================&lt;/p&gt;
 &lt;h2&gt;nmap 简介&lt;/h2&gt;
 &lt;h3&gt;概要&lt;/h3&gt;
 &lt;ul&gt;
@@ -719,7 +719,7 @@ nmap -r 192.168.1.1 (顺序扫描端口)&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">海江田万里</dc:creator><pubDate>Mon, 19 Jan 2015 14:40:00 +0800</pubDate><guid>tag:zhao-ji.github.io,2015-01-19:2015/nmap-shi-yong.html</guid></item><item><title>Python 字符串替换</title><link>http://zhao-ji.github.io/2015/python-zi-fu-chuan-ti-huan.html</link><description>&lt;p&gt;=================================&lt;/p&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">p0f</dc:creator><pubDate>Mon, 19 Jan 2015 14:40:00 +0800</pubDate><guid>tag:zhao-ji.github.io,2015-01-19:2015/nmap-shi-yong.html</guid></item><item><title>Python 字符串替换</title><link>http://zhao-ji.github.io/2015/python-zi-fu-chuan-ti-huan.html</link><description>&lt;p&gt;=================================&lt;/p&gt;
 &lt;h2&gt;字符串替换&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;def&lt;/span&gt; &lt;span class="n"&gt;replace_words&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;word_dic&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; 
     &lt;span class="n"&gt;yo&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;re&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;compile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sc"&gt;'|'&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;join&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;map&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;re&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;escape&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;word_dic&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt; 
@@ -727,7 +727,7 @@ nmap -r 192.168.1.1 (顺序扫描端口)&lt;/p&gt;
         &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;word_dic&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;mat&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;group&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)]&lt;/span&gt; 
     &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;yo&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sub&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;translate&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;链接： &lt;a href="http://segmentfault.com/q/1010000002474308"&gt;请教：Python字符串替换的一个问题&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">海江田万里</dc:creator><pubDate>Thu, 15 Jan 2015 17:40:00 +0800</pubDate><guid>tag:zhao-ji.github.io,2015-01-15:2015/python-zi-fu-chuan-ti-huan.html</guid></item><item><title>一月点滴收集</title><link>http://zhao-ji.github.io/2015/yi-yue-dian-di-shou-ji.html</link><description>&lt;p&gt;=======================&lt;/p&gt;
+&lt;p&gt;链接： &lt;a href="http://segmentfault.com/q/1010000002474308"&gt;请教：Python字符串替换的一个问题&lt;/a&gt;&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">p0f</dc:creator><pubDate>Thu, 15 Jan 2015 17:40:00 +0800</pubDate><guid>tag:zhao-ji.github.io,2015-01-15:2015/python-zi-fu-chuan-ti-huan.html</guid></item><item><title>一月点滴收集</title><link>http://zhao-ji.github.io/2015/yi-yue-dian-di-shou-ji.html</link><description>&lt;p&gt;=======================&lt;/p&gt;
 &lt;h2&gt;Python Tips&lt;/h2&gt;
 &lt;h4&gt;Python 暴力字典生成（brute 算法）&lt;/h4&gt;
 &lt;blockquote&gt;
@@ -937,7 +937,7 @@ in redis.conf &lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;code&gt;&lt;meta content="width=device-width, initial-scale=1" name="viewport"/&gt;&lt;code&gt;
 &lt;a href="http://www.ruanyifeng.com/blog/2012/05/responsive_web_design.html"&gt;网页自适应--软一峰&lt;/a&gt;&lt;/code&gt;&lt;/code&gt;&lt;/p&gt;
-&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">海江田万里</dc:creator><pubDate>Tue, 13 Jan 2015 16:30:00 +0800</pubDate><guid>tag:zhao-ji.github.io,2015-01-13:2015/yi-yue-dian-di-shou-ji.html</guid></item><item><title>Socks5协议</title><link>http://zhao-ji.github.io/2015/socks5xie-yi.html</link><description>&lt;p&gt;===========================&lt;/p&gt;
+&lt;/blockquote&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">p0f</dc:creator><pubDate>Tue, 13 Jan 2015 16:30:00 +0800</pubDate><guid>tag:zhao-ji.github.io,2015-01-13:2015/yi-yue-dian-di-shou-ji.html</guid></item><item><title>Socks5协议</title><link>http://zhao-ji.github.io/2015/socks5xie-yi.html</link><description>&lt;p&gt;===========================&lt;/p&gt;
 &lt;h2&gt;socks5 协议&lt;/h2&gt;
 &lt;h4&gt;特点&lt;/h4&gt;
 &lt;ul&gt;
@@ -1067,7 +1067,7 @@ in redis.conf &lt;/p&gt;
 &lt;td align="center"&gt;\x08\x00&lt;/td&gt;
 &lt;/tr&gt;
 &lt;/tbody&gt;
-&lt;/table&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">海江田万里</dc:creator><pubDate>Tue, 13 Jan 2015 12:16:00 +0800</pubDate><guid>tag:zhao-ji.github.io,2015-01-13:2015/socks5xie-yi.html</guid></item><item><title>netcat 使用笔记</title><link>http://zhao-ji.github.io/2015/netcat-shi-yong-bi-ji.html</link><description>&lt;p&gt;======================&lt;/p&gt;
+&lt;/table&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">p0f</dc:creator><pubDate>Tue, 13 Jan 2015 12:16:00 +0800</pubDate><guid>tag:zhao-ji.github.io,2015-01-13:2015/socks5xie-yi.html</guid></item><item><title>netcat 使用笔记</title><link>http://zhao-ji.github.io/2015/netcat-shi-yong-bi-ji.html</link><description>&lt;p&gt;======================&lt;/p&gt;
 &lt;h2&gt;netcat 三个例子&lt;/h2&gt;
 &lt;h3&gt;本地 client-server socket 模式&lt;/h3&gt;
 &lt;ul&gt;
@@ -1119,7 +1119,7 @@ in redis.conf &lt;/p&gt;
 &lt;h3&gt;netcat 蜜罐&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;netcat -l -p 442 实时监听442端口&lt;/li&gt;
-&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">海江田万里</dc:creator><pubDate>Mon, 12 Jan 2015 20:00:00 +0800</pubDate><guid>tag:zhao-ji.github.io,2015-01-12:2015/netcat-shi-yong-bi-ji.html</guid></item><item><title>正则表达式</title><link>http://zhao-ji.github.io/2014/zheng-ze-biao-da-shi.html</link><description>&lt;p&gt;================&lt;/p&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">p0f</dc:creator><pubDate>Mon, 12 Jan 2015 20:00:00 +0800</pubDate><guid>tag:zhao-ji.github.io,2015-01-12:2015/netcat-shi-yong-bi-ji.html</guid></item><item><title>正则表达式</title><link>http://zhao-ji.github.io/2014/zheng-ze-biao-da-shi.html</link><description>&lt;p&gt;================&lt;/p&gt;
 &lt;h1&gt;正则表达式&lt;/h1&gt;
 &lt;h2&gt;元字符&lt;/h2&gt;
 &lt;ul&gt;
@@ -1164,7 +1164,7 @@ in redis.conf &lt;/p&gt;
 &lt;/ul&gt;
 &lt;/blockquote&gt;
 &lt;/li&gt;
-&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">海江田万里</dc:creator><pubDate>Sun, 10 Aug 2014 20:30:00 +0800</pubDate><guid>tag:zhao-ji.github.io,2014-08-10:2014/zheng-ze-biao-da-shi.html</guid></item><item><title>Linux命令概要</title><link>http://zhao-ji.github.io/2014/linuxming-ling-gai-yao.html</link><description>&lt;p&gt;====================================&lt;/p&gt;
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">p0f</dc:creator><pubDate>Sun, 10 Aug 2014 20:30:00 +0800</pubDate><guid>tag:zhao-ji.github.io,2014-08-10:2014/zheng-ze-biao-da-shi.html</guid></item><item><title>Linux命令概要</title><link>http://zhao-ji.github.io/2014/linuxming-ling-gai-yao.html</link><description>&lt;p&gt;====================================&lt;/p&gt;
 &lt;h1&gt;Linux命令概要&lt;/h1&gt;
 &lt;h2&gt;帮助命令&lt;/h2&gt;
 &lt;ul&gt;
@@ -1298,4 +1298,4 @@ in redis.conf &lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;lpt&lt;/li&gt;
 &lt;li&gt;lpstat&lt;/li&gt;
-&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">海江田万里</dc:creator><pubDate>Sun, 01 Jun 2014 17:30:00 +0800</pubDate><guid>tag:zhao-ji.github.io,2014-06-01:2014/linuxming-ling-gai-yao.html</guid></item></channel></rss>
+&lt;/ul&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">p0f</dc:creator><pubDate>Sun, 01 Jun 2014 17:30:00 +0800</pubDate><guid>tag:zhao-ji.github.io,2014-06-01:2014/linuxming-ling-gai-yao.html</guid></item></channel></rss>
