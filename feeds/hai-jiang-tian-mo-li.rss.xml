@@ -15,7 +15,18 @@
 
     &lt;span class="n"&gt;print&lt;/span&gt; &lt;span class="n"&gt;colored&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;Hello&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;blue&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s"&gt;", "&lt;/span&gt; \
         &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;colored&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;V2EX&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;cyan&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;attrs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="n"&gt;bold&lt;/span&gt;&lt;span class="err"&gt;'&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">海江田万里</dc:creator><pubDate>Wed, 04 Feb 2015 19:00:00 +0800</pubDate><guid>tag:zhao-ji.github.io,2015-02-04:2015/er-yue-dian-di-shou-ji.html</guid></item><item><title>12306 数据分析</title><link>http://zhao-ji.github.io/2015/12306-shu-ju-fen-xi.html</link><description>&lt;p&gt;============================================&lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Vim Tips&lt;/h2&gt;
+&lt;h4&gt;快速复制从 20 到 30 行&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Normal Mode: 20G V 30G y&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Command Mode: :20,30y &lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;二月份春节假期和手术准备，所以blog和github更新很少&lt;/h2&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">海江田万里</dc:creator><pubDate>Wed, 04 Feb 2015 19:00:00 +0800</pubDate><guid>tag:zhao-ji.github.io,2015-02-04:2015/er-yue-dian-di-shou-ji.html</guid></item><item><title>12306 数据分析</title><link>http://zhao-ji.github.io/2015/12306-shu-ju-fen-xi.html</link><description>&lt;p&gt;============================================&lt;/p&gt;
 &lt;h2&gt;样本说明&lt;/h2&gt;
 &lt;p&gt;收集到12306泄漏数据共&lt;strong&gt;131653&lt;/strong&gt;条，每条有&lt;strong&gt;7&lt;/strong&gt;列数据，这七列数据分别为：
     - 姓名
