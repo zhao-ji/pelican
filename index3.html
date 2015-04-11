@@ -28,104 +28,34 @@ Released   : 20100928
         
 				<div id="content">
 					<div class="post">
-						<h2 class="title"><a href="http://zhao-ji.github.io/2015/dou-ban-mian-shi-jing-guo.html">豆瓣面试经过</a></h2>
+						<h2 class="title"><a href="http://zhao-ji.github.io/2015/si-yue-dian-di-shou-ji.html">四月点滴收集</a></h2>
 						<p class="meta"><span class="date">Le  </span><span class="posted">Par <a href="#">p0f</a></span><span>&nbsp; | Catégorie : <a href="http://zhao-ji.github.io/category/tips.html">Tips</a></span></p>
 					<p class="meta">Tags : </p>
 						<div style="clear: both;">&nbsp;</div>
 						<div class="entry">
-						 <p>====================================</p>
-<h3>面试前</h3>
-<p>在 v2ex 上看到豆瓣 ruby@douban.com 发招聘帖，然后发了份邮件。当天下午六点就收到 HR 电话，约了四月一号下午两点半面试。跟单位领导请假，不准，四月一号必须来公司完成任务。第二天真的没有能去面试。后来约四月二号下午面试， 结果四月二号去顺义，还是没有面成，真是太惭愧了。给 ruby@douban.com 发了份邮件表到了一下歉意。四月三号没去上班，上午抱着试试看的心态给 HR 打了个电话，可以下午面试。</p>
+						 <p>=======================</p>
+<h2>Shell Tips</h2>
+<h4>安装新字体</h4>
 <ul>
-<li>面试两点开始</li>
-<li>大概六点多结束</li>
-<li>笔试，三个部门领导面试，HR面试</li>
+<li>将字体文件夹拷贝到 /usr/share/fonts 目录下</li>
+<li>更改权限　644</li>
+<li>进入字体文件夹</li>
+<li>command:
+    sudo mkfontscale
+    sudo mkfontdir
+    sudo fc-cache -fv</li>
 </ul>
-<h3>笔试</h3>
-<p>一个小时的答题时间，六道题</p>
-<ul>
-<li>登录流程，表单项有用户名、密码、验证码。在提交后浏览器和服务器发生了什么。发送请求-处理-响应请求 的过程是怎样的</li>
-<li>Python 语言的特点是什么，相应的代价是什么</li>
-<li>豆瓣用户uid从100000开始，前十亿用户中，可以被6、9整除的uid之和是多少</li>
-<li>求一个自然数的最大质数</li>
-<li>
-<p>英文句子的单词反转，冠词+名词不反转，冠词+冠词反转</p>
-</li>
-<li>
-<p>流程</p>
-<ul>
-<li>浏览器将表单字段打包成HTTP报文----通过socket连接发给豆瓣服务器----豆瓣负载均衡服务器转发给Python后端</li>
-<li>解出body中三个字段----校验验证码----如果正确----校验用户名密码----如果正确----获取用户信息----如果存在用户----打包成HTTP报文</li>
-<li>发送报文----浏览器拿到报文----浏览器渲染CSS、HTML标签、执行js</li>
-</ul>
-</li>
-<li>
-<p>两个特点：缩进、包丰富  没有代价</p>
-</li>
-<li>
-<p>code:
-    #!/usr/bin/env python
-    # utf8</p>
-<p>is_aliquot = lambda num: num % 6 == 0 or num %9 == 0
-get_total = lambda num_list: sum(filter(is_aliquot, num_list))</p>
-<p>if <strong>name</strong> == "<strong>main</strong>":
-    num_list = xrange(100000, 10 ** 9)
-    print get_total(num_list)</p>
-</li>
-<li>
-<p>code:
-    #!/usr/bin/env python
-    # utf8</p>
-<p>get_remainder = lambda prime, num=num: num % prime
-get_next_prime = lambda prime_list, num: prime_list if sum(map(get_remainder, prime_list)) else prime_list.append(num)
-get_prime_list = lambda num: reduce(get_next_prime, xrange(2, num), [])</p>
-<p>def get_biggest_prime(num):
-    prime_list = get_prime_list(num)
-    if not prime_list:
-        return num
-    for prime in prime_list[::-1]:
-        if not get_remainder(prime, num):
-            return prime</p>
-<p>if <strong>name</strong> == "<strong>main</strong>":
-    print get_biggest_prime(44444)</p>
-</li>
-<li>
-<p>code:
-    #!/usr/bin/env python
-    # utf8</p>
-<p>ARTICLE_LIST = ['the', 'an', 'a']</p>
-<p>def correct_article(word_list):
-    for index, word in enumerate(word_list[:-1]):
-        if word in ARTICLE_LIST and word_list[index + 1] not in ARTICLE_LIST:
-            word_list[index], word_list[index + 1] = word_list[index + 1], word_list[index]</p>
-<p>if <strong>name</strong> == "<strong>main</strong>":
-    string = "hello, welcome to the new world, a an"
-    word_list = string.split(" ").reverse()
-    print " ".join(correct_article(word_list))</p>
-</li>
-</ul>
-<h3>豆瓣豆列负责人面试</h3>
-<p>因为中性笔出水不畅，所以用中号签字笔答题，乱，所以后来面试官都没有认真的看我的作答。</p>
-<ul>
-<li>context manager 异常机制</li>
-<li>豆瓣使用的python框架是风车，database使用mysql</li>
-<li>try...except...else...finally except中return仍然会走finally</li>
-<li>有人说python慢怎么会回复</li>
-<li>类的复杂继承 <strong>mor</strong></li>
-</ul>
-<h3>豆瓣广告和客服负责人面试</h3>
-<ul>
-<li>这块原有职工已经走的差不多了</li>
-<li>单例模式 大资源如何不重复加载</li>
-</ul>
-<h3>豆瓣广告负责人面试</h3>
-<ul>
-<li>兴趣，豆瓣ID为什么会取“杨金丽”这个名字</li>
-<li>薪资</li>
-<li>如果来豆瓣，会先做面向豆瓣广告投放者的事情，然后再做广告投放</li>
-<li>还面试了哪几家公司，知乎，如果两家选选哪一家，这个要看具体工作</li>
-</ul>
-<h3>豆瓣HR面试</h3>	
+<h2>Python Tips</h2>
+<h4>自然数生成器</h4>
+<div class="highlight"><pre><span class="n">class</span> <span class="n">Num</span><span class="o">:</span>
+    <span class="err">&#39;&#39;&#39;</span><span class="n">output</span> <span class="n">the</span> <span class="n">nature</span> <span class="n">number</span><span class="err">&#39;&#39;&#39;</span>
+    <span class="n">num</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="n">def</span> <span class="n">gen</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
+        <span class="k">while</span> <span class="n">True</span><span class="o">:</span>
+            <span class="n">yield</span> <span class="n">self</span><span class="p">.</span><span class="n">num</span>
+            <span class="n">self</span><span class="p">.</span><span class="n">num</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>	
 <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="qinghecha">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 						</div>
 					</div>
@@ -133,6 +63,17 @@ get_prime_list = lambda num: reduce(get_next_prime, xrange(2, num), [])</p>
 			                <div class="post">
 			                        <h2 class="title">Autres articles</h2>
 			                </div>
+        
+ 
+			                <div class="post summary">
+						<h2 class="title"><a href="http://zhao-ji.github.io/2015/dou-ban-mian-shi-jing-guo.html">豆瓣面试经过</a></h2>
+						<p class="meta"><span class="date">Le 日 05 四月 2015</span><span class="posted">Par <a href="#">p0f</a></span></p>
+						<div style="clear: both;">&nbsp;</div>
+						<div class="entry">
+						 <p>the interview in douban</p>	
+						 <a class="readmore" href="http://zhao-ji.github.io/2015/dou-ban-mian-shi-jing-guo.html">Lire la suite …</a>
+						</div>
+					</div>
         
  
 			                <div class="post summary">
@@ -213,12 +154,12 @@ get_prime_list = lambda num: reduce(get_next_prime, xrange(2, num), [])</p>
         
  
 			                <div class="post summary">
-						<h2 class="title"><a href="http://zhao-ji.github.io/2015/yi-yue-dian-di-shou-ji.html">一月点滴收集</a></h2>
+						<h2 class="title"><a href="http://zhao-ji.github.io/2015/yue-dian-di-shou-ji.html">一月点滴收集</a></h2>
 						<p class="meta"><span class="date">Le 二 13 一月 2015</span><span class="posted">Par <a href="#">p0f</a></span></p>
 						<div style="clear: both;">&nbsp;</div>
 						<div class="entry">
 						 <p>Tips in Jan</p>	
-						 <a class="readmore" href="http://zhao-ji.github.io/2015/yi-yue-dian-di-shou-ji.html">Lire la suite …</a>
+						 <a class="readmore" href="http://zhao-ji.github.io/2015/yue-dian-di-shou-ji.html">Lire la suite …</a>
 						</div>
 					</div>
         
@@ -241,7 +182,7 @@ get_prime_list = lambda num: reduce(get_next_prime, xrange(2, num), [])</p>
 <ul>
 <li>客户端发起</li>
 </ul>
-<table class="table table-hover table-striped">
+<table>
 <thead>
 <tr>
 <th align="center">field1</th>
@@ -270,7 +211,7 @@ get_prime_list = lambda num: reduce(get_next_prime, xrange(2, num), [])</p>
 <ul>
 <li>服务端返回</li>
 </ul>
-<table class="table table-hover table-striped">
+<table>
 <thead>
 <tr>
 <th align="center">field1</th>
@@ -296,7 +237,7 @@ get_prime_list = lambda num: reduce(get_next_prime, xrange(2, num), [])</p>
 <ul>
 <li>客户端请求</li>
 </ul>
-<table class="table table-hover table-striped">
+<table>
 <thead>
 <tr>
 <th align="center">协议版本号</th>
@@ -351,7 +292,7 @@ get_prime_list = lambda num: reduce(get_next_prime, xrange(2, num), [])</p>
 				</div>
 				<div id="sidebar">
 					<div id="logo">
-						<h1><a href="http://zhao-ji.github.io">写博客也要讲基本法</h1>
+						<h1><a href="http://zhao-ji.github.io">写博客也要讲基本法</a></h1>
 					</div>
 					<div id="menu">
 						<ul>

@@ -27,7 +27,7 @@ Released   : 20100928
     
                         	<div id="content">
 					<div class="post">
-						<h2 class="title"><a href="2015/yi-yue-dian-di-shou-ji.html">一月点滴收集</a></h2>
+						<h2 class="title"><a href="2015/yue-dian-di-shou-ji.html">一月点滴收集</a></h2>
 						<p class="meta"><span class="date">Le 二 13 一月 2015 </span><span class="posted">Par <a href="#">p0f</a></span><span>&nbsp; | Catégorie : <a href="http://zhao-ji.github.io/category/tips.html">Tips</a></span></p>
 					<p class="meta">Tags : </p>	
 						<div style="clear: both;">&nbsp;</div>
@@ -40,7 +40,7 @@ Released   : 20100928
 </blockquote>
 <div class="highlight"><pre>    <span class="n">def</span> <span class="n">brute</span><span class="p">(</span><span class="n">choices</span><span class="p">,</span> <span class="n">length</span><span class="p">)</span><span class="o">:</span>
         <span class="k">return</span> <span class="p">(</span>
-            <span class="err">''</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">candidate</span><span class="p">)</span> <span class="k">for</span> <span class="n">candidate</span> <span class="n">in</span>
+            <span class="err">&#39;&#39;</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">candidate</span><span class="p">)</span> <span class="k">for</span> <span class="n">candidate</span> <span class="n">in</span>
             <span class="n">chain</span><span class="p">.</span><span class="n">from_iterable</span><span class="p">(</span>
                 <span class="n">product</span><span class="p">(</span>
                     <span class="n">choices</span><span class="p">,</span>
@@ -49,7 +49,9 @@ Released   : 20100928
             <span class="p">)</span>
         <span class="p">)</span>
 </pre></div>
-<p><br/></p>
+
+
+<p><br></p>
 <h4>isinstance 用法</h4>
 <blockquote>
 <p>isinstance(...)
@@ -72,9 +74,9 @@ Out[6]: True</p>
 </blockquote>
 </blockquote>
 <p><strong>isinstance 的第二个参数可以是 类型、类、包含类型或类的元祖。</strong></p>
-<p><br/></p>
+<p><br></p>
 <h4>How to flatten arbitrarily nested lists in Python?</h4>
-<div class="highlight"><pre>    <span class="n">nested_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="p">[</span><span class="mi">5</span><span class="p">],[</span><span class="err">'</span><span class="n">hi</span><span class="err">'</span><span class="p">]],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="p">[[[</span><span class="mi">7</span><span class="p">,</span> <span class="err">'</span><span class="n">hello</span><span class="err">'</span><span class="p">]]]]]</span>
+<div class="highlight"><pre>    <span class="n">nested_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="p">[</span><span class="mi">5</span><span class="p">],[</span><span class="err">&#39;</span><span class="n">hi</span><span class="err">&#39;</span><span class="p">]],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="p">[[[</span><span class="mi">7</span><span class="p">,</span> <span class="err">&#39;</span><span class="n">hello</span><span class="err">&#39;</span><span class="p">]]]]]</span>
 
     <span class="n">def</span> <span class="n">flatten</span><span class="p">(</span><span class="n">nested</span><span class="p">)</span><span class="o">:</span>
         <span class="k">for</span> <span class="n">item</span> <span class="n">in</span> <span class="n">nested</span><span class="o">:</span>
@@ -86,9 +88,11 @@ Out[6]: True</p>
 
     <span class="n">print</span> <span class="n">list</span><span class="p">(</span><span class="n">flatten</span><span class="p">(</span><span class="n">nested_list</span><span class="p">))</span>
 
-    <span class="o">&gt;</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="err">'</span><span class="n">hi</span><span class="err">'</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="err">'</span><span class="n">hello</span><span class="err">'</span><span class="p">]</span>
+    <span class="o">&gt;</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="err">&#39;</span><span class="n">hi</span><span class="err">&#39;</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="err">&#39;</span><span class="n">hello</span><span class="err">&#39;</span><span class="p">]</span>
 </pre></div>
-<p><br/></p>
+
+
+<p><br></p>
 <h4>map 传参数可以设置默认参数，和使用*方法</h4>
 <blockquote>
 <p>In [1]: sum_5 = lambda x, y=5: x+y</p>
@@ -100,7 +104,7 @@ Out[3]: 7</p>
 <p>In [7]: sum_new(1,2,3,4)
 Out[7]: 10</p>
 </blockquote>
-<p><br/></p>
+<p><br></p>
 <h4>bisect 模块二分查找，作用对象：字符串、列表</h4>
 <blockquote>
 <p>In [1]: from bisect import bisect, insort</p>
@@ -111,68 +115,68 @@ Out[4]: [1, 2, 3, 4, 5, 6, 7, 8, 9]</p>
 <p>In [5]: bisect(a, 6)
 Out[5]: 6</p>
 </blockquote>
-<p><br/></p>
+<p><br></p>
 <h4>unidecode 将汉字转为拼音</h4>
 <blockquote>
 <p>In [8]: from unidecode import unidecode</p>
 <p>In [9]: unidecode(u'你好')
 Out[9]: 'Ni Hao '</p>
 </blockquote>
-<p><br/></p>
+<p><br></p>
 <h4>iter(func(), value) : make the iterator of func() until func()==value</h4>
-<p><br/></p>
+<p><br></p>
 <h4>条件判断</h4>
 <blockquote>
 <p>In [1]: a = 3</p>
 <p>In [2]: if 1&lt; a&lt; 4:
    ...:     print 4
-   ...:   <br/>
+   ...:   <br />
         4</p>
 <p>In [3]: if not (1 &lt; a &lt; 4):
    ...:     print 4
    ...:     </p>
 <p>In [4]: if not 4&lt;a&lt;5:
    ...:     print 4
-   ...:   <br/>
+   ...:   <br />
         4</p>
 </blockquote>
 <p><br>
-<br/></br></p>
+<br></p>
 <h2>VIM Tips</h2>
-<p><br/></p>
+<p><br></p>
 <h4>以普通用户身份打开的文件需要以sudo身份保存</h4>
 <blockquote>
 <p>:w !sudo tee %</p>
 </blockquote>
-<p><br/></p>
+<p><br></p>
 <h4>插入模式 自动补全</h4>
 <blockquote>
 <p>CTRL + N</p>
 </blockquote>
-<p><br/></p>
+<p><br></p>
 <h4>打开文件自动回到上次编辑位置</h4>
 <blockquote>
 <p>au BufReadPost * if line("'\"") &gt; 0|if line("'\"") &lt;= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif</p>
 </blockquote>
-<p><br/></p>
+<p><br></p>
 <h4>代码折叠</h4>
 <blockquote>
 <p>V模式选择文本，可以使用%快速匹配括号, zf 折叠
 zo 打开折叠
 zc 关闭折叠</p>
 </blockquote>
-<p><br/></p>
+<p><br></p>
 <h3>HML 分别将光标移至屏幕最上、正中、最下</h3>
-<p><br/></p>
+<p><br></p>
 <h3>IrA 列选择后分别在前面、当下、后面修改或添加</h3>
-<p><br/></p>
+<p><br></p>
 <h3>将光标所在行移至屏幕正中: z.</h3>
-<p><br/></p>
+<p><br></p>
 <h3>编辑远程文件</h3>
 <blockquote>
 <p>vim scp://root@baidu.com:12345//etc/nginx/nginx.conf</p>
 </blockquote>
-<p><br/></p>
+<p><br></p>
 <h3>书签使用</h3>
 <h4>命令模式</h4>
 <blockquote>
@@ -188,38 +192,38 @@ zc 关闭折叠</p>
 <p>'. 回到上次编辑位置所在行</p>
 </blockquote>
 <p><br>
-<br/></br></p>
+<br></p>
 <h2>Shell Tips</h2>
 <h4>查看当前目录文件夹大小</h4>
 <blockquote>
 <p>du -h --max-depth=1 ./</p>
 </blockquote>
-<p><br/></p>
+<p><br></p>
 <h4>修改系统默认编辑器</h4>
 <blockquote>
 <p>sudo update-alternatives --config editor</p>
 </blockquote>
-<p><br/></p>
+<p><br></p>
 <h4>redis 开启远端访问</h4>
 <blockquote>
 <p>remove the "bind 127.0.0.1" 
 set password after "requirepass" 
 in redis.conf </p>
 </blockquote>
-<p><br/></p>
+<p><br></p>
 <h4>mongo 修改字段名</h4>
 <blockquote>
 <p>db.collection.update({}, {$rename: {old_name: new_name}})</p>
 </blockquote>
-<p><br/></p>
+<p><br></p>
 <h4>unalias 删除alias后的命令， 'ls' 和 \ls 能强制调用原始ls命令</h4>
-<p><br/></p>
+<p><br></p>
 <h4>禁用ubuntu内部错误报告</h4>
 <blockquote>
 <p>sudo service apport stop</p>
 <p>vim /etc/default/apport enabled=0</p>
 </blockquote>
-<p><br/></p>
+<p><br></p>
 <h4>设置服务器不回应PING</h4>
 <blockquote>
 <p>echo 1 &gt; /proc/sys/net/ipv4/icmp_echo_ignore_all</p>
@@ -235,13 +239,13 @@ in redis.conf </p>
 修改用户</p>
 </blockquote>
 <p><br>
-<br/></br></p>
+<br></p>
 <h2>前端 Tips</h2>
-<p><br/></p>
+<p><br></p>
 <h4>移动端设置 viewport 使网页自适应</h4>
 <blockquote>
-<p><code><meta content="width=device-width, initial-scale=1" name="viewport"/><code>
-<a href="http://www.ruanyifeng.com/blog/2012/05/responsive_web_design.html">网页自适应--软一峰</a></code></code></p>
+<p><code><meta name="viewport" content="width=device-width, initial-scale=1" /><code>
+<a href="http://www.ruanyifeng.com/blog/2012/05/responsive_web_design.html">网页自适应--软一峰</a></p>
 </blockquote>	
 <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="qinghecha">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 						</div>
@@ -252,7 +256,7 @@ in redis.conf </p>
                                         <h2 class="title">Commentaires !</h2>
                                             <div id="disqus_thread"></div>
                                             <script type="text/javascript">
-                                               var disqus_identifier = "2015/yi-yue-dian-di-shou-ji.html";
+                                               var disqus_identifier = "2015/yue-dian-di-shou-ji.html";
                                                (function() {
                                                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
                                                dsq.src = 'http://zhaoji.disqus.com/embed.js';
@@ -264,7 +268,7 @@ in redis.conf </p>
 				<!-- end #content -->
 				<div id="sidebar">
 					<div id="logo">
-						<h1><a href="http://zhao-ji.github.io">写博客也要讲基本法</h1>
+						<h1><a href="http://zhao-ji.github.io">写博客也要讲基本法</a></h1>
 					</div>
 					<div id="menu">
 						<ul>

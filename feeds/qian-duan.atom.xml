@@ -5,14 +5,14 @@
 &lt;p&gt;https://gist.github.com/c34c44f9555e6646875c&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt; &lt;span class="c"&gt;&amp;lt;!--在html代码的&amp;lt;head&amp;gt;...&amp;lt;/head&amp;gt;中嵌入下面代码--&amp;gt;&lt;/span&gt;
- &lt;span class="nt"&gt;&amp;lt;meta&lt;/span&gt; &lt;span class="na"&gt;name=&lt;/span&gt;&lt;span class="s"&gt;"viewport"&lt;/span&gt;
- &lt;span class="na"&gt;content=&lt;/span&gt;&lt;span class="s"&gt;"&lt;/span&gt;
+ &lt;span class="nt"&gt;&amp;lt;meta&lt;/span&gt; &lt;span class="na"&gt;name=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;viewport&amp;quot;&lt;/span&gt;
+ &lt;span class="na"&gt;content=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;
 &lt;span class="s"&gt; height = &lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;pixel_value&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="nx"&gt;device&lt;/span&gt;&lt;span class="na"&gt;-height&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="s"&gt; ,&lt;/span&gt;
 &lt;span class="s"&gt; width = &lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;pixel_value&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="nx"&gt;device&lt;/span&gt;&lt;span class="na"&gt;-width&lt;/span&gt; &lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="s"&gt; ,&lt;/span&gt;
 &lt;span class="s"&gt; initial-scale = 0.5 ,&lt;/span&gt;
 &lt;span class="s"&gt; minimum-scale = float_value ,&lt;/span&gt;
 &lt;span class="s"&gt; maximum-scale = float_value ,&lt;/span&gt;
 &lt;span class="s"&gt; user-scalable = &lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;yes&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="nx"&gt;no&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="s"&gt; ,&lt;/span&gt;
-&lt;span class="s"&gt; "&lt;/span&gt;
+&lt;span class="s"&gt; &amp;quot;&lt;/span&gt;
  &lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;</summary></entry></feed>

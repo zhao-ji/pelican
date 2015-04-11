@@ -15,7 +15,7 @@ Released   : 20100928
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<title>写博客也要讲基本法</title>
+<title>四月点滴收集</title>
 <link href="http://zhao-ji.github.io/theme/css/style.css" rel="stylesheet" type="text/css" media="screen" />
 <link href="http://zhao-ji.github.io/" type="application/atom+xml" rel="alternate" title="写博客也要讲基本法 ATOM Feed" />
 </head>
@@ -24,12 +24,56 @@ Released   : 20100928
 	<div id="page">
 		<div id="page-bgtop">
 			<div id="page-bgbtm">
-<div id="content">
-<div class="post">  
+    
+                        	<div id="content">
+					<div class="post">
+						<h2 class="title"><a href="2015/si-yue-dian-di-shou-ji.html">四月点滴收集</a></h2>
+						<p class="meta"><span class="date">Le 六 11 四月 2015 </span><span class="posted">Par <a href="#">p0f</a></span><span>&nbsp; | Catégorie : <a href="http://zhao-ji.github.io/category/tips.html">Tips</a></span></p>
+					<p class="meta">Tags : </p>	
+						<div style="clear: both;">&nbsp;</div>
+						<div class="entry">
+						 <p>=======================</p>
+<h2>Shell Tips</h2>
+<h4>安装新字体</h4>
 <ul>
+<li>将字体文件夹拷贝到 /usr/share/fonts 目录下</li>
+<li>更改权限　644</li>
+<li>进入字体文件夹</li>
+<li>command:
+    sudo mkfontscale
+    sudo mkfontdir
+    sudo fc-cache -fv</li>
 </ul>
-</div>
-</div>
+<h2>Python Tips</h2>
+<h4>自然数生成器</h4>
+<div class="highlight"><pre><span class="n">class</span> <span class="n">Num</span><span class="o">:</span>
+    <span class="err">&#39;&#39;&#39;</span><span class="n">output</span> <span class="n">the</span> <span class="n">nature</span> <span class="n">number</span><span class="err">&#39;&#39;&#39;</span>
+    <span class="n">num</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="n">def</span> <span class="n">gen</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
+        <span class="k">while</span> <span class="n">True</span><span class="o">:</span>
+            <span class="n">yield</span> <span class="n">self</span><span class="p">.</span><span class="n">num</span>
+            <span class="n">self</span><span class="p">.</span><span class="n">num</span> <span class="o">+=</span> <span class="mi">1</span>
+</pre></div>	
+<a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="qinghecha">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+						</div>
+					</div>
+			      
+					<div style="clear: both;">&nbsp;</div>
+                                        <div class="post">
+                                        <h2 class="title">Commentaires !</h2>
+                                            <div id="disqus_thread"></div>
+                                            <script type="text/javascript">
+                                               var disqus_identifier = "2015/si-yue-dian-di-shou-ji.html";
+                                               (function() {
+                                               var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                                               dsq.src = 'http://zhaoji.disqus.com/embed.js';
+                                               (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                                              })();
+                                            </script>
+                                        </div>
+				</div>
+				<!-- end #content -->
 				<div id="sidebar">
 					<div id="logo">
 						<h1><a href="http://zhao-ji.github.io">写博客也要讲基本法</a></h1>
@@ -45,7 +89,7 @@ Released   : 20100928
 						<li>
 							<h2>Catégories</h2>
 							<ul>
-								 <li ><a href="http://zhao-ji.github.io/category/tips.html">Tips</a></li>
+								 <li class="active"><a href="http://zhao-ji.github.io/category/tips.html">Tips</a></li>
 								 <li ><a href="http://zhao-ji.github.io/category/scripts.html">Scripts</a></li>
 								 <li ><a href="http://zhao-ji.github.io/category/re.html">Re</a></li>
 								 <li ><a href="http://zhao-ji.github.io/category/qian-duan.html">前端</a></li>
