@@ -116,6 +116,7 @@ get_prime_list = lambda num: reduce(get_next_prime, xrange(2, num), [])&lt;/p&gt
 &lt;li&gt;单例模式 大资源如何不重复加载&lt;/li&gt;
 &lt;li&gt;websocket 原理&lt;/li&gt;
 &lt;li&gt;自己平时做过的小项目&lt;/li&gt;
+&lt;li&gt;WSGI　协议，自己写WEB服务器的难点在哪&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3&gt;豆瓣广告负责人面试&lt;/h3&gt;
 &lt;ul&gt;
