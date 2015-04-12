@@ -21,7 +21,16 @@
         &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="n"&gt;True&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
             &lt;span class="n"&gt;yield&lt;/span&gt; &lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt;
             &lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;</summary></entry><entry><title>豆瓣面试经过</title><link href="http://zhao-ji.github.io/2015/dou-ban-mian-shi-jing-guo.html" rel="alternate"></link><updated>2015-04-05T09:17:00+08:00</updated><author><name>p0f</name></author><id>tag:zhao-ji.github.io,2015-04-05:2015/dou-ban-mian-shi-jing-guo.html</id><summary type="html">&lt;p&gt;====================================&lt;/p&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h4&gt;yield&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;only yield: frozen the status&lt;/li&gt;
+&lt;li&gt;yield someone: frozen the status and return the someone&lt;/li&gt;
+&lt;li&gt;somebody = yield: frozen the status and send the somebody to function&lt;/li&gt;
+&lt;li&gt;somebody = yield someone: frozen the status and send the somebody to the generator and return someone and &lt;/li&gt;
+&lt;/ul&gt;</summary></entry><entry><title>豆瓣面试经过</title><link href="http://zhao-ji.github.io/2015/dou-ban-mian-shi-jing-guo.html" rel="alternate"></link><updated>2015-04-05T09:17:00+08:00</updated><author><name>p0f</name></author><id>tag:zhao-ji.github.io,2015-04-05:2015/dou-ban-mian-shi-jing-guo.html</id><summary type="html">&lt;p&gt;====================================&lt;/p&gt;
 &lt;h3&gt;面试前&lt;/h3&gt;
 &lt;p&gt;在 v2ex 上看到豆瓣 ruby@douban.com 发招聘帖，然后发了份邮件。当天下午六点就收到 HR 电话，约了四月一号下午两点半面试。跟单位领导请假，不准，四月一号必须来公司完成任务。第二天真的没有能去面试。后来约四月二号下午面试， 结果四月二号去顺义，还是没有面成，真是太惭愧了。给 ruby@douban.com 发了份邮件表到了一下歉意。四月三号没去上班，上午抱着试试看的心态给 HR 打了个电话，可以下午面试。&lt;/p&gt;
 &lt;ul&gt;
