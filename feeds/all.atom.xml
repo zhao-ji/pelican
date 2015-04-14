@@ -13,14 +13,14 @@
 &lt;/ul&gt;
 &lt;h2&gt;Python Tips&lt;/h2&gt;
 &lt;h4&gt;自然数生成器&lt;/h4&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;class&lt;/span&gt; &lt;span class="n"&gt;Num&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-    &lt;span class="err"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;output&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;nature&lt;/span&gt; &lt;span class="n"&gt;number&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
-    &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="n"&gt;Num:&lt;/span&gt;
+    &lt;span class="s"&gt;&amp;#39;&amp;#39;&amp;#39;output the nature number&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+    &lt;span class="nb"&gt;num&lt;/span&gt; = &lt;span class="mi"&gt;0&lt;/span&gt;
 
-    &lt;span class="n"&gt;def&lt;/span&gt; &lt;span class="n"&gt;gen&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-        &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="n"&gt;True&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-            &lt;span class="n"&gt;yield&lt;/span&gt; &lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt;
-            &lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+    &lt;span class="n"&gt;def&lt;/span&gt; &lt;span class="n"&gt;gen&lt;/span&gt;(&lt;span class="k"&gt;self&lt;/span&gt;):
+        &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="n"&gt;True:&lt;/span&gt;
+            &lt;span class="n"&gt;yield&lt;/span&gt; &lt;span class="k"&gt;self&lt;/span&gt;.&lt;span class="nb"&gt;num&lt;/span&gt;
+            &lt;span class="k"&gt;self&lt;/span&gt;.&lt;span class="nb"&gt;num&lt;/span&gt; += &lt;span class="mi"&gt;1&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -30,7 +30,8 @@
 &lt;li&gt;yield someone: frozen the status and return the someone&lt;/li&gt;
 &lt;li&gt;somebody = yield: frozen the status and send the somebody to function&lt;/li&gt;
 &lt;li&gt;somebody = yield someone: frozen the status and send the somebody to the generator and return someone and &lt;/li&gt;
-&lt;/ul&gt;</summary></entry><entry><title>豆瓣面试经过</title><link href="http://zhao-ji.github.io/2015/dou-ban-mian-shi-jing-guo.html" rel="alternate"></link><updated>2015-04-05T09:17:00+08:00</updated><author><name>p0f</name></author><id>tag:zhao-ji.github.io,2015-04-05:2015/dou-ban-mian-shi-jing-guo.html</id><summary type="html">&lt;p&gt;====================================&lt;/p&gt;
+&lt;/ul&gt;
+&lt;h4&gt;用字典实现switch功能 (router)&lt;/h4&gt;</summary></entry><entry><title>豆瓣面试经过</title><link href="http://zhao-ji.github.io/2015/dou-ban-mian-shi-jing-guo.html" rel="alternate"></link><updated>2015-04-05T09:17:00+08:00</updated><author><name>p0f</name></author><id>tag:zhao-ji.github.io,2015-04-05:2015/dou-ban-mian-shi-jing-guo.html</id><summary type="html">&lt;p&gt;====================================&lt;/p&gt;
 &lt;h3&gt;面试前&lt;/h3&gt;
 &lt;p&gt;在 v2ex 上看到豆瓣 ruby@douban.com 发招聘帖，然后发了份邮件。当天下午六点就收到 HR 电话，约了四月一号下午两点半面试。跟单位领导请假，不准，四月一号必须来公司完成任务。第二天真的没有能去面试。后来约四月二号下午面试， 结果四月二号去顺义，还是没有面成，真是太惭愧了。给 ruby@douban.com 发了份邮件表到了一下歉意。四月三号没去上班，上午抱着试试看的心态给 HR 打了个电话，可以下午面试。&lt;/p&gt;
 &lt;ul&gt;
@@ -251,10 +252,10 @@ get_prime_list = lambda num: reduce(get_next_prime, xrange(2, num), [])&lt;/p&gt
 &lt;h4&gt;普通用户和超级用户 以提示符（prompt）$和#区分&lt;/h4&gt;
 &lt;h2&gt;Python Tips&lt;/h2&gt;
 &lt;h4&gt;shell 彩色输出&lt;/h4&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="n"&gt;from&lt;/span&gt; &lt;span class="n"&gt;termcolor&lt;/span&gt; &lt;span class="n"&gt;import&lt;/span&gt; &lt;span class="n"&gt;colored&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;termcolor&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;colored&lt;/span&gt;
 
-    &lt;span class="n"&gt;print&lt;/span&gt; &lt;span class="n"&gt;colored&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;Hello&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;blue&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;, &amp;quot;&lt;/span&gt; \
-        &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;colored&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;V2EX&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;cyan&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;attrs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;bold&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="n"&gt;colored&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;Hello&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;blue&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;, &amp;quot;&lt;/span&gt; \
+        &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;colored&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;V2EX&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;cyan&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;attrs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;bold&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -887,12 +888,12 @@ get_prime_list = lambda num: reduce(get_next_prime, xrange(2, num), [])&lt;/p&gt
 &lt;div class="highlight"&gt;&lt;pre&gt; &lt;span class="c"&gt;&amp;lt;!--在html代码的&amp;lt;head&amp;gt;...&amp;lt;/head&amp;gt;中嵌入下面代码--&amp;gt;&lt;/span&gt;
  &lt;span class="nt"&gt;&amp;lt;meta&lt;/span&gt; &lt;span class="na"&gt;name=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;viewport&amp;quot;&lt;/span&gt;
  &lt;span class="na"&gt;content=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;&lt;/span&gt;
-&lt;span class="s"&gt; height = &lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;pixel_value&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="nx"&gt;device&lt;/span&gt;&lt;span class="na"&gt;-height&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="s"&gt; ,&lt;/span&gt;
-&lt;span class="s"&gt; width = &lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;pixel_value&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="nx"&gt;device&lt;/span&gt;&lt;span class="na"&gt;-width&lt;/span&gt; &lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="s"&gt; ,&lt;/span&gt;
+&lt;span class="s"&gt; height = [pixel_value | device-height] ,&lt;/span&gt;
+&lt;span class="s"&gt; width = [pixel_value | device-width ] ,&lt;/span&gt;
 &lt;span class="s"&gt; initial-scale = 0.5 ,&lt;/span&gt;
 &lt;span class="s"&gt; minimum-scale = float_value ,&lt;/span&gt;
 &lt;span class="s"&gt; maximum-scale = float_value ,&lt;/span&gt;
-&lt;span class="s"&gt; user-scalable = &lt;/span&gt;&lt;span class="cp"&gt;[&lt;/span&gt;&lt;span class="nx"&gt;yes&lt;/span&gt; &lt;span class="o"&gt;|&lt;/span&gt; &lt;span class="nx"&gt;no&lt;/span&gt;&lt;span class="cp"&gt;]&lt;/span&gt;&lt;span class="s"&gt; ,&lt;/span&gt;
+&lt;span class="s"&gt; user-scalable = [yes | no] ,&lt;/span&gt;
 &lt;span class="s"&gt; &amp;quot;&lt;/span&gt;
  &lt;span class="nt"&gt;/&amp;gt;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;</summary></entry><entry><title>NMap 使用</title><link href="http://zhao-ji.github.io/2015/nmap-shi-yong.html" rel="alternate"></link><updated>2015-01-19T14:40:00+08:00</updated><author><name>p0f</name></author><id>tag:zhao-ji.github.io,2015-01-19:2015/nmap-shi-yong.html</id><summary type="html">&lt;p&gt;================================&lt;/p&gt;
@@ -941,11 +942,11 @@ nmap -r 192.168.1.1 (顺序扫描端口)&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;</summary></entry><entry><title>Python 字符串替换</title><link href="http://zhao-ji.github.io/2015/python-zi-fu-chuan-ti-huan.html" rel="alternate"></link><updated>2015-01-15T17:40:00+08:00</updated><author><name>p0f</name></author><id>tag:zhao-ji.github.io,2015-01-15:2015/python-zi-fu-chuan-ti-huan.html</id><summary type="html">&lt;p&gt;=================================&lt;/p&gt;
 &lt;h2&gt;字符串替换&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;def&lt;/span&gt; &lt;span class="n"&gt;replace_words&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;word_dic&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; 
-    &lt;span class="n"&gt;yo&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;re&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;compile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sc"&gt;&amp;#39;|&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;join&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;map&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;re&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;escape&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;word_dic&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt; 
-    &lt;span class="n"&gt;def&lt;/span&gt; &lt;span class="n"&gt;translate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;mat&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; 
-        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;word_dic&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;mat&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;group&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)]&lt;/span&gt; 
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;yo&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sub&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;translate&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;def replace_words(text, word_dic): 
+    yo = re.compile(&amp;#39;|&amp;#39;.join(map(re.escape, word_dic))) 
+    def translate(mat): 
+        return word_dic[mat.group(0)] 
+    return yo.sub(translate, text)
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -955,16 +956,16 @@ nmap -r 192.168.1.1 (顺序扫描端口)&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;可重复全排列&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="n"&gt;def&lt;/span&gt; &lt;span class="n"&gt;brute&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;choices&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;length&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
-            &lt;span class="err"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;join&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;candidate&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;candidate&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt;
-            &lt;span class="n"&gt;chain&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;from_iterable&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
-                &lt;span class="n"&gt;product&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
-                    &lt;span class="n"&gt;choices&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-                    &lt;span class="n"&gt;repeat&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-                &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;length&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
-            &lt;span class="p"&gt;)&lt;/span&gt;
-        &lt;span class="p"&gt;)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;    def brute(choices, length):
+        return (
+            &amp;#39;&amp;#39;.join(candidate) for candidate in
+            chain.from_iterable(
+                product(
+                    choices,
+                    repeat = i,
+                ) for i in range(1, length + 1),
+            )
+        )
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -993,19 +994,19 @@ Out[6]: True&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;isinstance 的第二个参数可以是 类型、类、包含类型或类的元祖。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 &lt;h4&gt;How to flatten arbitrarily nested lists in Python?&lt;/h4&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="n"&gt;nested_list&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;],[&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;hi&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]],&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[[[&lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;hello&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]]]]]&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;    nested_list = [1, 2, [3, 4, [5],[&amp;#39;hi&amp;#39;]], [6, [[[7, &amp;#39;hello&amp;#39;]]]]]
 
-    &lt;span class="n"&gt;def&lt;/span&gt; &lt;span class="n"&gt;flatten&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;nested&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;item&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;nested&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;isinstance&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;item&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;or&lt;/span&gt; &lt;span class="n"&gt;isinstance&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;item&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;tuple&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-                &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;element&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;flatten&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;item&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-                    &lt;span class="n"&gt;yield&lt;/span&gt; &lt;span class="n"&gt;element&lt;/span&gt;
-            &lt;span class="nl"&gt;else:&lt;/span&gt;
-                &lt;span class="n"&gt;yield&lt;/span&gt; &lt;span class="n"&gt;item&lt;/span&gt;
+    def flatten(nested):
+        for item in nested:
+            if isinstance(item, list) or isinstance(item, tuple):
+                for element in flatten(item):
+                    yield element
+            else:
+                yield item
 
-    &lt;span class="n"&gt;print&lt;/span&gt; &lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;flatten&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;nested_list&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+    print list(flatten(nested_list))
 
-    &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;hi&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;hello&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+    &amp;gt; [1, 2, 3, 4, 5, &amp;#39;hi&amp;#39;, 6, 7, &amp;#39;hello&amp;#39;]
 &lt;/pre&gt;&lt;/div&gt;
 
 
