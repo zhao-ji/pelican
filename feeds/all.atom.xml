@@ -27,6 +27,10 @@
 &lt;ul&gt;
 &lt;li&gt;sort&lt;/li&gt;
 &lt;/ul&gt;
+&lt;h4&gt;zip文件解压乱码&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;unzip -O GBK xxxx.zip&lt;/li&gt;
+&lt;/ul&gt;
 &lt;h2&gt;Python Tips&lt;/h2&gt;
 &lt;h4&gt;自然数生成器&lt;/h4&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="n"&gt;Num:&lt;/span&gt;
