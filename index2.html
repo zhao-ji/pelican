@@ -28,78 +28,28 @@ Released   : 20100928
         
 				<div id="content">
 					<div class="post">
-						<h2 class="title"><a href="http://zhao-ji.github.io/2015/si-yue-dian-di-shou-ji.html">四月点滴收集</a></h2>
+						<h2 class="title"><a href="http://zhao-ji.github.io/2015/wu-yue-dian-di-shou-ji.html">五月点滴收集</a></h2>
 						<p class="meta"><span class="date">Le  </span><span class="posted">Par <a href="#">p0f</a></span><span>&nbsp; | Catégorie : <a href="http://zhao-ji.github.io/category/tips.html">Tips</a></span></p>
 					<p class="meta">Tags : </p>
 						<div style="clear: both;">&nbsp;</div>
 						<div class="entry">
 						 <p>=======================</p>
-<h2>Shell Tips</h2>
-<h4>安装新字体</h4>
-<ul>
-<li>将字体文件夹拷贝到 /usr/share/fonts 目录下</li>
-<li>更改权限　644</li>
-<li>进入字体文件夹</li>
-<li>command:
-    sudo mkfontscale
-    sudo mkfontdir
-    sudo fc-cache -fv</li>
-</ul>
-<h4>无密码登录VPS前的密钥传递</h4>
-<ul>
-<li>ssh-copy-id -p 80 username@host</li>
-</ul>
-<h4>shell 去空行</h4>
-<ul>
-<li>cat hello | tr -s '\n'</li>
-</ul>
-<h4>shell 去重</h4>
-<ul>
-<li>uniq</li>
-</ul>
-<h4>shell 排序</h4>
-<ul>
-<li>sort</li>
-</ul>
-<h4>zip文件解压乱码</h4>
-<ul>
-<li>unzip -O GBK xxxx.zip</li>
-</ul>
-<h2>Python Tips</h2>
-<h4>自然数生成器</h4>
-<div class="highlight"><pre><span class="k">class</span> <span class="n">Num:</span>
-    <span class="s">&#39;&#39;&#39;output the nature number&#39;&#39;&#39;</span>
-    <span class="nb">num</span> = <span class="mi">0</span>
-
-    <span class="n">def</span> <span class="n">gen</span>(<span class="k">self</span>):
-        <span class="k">while</span> <span class="n">True:</span>
-            <span class="n">yield</span> <span class="k">self</span>.<span class="nb">num</span>
-            <span class="k">self</span>.<span class="nb">num</span> += <span class="mi">1</span>
-</pre></div>
-
-
-<h4>yield</h4>
-<ul>
-<li>only yield: frozen the status</li>
-<li>yield someone: frozen the status and return the someone</li>
-<li>somebody = yield: frozen the status and send the somebody to function</li>
-<li>somebody = yield someone: frozen the status and send the somebody to the generator and return someone and </li>
-</ul>
-<h4>用字典实现switch功能 (router)</h4>
 <h2>Vim Tips</h2>
-<h4>读取内容到正在编辑的文件中</h4>
 <ul>
-<li>:r hey.txt</li>
-<li>:r !ls</li>
-</ul>
-<h4>执行shell命令</h4>
-<ul>
-<li>Ctrl+z 回到命令行 fg 回到Vim</li>
-<li>:shell 回到命令行 exit 回到Vim</li>
-</ul>
-<h4>rot13 加密混淆当前文本</h4>
-<ul>
-<li>:'&lt;,'&gt; !rot13</li>
+<li>
+<p>Vim 中空格代替 制表符配置</p>
+<ol>
+<li>set expandtab # replace the tab with space</li>
+<li>set tabstop=4 # 4 space</li>
+<li>set shiftwigth=4 # auto shift width 4 space</li>
+</ol>
+</li>
+<li>
+<p>交换当前行和下一行： ddp</p>
+</li>
+<li>
+<p>i internal a outer : cis cip cas cap</p>
+</li>
 </ul>	
 <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="qinghecha">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 						</div>
@@ -108,6 +58,17 @@ Released   : 20100928
 			                <div class="post">
 			                        <h2 class="title">Autres articles</h2>
 			                </div>
+        
+ 
+			                <div class="post summary">
+						<h2 class="title"><a href="http://zhao-ji.github.io/2015/si-yue-dian-di-shou-ji.html">四月点滴收集</a></h2>
+						<p class="meta"><span class="date">Le 六 11 四月 2015</span><span class="posted">Par <a href="#">p0f</a></span></p>
+						<div style="clear: both;">&nbsp;</div>
+						<div class="entry">
+						 <p>Tips in Apr</p>	
+						 <a class="readmore" href="http://zhao-ji.github.io/2015/si-yue-dian-di-shou-ji.html">Lire la suite …</a>
+						</div>
+					</div>
         
  
 			                <div class="post summary">

@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>写博客也要讲基本法</title><link href="http://zhao-ji.github.io/" rel="alternate"></link><link href="http://zhao-ji.github.io/feeds/all.atom.xml" rel="self"></link><id>http://zhao-ji.github.io/</id><updated>2015-04-11T19:00:00+08:00</updated><entry><title>四月点滴收集</title><link href="http://zhao-ji.github.io/2015/si-yue-dian-di-shou-ji.html" rel="alternate"></link><updated>2015-04-11T19:00:00+08:00</updated><author><name>p0f</name></author><id>tag:zhao-ji.github.io,2015-04-11:2015/si-yue-dian-di-shou-ji.html</id><summary type="html">&lt;p&gt;=======================&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>写博客也要讲基本法</title><link href="http://zhao-ji.github.io/" rel="alternate"></link><link href="http://zhao-ji.github.io/feeds/all.atom.xml" rel="self"></link><id>http://zhao-ji.github.io/</id><updated>2015-05-04T08:00:00+08:00</updated><entry><title>五月点滴收集</title><link href="http://zhao-ji.github.io/2015/wu-yue-dian-di-shou-ji.html" rel="alternate"></link><updated>2015-05-04T08:00:00+08:00</updated><author><name>p0f</name></author><id>tag:zhao-ji.github.io,2015-05-04:2015/wu-yue-dian-di-shou-ji.html</id><summary type="html">&lt;p&gt;=======================&lt;/p&gt;
+&lt;h2&gt;Vim Tips&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Vim 中空格代替 制表符配置&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;set expandtab # replace the tab with space&lt;/li&gt;
+&lt;li&gt;set tabstop=4 # 4 space&lt;/li&gt;
+&lt;li&gt;set shiftwigth=4 # auto shift width 4 space&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;交换当前行和下一行： ddp&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;i internal a outer : cis cip cas cap&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</summary></entry><entry><title>四月点滴收集</title><link href="http://zhao-ji.github.io/2015/si-yue-dian-di-shou-ji.html" rel="alternate"></link><updated>2015-04-11T19:00:00+08:00</updated><author><name>p0f</name></author><id>tag:zhao-ji.github.io,2015-04-11:2015/si-yue-dian-di-shou-ji.html</id><summary type="html">&lt;p&gt;=======================&lt;/p&gt;
 &lt;h2&gt;Shell Tips&lt;/h2&gt;
 &lt;h4&gt;安装新字体&lt;/h4&gt;
 &lt;ul&gt;
