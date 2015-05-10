@@ -19,6 +19,9 @@
 &lt;li&gt;
 &lt;p&gt;保存sudo权限的文件 :w !sudo tee %&lt;/p&gt;
 &lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Tab页切换 gt&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2&gt;Linux Tips&lt;/h2&gt;
 &lt;ul&gt;
