@@ -38,16 +38,16 @@ Released   : 20100928
 <blockquote>
 <p>可重复全排列</p>
 </blockquote>
-<div class="highlight"><pre>    def brute(choices, length):
-        return (
-            &#39;&#39;.join(candidate) for candidate in
-            chain.from_iterable(
-                product(
-                    choices,
-                    repeat = i,
-                ) for i in range(1, length + 1),
-            )
-        )
+<div class="highlight"><pre>    <span class="n">def</span> <span class="n">brute</span><span class="p">(</span><span class="n">choices</span><span class="p">,</span> <span class="n">length</span><span class="p">)</span><span class="o">:</span>
+        <span class="k">return</span> <span class="p">(</span>
+            <span class="err">&#39;&#39;</span><span class="p">.</span><span class="n">join</span><span class="p">(</span><span class="n">candidate</span><span class="p">)</span> <span class="k">for</span> <span class="n">candidate</span> <span class="n">in</span>
+            <span class="n">chain</span><span class="p">.</span><span class="n">from_iterable</span><span class="p">(</span>
+                <span class="n">product</span><span class="p">(</span>
+                    <span class="n">choices</span><span class="p">,</span>
+                    <span class="n">repeat</span> <span class="o">=</span> <span class="n">i</span><span class="p">,</span>
+                <span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="n">in</span> <span class="n">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">length</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span>
+            <span class="p">)</span>
+        <span class="p">)</span>
 </pre></div>
 
 
@@ -76,19 +76,19 @@ Out[6]: True</p>
 <p><strong>isinstance 的第二个参数可以是 类型、类、包含类型或类的元祖。</strong></p>
 <p><br></p>
 <h4>How to flatten arbitrarily nested lists in Python?</h4>
-<div class="highlight"><pre>    nested_list = [1, 2, [3, 4, [5],[&#39;hi&#39;]], [6, [[[7, &#39;hello&#39;]]]]]
+<div class="highlight"><pre>    <span class="n">nested_list</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="p">[</span><span class="mi">5</span><span class="p">],[</span><span class="err">&#39;</span><span class="n">hi</span><span class="err">&#39;</span><span class="p">]],</span> <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="p">[[[</span><span class="mi">7</span><span class="p">,</span> <span class="err">&#39;</span><span class="n">hello</span><span class="err">&#39;</span><span class="p">]]]]]</span>
 
-    def flatten(nested):
-        for item in nested:
-            if isinstance(item, list) or isinstance(item, tuple):
-                for element in flatten(item):
-                    yield element
-            else:
-                yield item
+    <span class="n">def</span> <span class="n">flatten</span><span class="p">(</span><span class="n">nested</span><span class="p">)</span><span class="o">:</span>
+        <span class="k">for</span> <span class="n">item</span> <span class="n">in</span> <span class="n">nested</span><span class="o">:</span>
+            <span class="k">if</span> <span class="n">isinstance</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">list</span><span class="p">)</span> <span class="n">or</span> <span class="n">isinstance</span><span class="p">(</span><span class="n">item</span><span class="p">,</span> <span class="n">tuple</span><span class="p">)</span><span class="o">:</span>
+                <span class="k">for</span> <span class="n">element</span> <span class="n">in</span> <span class="n">flatten</span><span class="p">(</span><span class="n">item</span><span class="p">)</span><span class="o">:</span>
+                    <span class="n">yield</span> <span class="n">element</span>
+            <span class="nl">else:</span>
+                <span class="n">yield</span> <span class="n">item</span>
 
-    print list(flatten(nested_list))
+    <span class="n">print</span> <span class="n">list</span><span class="p">(</span><span class="n">flatten</span><span class="p">(</span><span class="n">nested_list</span><span class="p">))</span>
 
-    &gt; [1, 2, 3, 4, 5, &#39;hi&#39;, 6, 7, &#39;hello&#39;]
+    <span class="o">&gt;</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="err">&#39;</span><span class="n">hi</span><span class="err">&#39;</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="err">&#39;</span><span class="n">hello</span><span class="err">&#39;</span><span class="p">]</span>
 </pre></div>
 
 
