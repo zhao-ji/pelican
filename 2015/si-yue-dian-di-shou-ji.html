@@ -66,14 +66,14 @@ Released   : 20100928
 </ul>
 <h2>Python Tips</h2>
 <h4>自然数生成器</h4>
-<div class="highlight"><pre><span class="n">class</span> <span class="n">Num</span><span class="o">:</span>
-    <span class="err">&#39;&#39;&#39;</span><span class="n">output</span> <span class="n">the</span> <span class="n">nature</span> <span class="n">number</span><span class="err">&#39;&#39;&#39;</span>
-    <span class="n">num</span> <span class="o">=</span> <span class="mi">0</span>
+<div class="highlight"><pre><span class="k">class</span> <span class="n">Num:</span>
+    <span class="s">&#39;&#39;&#39;output the nature number&#39;&#39;&#39;</span>
+    <span class="nb">num</span> = <span class="mi">0</span>
 
-    <span class="n">def</span> <span class="n">gen</span><span class="p">(</span><span class="n">self</span><span class="p">)</span><span class="o">:</span>
-        <span class="k">while</span> <span class="n">True</span><span class="o">:</span>
-            <span class="n">yield</span> <span class="n">self</span><span class="p">.</span><span class="n">num</span>
-            <span class="n">self</span><span class="p">.</span><span class="n">num</span> <span class="o">+=</span> <span class="mi">1</span>
+    <span class="n">def</span> <span class="n">gen</span>(<span class="k">self</span>):
+        <span class="k">while</span> <span class="n">True:</span>
+            <span class="n">yield</span> <span class="k">self</span>.<span class="nb">num</span>
+            <span class="k">self</span>.<span class="nb">num</span> += <span class="mi">1</span>
 </pre></div>
 
 

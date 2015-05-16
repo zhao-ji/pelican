@@ -23,11 +23,11 @@
 &lt;/ul&gt;
 &lt;h2&gt;Tips&lt;/h2&gt;</summary></entry><entry><title>Python 字符串替换</title><link href="http://zhao-ji.github.io/2015/python-zi-fu-chuan-ti-huan.html" rel="alternate"></link><updated>2015-01-15T17:40:00+08:00</updated><author><name>p0f</name></author><id>tag:zhao-ji.github.io,2015-01-15:2015/python-zi-fu-chuan-ti-huan.html</id><summary type="html">&lt;p&gt;=================================&lt;/p&gt;
 &lt;h2&gt;字符串替换&lt;/h2&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;def&lt;/span&gt; &lt;span class="n"&gt;replace_words&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;word_dic&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; 
-    &lt;span class="n"&gt;yo&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;re&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;compile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="sc"&gt;&amp;#39;|&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;join&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;map&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;re&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;escape&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;word_dic&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt; 
-    &lt;span class="n"&gt;def&lt;/span&gt; &lt;span class="n"&gt;translate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;mat&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; 
-        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;word_dic&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;mat&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;group&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)]&lt;/span&gt; 
-    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;yo&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sub&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;translate&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;text&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;def replace_words(text, word_dic): 
+    yo = re.compile(&amp;#39;|&amp;#39;.join(map(re.escape, word_dic))) 
+    def translate(mat): 
+        return word_dic[mat.group(0)] 
+    return yo.sub(translate, text)
 &lt;/pre&gt;&lt;/div&gt;
 
 

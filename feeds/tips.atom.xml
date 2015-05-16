@@ -46,6 +46,18 @@
 &lt;li&gt;
 &lt;p&gt;去掉系统错误提示 /etc/default/apport 设为0&lt;/p&gt;
 &lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;command line 里用一个横线的option 方便书写, scripts 里面用两个横线的option 易于维护&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;cut 残废在对多空格分隔符的处理上，用 tr -s " " | cut -d " " -f 4 代替&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;dot = soruce, chmod 755&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;用户script存放在 ~/bin/ 下，脚本自制脚本放入/usr/local/bin和/usr/local/sbin下&lt;/p&gt;
+&lt;/li&gt;
 &lt;/ul&gt;</summary></entry><entry><title>四月点滴收集</title><link href="http://zhao-ji.github.io/2015/si-yue-dian-di-shou-ji.html" rel="alternate"></link><updated>2015-04-11T19:00:00+08:00</updated><author><name>p0f</name></author><id>tag:zhao-ji.github.io,2015-04-11:2015/si-yue-dian-di-shou-ji.html</id><summary type="html">&lt;p&gt;=======================&lt;/p&gt;
 &lt;h2&gt;Shell Tips&lt;/h2&gt;
 &lt;h4&gt;安装新字体&lt;/h4&gt;
@@ -80,14 +92,14 @@
 &lt;/ul&gt;
 &lt;h2&gt;Python Tips&lt;/h2&gt;
 &lt;h4&gt;自然数生成器&lt;/h4&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;class&lt;/span&gt; &lt;span class="n"&gt;Num&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-    &lt;span class="err"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;output&lt;/span&gt; &lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;nature&lt;/span&gt; &lt;span class="n"&gt;number&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
-    &lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="n"&gt;Num:&lt;/span&gt;
+    &lt;span class="s"&gt;&amp;#39;&amp;#39;&amp;#39;output the nature number&amp;#39;&amp;#39;&amp;#39;&lt;/span&gt;
+    &lt;span class="nb"&gt;num&lt;/span&gt; = &lt;span class="mi"&gt;0&lt;/span&gt;
 
-    &lt;span class="n"&gt;def&lt;/span&gt; &lt;span class="n"&gt;gen&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-        &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="n"&gt;True&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-            &lt;span class="n"&gt;yield&lt;/span&gt; &lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt;
-            &lt;span class="n"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+    &lt;span class="n"&gt;def&lt;/span&gt; &lt;span class="n"&gt;gen&lt;/span&gt;(&lt;span class="k"&gt;self&lt;/span&gt;):
+        &lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="n"&gt;True:&lt;/span&gt;
+            &lt;span class="n"&gt;yield&lt;/span&gt; &lt;span class="k"&gt;self&lt;/span&gt;.&lt;span class="nb"&gt;num&lt;/span&gt;
+            &lt;span class="k"&gt;self&lt;/span&gt;.&lt;span class="nb"&gt;num&lt;/span&gt; += &lt;span class="mi"&gt;1&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -312,10 +324,10 @@ get_prime_list = lambda num: reduce(get_next_prime, xrange(2, num), [])&lt;/p&gt
 &lt;h4&gt;普通用户和超级用户 以提示符（prompt）$和#区分&lt;/h4&gt;
 &lt;h2&gt;Python Tips&lt;/h2&gt;
 &lt;h4&gt;shell 彩色输出&lt;/h4&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="n"&gt;from&lt;/span&gt; &lt;span class="n"&gt;termcolor&lt;/span&gt; &lt;span class="n"&gt;import&lt;/span&gt; &lt;span class="n"&gt;colored&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;termcolor&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;colored&lt;/span&gt;
 
-    &lt;span class="n"&gt;print&lt;/span&gt; &lt;span class="n"&gt;colored&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;Hello&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;blue&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;, &amp;quot;&lt;/span&gt; \
-        &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;colored&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;V2EX&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;cyan&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;attrs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;bold&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+    &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="n"&gt;colored&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;Hello&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;blue&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s"&gt;&amp;quot;, &amp;quot;&lt;/span&gt; \
+        &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="n"&gt;colored&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;V2EX&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;cyan&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;attrs&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;bold&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -335,16 +347,16 @@ get_prime_list = lambda num: reduce(get_next_prime, xrange(2, num), [])&lt;/p&gt
 &lt;blockquote&gt;
 &lt;p&gt;可重复全排列&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="n"&gt;def&lt;/span&gt; &lt;span class="n"&gt;brute&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;choices&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;length&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;
-            &lt;span class="err"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;join&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;candidate&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;candidate&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt;
-            &lt;span class="n"&gt;chain&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;from_iterable&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
-                &lt;span class="n"&gt;product&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;
-                    &lt;span class="n"&gt;choices&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-                    &lt;span class="n"&gt;repeat&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-                &lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;i&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;length&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
-            &lt;span class="p"&gt;)&lt;/span&gt;
-        &lt;span class="p"&gt;)&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;    def brute(choices, length):
+        return (
+            &amp;#39;&amp;#39;.join(candidate) for candidate in
+            chain.from_iterable(
+                product(
+                    choices,
+                    repeat = i,
+                ) for i in range(1, length + 1),
+            )
+        )
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -373,19 +385,19 @@ Out[6]: True&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;isinstance 的第二个参数可以是 类型、类、包含类型或类的元祖。&lt;/strong&gt;&lt;/p&gt;
 &lt;p&gt;&lt;br&gt;&lt;/p&gt;
 &lt;h4&gt;How to flatten arbitrarily nested lists in Python?&lt;/h4&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="n"&gt;nested_list&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;],[&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;hi&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]],&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;[[[&lt;/span&gt;&lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;hello&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]]]]]&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;    nested_list = [1, 2, [3, 4, [5],[&amp;#39;hi&amp;#39;]], [6, [[[7, &amp;#39;hello&amp;#39;]]]]]
 
-    &lt;span class="n"&gt;def&lt;/span&gt; &lt;span class="n"&gt;flatten&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;nested&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-        &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;item&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;nested&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-            &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;isinstance&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;item&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="n"&gt;or&lt;/span&gt; &lt;span class="n"&gt;isinstance&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;item&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;tuple&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-                &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;element&lt;/span&gt; &lt;span class="n"&gt;in&lt;/span&gt; &lt;span class="n"&gt;flatten&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;item&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;
-                    &lt;span class="n"&gt;yield&lt;/span&gt; &lt;span class="n"&gt;element&lt;/span&gt;
-            &lt;span class="nl"&gt;else:&lt;/span&gt;
-                &lt;span class="n"&gt;yield&lt;/span&gt; &lt;span class="n"&gt;item&lt;/span&gt;
+    def flatten(nested):
+        for item in nested:
+            if isinstance(item, list) or isinstance(item, tuple):
+                for element in flatten(item):
+                    yield element
+            else:
+                yield item
 
-    &lt;span class="n"&gt;print&lt;/span&gt; &lt;span class="n"&gt;list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;flatten&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;nested_list&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+    print list(flatten(nested_list))
 
-    &lt;span class="o"&gt;&amp;gt;&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;hi&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;hello&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+    &amp;gt; [1, 2, 3, 4, 5, &amp;#39;hi&amp;#39;, 6, 7, &amp;#39;hello&amp;#39;]
 &lt;/pre&gt;&lt;/div&gt;
 
 
