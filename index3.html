@@ -28,127 +28,52 @@ Released   : 20100928
         
 				<div id="content">
 					<div class="post">
-						<h2 class="title"><a href="http://zhao-ji.github.io/2015/wu-yue-dian-di-shou-ji.html">五月点滴收集</a></h2>
-						<p class="meta"><span class="date">Le  </span><span class="posted">Par <a href="#">p0f</a></span><span>&nbsp; | Catégorie : <a href="http://zhao-ji.github.io/category/tips.html">Tips</a></span></p>
+						<h2 class="title"><a href="http://zhao-ji.github.io/2015/php-da-hui.html">PHP 大会</a></h2>
+						<p class="meta"><span class="date">Le  </span><span class="posted">Par <a href="#">p0f</a></span><span>&nbsp; | Catégorie : <a href="http://zhao-ji.github.io/category/ji-zhu-ju-hui.html">技术聚会</a></span></p>
 					<p class="meta">Tags : </p>
 						<div style="clear: both;">&nbsp;</div>
 						<div class="entry">
-						 <p>=======================</p>
-<h2>Vim Tips</h2>
+						 <p>================================</p>
+<h2>最靠谱的人组织的世界上最好的语言的技术大会</h2>
+<h4>开场</h4>
 <ul>
-<li>
-<p>Vim 中空格代替 制表符配置</p>
-<ol>
-<li>set expandtab # replace the tab with space</li>
-<li>set tabstop=4 # 4 space</li>
-<li>set shiftwigth=4 # auto shift width 4 space</li>
-</ol>
-</li>
-<li>
-<p>交换当前行和下一行： ddp</p>
-</li>
-<li>
-<p>i internal a outer : cis cip cas cap</p>
-</li>
-<li>
-<p>保存sudo权限的文件 :w !sudo tee %</p>
-</li>
-<li>
-<p>Tab页切换 gt</p>
-</li>
-<li>
-<p>刷新页面使 syntax 生效 :e</p>
-</li>
+<li>六月六号、六月七号两天，在鑫海久江大酒店。场地豪华宽敞，中午还有美女热舞。足见高春辉的人脉和拉赞助能力。</li>
+<li>开场高春辉就说我们跟CSDN不一样，他们是面向架构师的技术大会。我们希望能给一线开发工程师分享一些干货。</li>
+<li>靠谱的人做靠谱的事，do one thing and do it well.</li>
 </ul>
-<h2>Linux Tips</h2>
+<h4>第一讲</h4>
 <ul>
-<li>
-<p>locate updatedb</p>
-</li>
-<li>
-<p>find ~ -type f -name "*.pyc" -size -1M -delete</p>
-</li>
-<li>
-<p>cat -Ans file 显示行号、空行压缩、不可打印字符</p>
-</li>
-<li>
-<p>sort -k 2.3brn,2 -t ';'</p>
-</li>
-<li>
-<p>cut -f 2,3 -c 4,5</p>
-</li>
-<li>
-<p>paste file1 file2</p>
-</li>
-<li>
-<p>去掉系统错误提示 /etc/default/apport 设为0</p>
-</li>
-<li>
-<p>command line 里用一个横线的option 方便书写, scripts 里面用两个横线的option 易于维护</p>
-</li>
-<li>
-<p>cut 残废在对多空格分隔符的处理上，用 tr -s " " | cut -d " " -f 4 代替</p>
-</li>
-<li>
-<p>dot = soruce, chmod 755</p>
-</li>
-<li>
-<p>用户script存放在 ~/bin/ 下，脚本自制脚本放入/usr/local/bin和/usr/local/sbin下</p>
-</li>
-<li>
-<p>sh 不支持 delare, bash 支持</p>
-</li>
-<li>
-<p>bash 引用执行结果  $(ls)</p>
-</li>
-<li>
-<p>bash 引用计算结果  $((4+5))</p>
-</li>
-<li>
-<p>bash 字符串长度 ${#aaaaa}</p>
-</li>
-<li>
-<p>bash 拼接执行结果  aaaa${b}cccc</p>
-</li>
-<li>
-<p>bash 进制转换 $((16#fffff))</p>
-</li>
-<li>
-<p>bash 上条命令执行状态码 $?</p>
-</li>
+<li>上午第一讲是新浪微博的哥们儿，原来新浪微博后台主要用PHP。</li>
+<li>那哥们儿坦言新浪微博后台接口有历史包袱，kjava接口有次更新被移除了，结果电话被打爆，背了个A级故障。</li>
+<li>创业公司源代码一穷二白一片荒芜，用户量也少，写起来没快感。像新浪微博这样，历史包袱太大搞起来又碍手碍脚。</li>
+<li>中等规模的公司，中等规模的项目，才是最适合程序员待的地方。</li>
+<li>这哥们在给手机端提供接口，新浪微博API早已实现分层，他们算是事物层API，原子层API还在下面</li>
+<li>由 Apache 换成了 NginX, PHP 由5.3升级到5.4，下一步还要升级到 PHP7。用的自己写的yaf yak.</li>
+<li>换成 NginX 遇到了返回验证码时没有 Content-Length 的坑</li>
+<li>PHP 是用 C 写的，每一次版本升级都能带来巨大的性能提升。</li>
+<li>这哥们最后说分布服务器和数据中心的通信要从HTTP换成SocketServer, 还要从TCP换成UDP。</li>
 </ul>
-<h2>Git Tips</h2>
+<h4>第二讲</h4>
 <ul>
-<li>
-<p>撤销修改 git checkout -- somefile.txt</p>
-</li>
-<li>
-<p>撤销add git reset HEAD somefile.py</p>
-</li>
-<li>
-<p>撤销commit git commit -m 'add: hey' | git add somefile.py | git commit --amend </p>
-</li>
-<li>
-<p>查看config git config --list</p>
-</li>
-<li>
-<p>设置默认编辑器  git config --global core.editor vim</p>
-</li>
+<li>web安全相关的</li>
+<li>SQL注入 盲注 union注入 error注入</li>
+<li>正则注入</li>
+<li>CSRF注入 请求加token</li>
+<li>XSS注入 过滤标签</li>
+<li>webshell 注入</li>
 </ul>
-<blockquote>
-<p>为什么要写好的 commit log? 为了自己review方便 为了后人维护方便 方便写文档
-注意点： fix/add/change issue/feature号开头，放上issue链接
-开头综述干了什么，隔空行后放上链接
-接下来分条讲清楚为什么要做改动、是什么问题让自己不得不改动代码，自己是怎么解决这个问题的，问题解决后会不会有副作用、会不会留下什么坑</p>
-</blockquote>
-<h2>algorithm</h2>
+<h4>中午休息</h4>
 <ul>
-<li>
-<p>正则执行原理</p>
-</li>
-<li>
-<p>LRU cache 设计注意点</p>
-</li>
+<li>再胡同里面绕了一圈，找了个饭店吃了个饭</li>
+<li>领了T-shirt</li>
+<li>中午美女热舞，看的出来主办方真的是在用心做事</li>
+</ul>
+<h4>第三讲</h4>
+<ul>
+<li>PHP并发并行编程</li>
+<li>进程池的用法 是为了避免单进程阻塞太厉害，而多进程相当吃内存的折中办法</li>
+<li>基于epoll的异步回调机制 用单进程单线程解决C10K问题</li>
+<li>演讲嘉宾原来再腾讯朋友网供职，他开发的框架是多进程多线程的事件驱动的异步回调</li>
 </ul>	
 <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="qinghecha">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 						</div>
@@ -157,6 +82,17 @@ Released   : 20100928
 			                <div class="post">
 			                        <h2 class="title">Autres articles</h2>
 			                </div>
+        
+ 
+			                <div class="post summary">
+						<h2 class="title"><a href="http://zhao-ji.github.io/2015/wu-yue-dian-di-shou-ji.html">五月点滴收集</a></h2>
+						<p class="meta"><span class="date">Le 一 04 五月 2015</span><span class="posted">Par <a href="#">p0f</a></span></p>
+						<div style="clear: both;">&nbsp;</div>
+						<div class="entry">
+						 <p>Tips in June</p>	
+						 <a class="readmore" href="http://zhao-ji.github.io/2015/wu-yue-dian-di-shou-ji.html">Lire la suite …</a>
+						</div>
+					</div>
         
  
 			                <div class="post summary">
@@ -417,6 +353,7 @@ Released   : 20100928
 								 <li ><a href="http://zhao-ji.github.io/category/python.html">Python</a></li>
 								 <li ><a href="http://zhao-ji.github.io/category/network.html">NetWork</a></li>
 								 <li ><a href="http://zhao-ji.github.io/category/linux.html">Linux</a></li>
+								 <li ><a href="http://zhao-ji.github.io/category/ji-zhu-ju-hui.html">技术聚会</a></li>
 							</ul>
 						</li>
 						<li>
