@@ -40,6 +40,7 @@
 &lt;li&gt;进程池的用法 是为了避免单进程阻塞太厉害，而多进程相当吃内存的折中办法&lt;/li&gt;
 &lt;li&gt;基于epoll的异步回调机制 用单进程单线程解决C10K问题&lt;/li&gt;
 &lt;li&gt;演讲嘉宾原来再腾讯朋友网供职，他开发的框架是多进程多线程的事件驱动的异步回调&lt;/li&gt;
+&lt;li&gt;现在每秒能抗70万并发&lt;/li&gt;
 &lt;/ul&gt;</summary></entry><entry><title>五月点滴收集</title><link href="http://zhao-ji.github.io/2015/wu-yue-dian-di-shou-ji.html" rel="alternate"></link><updated>2015-05-04T08:00:00+08:00</updated><author><name>p0f</name></author><id>tag:zhao-ji.github.io,2015-05-04:2015/wu-yue-dian-di-shou-ji.html</id><summary type="html">&lt;p&gt;=======================&lt;/p&gt;
 &lt;h2&gt;Vim Tips&lt;/h2&gt;
 &lt;ul&gt;
