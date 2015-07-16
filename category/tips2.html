@@ -28,128 +28,70 @@ Released   : 20100928
         
 				<div id="content">
 					<div class="post">
-						<h2 class="title"><a href="http://zhao-ji.github.io/2015/wu-yue-dian-di-shou-ji.html">五月点滴收集</a></h2>
+						<h2 class="title"><a href="http://zhao-ji.github.io/2015/open-party-ji-zhu-fen-xiang.html">Open Party 技术分享</a></h2>
 						<p class="meta"><span class="date">Le  </span><span class="posted">Par <a href="#">p0f</a></span><span>&nbsp; | Catégorie : <a href="http://zhao-ji.github.io/category/tips.html">Tips</a></span></p>
 					<p class="meta">Tags : </p>
 						<div style="clear: both;">&nbsp;</div>
 						<div class="entry">
-						 <p>=======================</p>
-<h2>Vim Tips</h2>
-<ul>
-<li>
-<p>Vim 中空格代替 制表符配置</p>
-<ol>
-<li>set expandtab # replace the tab with space</li>
-<li>set tabstop=4 # 4 space</li>
-<li>set shiftwigth=4 # auto shift width 4 space</li>
-</ol>
-</li>
-<li>
-<p>交换当前行和下一行： ddp</p>
-</li>
-<li>
-<p>i internal a outer : cis cip cas cap</p>
-</li>
-<li>
-<p>保存sudo权限的文件 :w !sudo tee %</p>
-</li>
-<li>
-<p>Tab页切换 gt</p>
-</li>
-<li>
-<p>刷新页面使 syntax 生效 :e</p>
-</li>
-</ul>
-<h2>Linux Tips</h2>
-<ul>
-<li>
-<p>locate updatedb</p>
-</li>
-<li>
-<p>find ~ -type f -name "*.pyc" -size -1M -delete</p>
-</li>
-<li>
-<p>cat -Ans file 显示行号、空行压缩、不可打印字符</p>
-</li>
-<li>
-<p>sort -k 2.3brn,2 -t ';'</p>
-</li>
-<li>
-<p>cut -f 2,3 -c 4,5</p>
-</li>
-<li>
-<p>paste file1 file2</p>
-</li>
-<li>
-<p>去掉系统错误提示 /etc/default/apport 设为0</p>
-</li>
-<li>
-<p>command line 里用一个横线的option 方便书写, scripts 里面用两个横线的option 易于维护</p>
-</li>
-<li>
-<p>cut 残废在对多空格分隔符的处理上，用 tr -s " " | cut -d " " -f 4 代替</p>
-</li>
-<li>
-<p>dot = soruce, chmod 755</p>
-</li>
-<li>
-<p>用户script存放在 ~/bin/ 下，脚本自制脚本放入/usr/local/bin和/usr/local/sbin下</p>
-</li>
-<li>
-<p>sh 不支持 delare, bash 支持</p>
-</li>
-<li>
-<p>bash 引用执行结果  $(ls)</p>
-</li>
-<li>
-<p>bash 引用计算结果  $((4+5))</p>
-</li>
-<li>
-<p>bash 字符串长度 ${#aaaaa}</p>
-</li>
-<li>
-<p>bash 拼接执行结果  aaaa${b}cccc</p>
-</li>
-<li>
-<p>bash 进制转换 $((16#fffff))</p>
-</li>
-<li>
-<p>bash 上条命令执行状态码 $?</p>
-</li>
-</ul>
-<h2>Git Tips</h2>
-<ul>
-<li>
-<p>撤销修改 git checkout -- somefile.txt</p>
-</li>
-<li>
-<p>撤销add git reset HEAD somefile.py</p>
-</li>
-<li>
-<p>撤销commit git commit -m 'add: hey' | git add somefile.py | git commit --amend </p>
-</li>
-<li>
-<p>查看config git config --list</p>
-</li>
-<li>
-<p>设置默认编辑器  git config --global core.editor vim</p>
-</li>
-</ul>
-<blockquote>
-<p>为什么要写好的 commit log? 为了自己review方便 为了后人维护方便 方便写文档
-注意点： fix/add/change issue/feature号开头，放上issue链接
-开头综述干了什么，隔空行后放上链接
-接下来分条讲清楚为什么要做改动、是什么问题让自己不得不改动代码，自己是怎么解决这个问题的，问题解决后会不会有副作用、会不会留下什么坑</p>
-</blockquote>
-<h2>algorithm</h2>
-<ul>
-<li>
-<p>正则执行原理</p>
-</li>
-<li>
-<p>LRU cache 设计注意点</p>
-</li>
-</ul>	
+						 <p>====================================</p>
+<h1>会后总评</h1>
+<div class="highlight"><pre>* 官网上说下午一点半开始，其实两点才开始投票选场地。正式开始第一场分享都不知道什么时候了。
+* 现场没空调，不知道是 ThoughtWorks 平时就没空调还是嫌费电不给我们开空调。
+* 谷歌退出中国后显然活动经费就空了，虽然挂着个谷歌中国的名号，但是场地是借的，显然讲师也都是自愿的，所以干货少的很。
+* 遇到了前同事，得知前东家仅有的两位设计师也都先后离职了。
+</pre></div>
+
+
+<h1>第一场 滴滴打车 低成本架构</h1>
+<hr />
+<div class="highlight"><pre>* 滴滴后面有两套支付系统
+* 目前业界支付系统 JAVA 一家独大
+</pre></div>
+
+
+<hr />
+<div class="highlight"><pre>* 滴滴目前的情况是：每天都在面临新挑战 开发速度是第一位的 线上出差错影响巨大 无法预估请求峰值
+* 滴滴目前的做法是 拆分业务 拆分到每一部分都能用简单的增删改查完成 没有耦合 每一部分都是一样的 只是在完成不同的业务
+</pre></div>
+
+
+<hr />
+<div class="highlight"><pre>* 简单 开发快 简单 新人上手快 简单 问题解决办法能复用
+* 马化腾和张志东说 公司文化不被稀释的原则是每年新员工加入不超过 30%
+</pre></div>
+
+
+<hr />
+<div class="highlight"><pre>* 登录功能出过差错 在一周内用 GO 改写 学习新语言和完成功能二十人天  单元测试十二人天 
+* 登录功能 灰度上线和凌晨上线 
+* 新登录后台 修改密码 SQL语句错误 少了where 写了好多人的密码 灰度上线加上数据库分片 损失不大
+* 单元测试的好处是 修改代码方便  免得线上测试 滴滴这么大体量的公司还在搞线上测试 真是令人吃惊
+</pre></div>
+
+
+<hr />
+<div class="highlight"><pre>* 日志功能出过差错 日志记录数据库阻塞 因为硬盘满了 导致服务中断
+* 开始用socket发送日志 检测失败率 超过阀值就换掉 上人工检查
+</pre></div>
+
+
+<hr />
+<h1>第二场 马丁招聘</h1>
+<hr />
+<div class="highlight"><pre>* 新的 Linux 发行版，需要测试和安装人手
+* 马丁使用了新的翻墙方法：SSH 端口转发
+* 这哥们Mac上装fedora，这次亮相又惊了不少人
+* 请教 EMACS 问题，没想到这哥们说他使用 Vim
+* 问了一下为什么系统的 ping 工具能在普通用户权限下使用，自己写 raw_socket 就得用超级用户权限，马丁给我介绍了一个心领域：capability
+* TCP-ping 已经有了很多实现
+</pre></div>
+
+
+<h1>第三场 冲绳自由行</h1>
+<hr />
+<div class="highlight"><pre>* 两人全部一万五
+* 光盘可以过海关
+</pre></div>	
 <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="qinghecha">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 						</div>
 					</div>
@@ -157,6 +99,17 @@ Released   : 20100928
 			                <div class="post">
 			                        <h2 class="title">Autres articles</h2>
 			                </div>
+        
+ 
+			                <div class="post summary">
+						<h2 class="title"><a href="http://zhao-ji.github.io/2015/wu-yue-dian-di-shou-ji.html">五月点滴收集</a></h2>
+						<p class="meta"><span class="date">Le 一 04 五月 2015</span><span class="posted">Par <a href="#">p0f</a></span></p>
+						<div style="clear: both;">&nbsp;</div>
+						<div class="entry">
+						 <p>Tips in June</p>	
+						 <a class="readmore" href="http://zhao-ji.github.io/2015/wu-yue-dian-di-shou-ji.html">Lire la suite …</a>
+						</div>
+					</div>
         
  
 			                <div class="post summary">
