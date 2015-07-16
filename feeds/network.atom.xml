@@ -1,5 +1,211 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>写博客也要讲基本法</title><link href="http://zhao-ji.github.io/" rel="alternate"></link><link href="http://zhao-ji.github.io/feeds/network.atom.xml" rel="self"></link><id>http://zhao-ji.github.io/</id><updated>2015-01-19T14:40:00+08:00</updated><entry><title>NMap 使用</title><link href="http://zhao-ji.github.io/2015/nmap-shi-yong.html" rel="alternate"></link><updated>2015-01-19T14:40:00+08:00</updated><author><name>p0f</name></author><id>tag:zhao-ji.github.io,2015-01-19:2015/nmap-shi-yong.html</id><summary type="html">&lt;p&gt;================================&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>写博客也要讲基本法</title><link href="http://zhao-ji.github.io/" rel="alternate"></link><link href="http://zhao-ji.github.io/feeds/network.atom.xml" rel="self"></link><id>http://zhao-ji.github.io/</id><updated>2015-07-15T18:30:00+08:00</updated><entry><title>Scapy</title><link href="http://zhao-ji.github.io/2015/scapy.html" rel="alternate"></link><updated>2015-07-15T18:30:00+08:00</updated><author><name>p0f</name></author><id>tag:zhao-ji.github.io,2015-07-15:2015/scapy.html</id><summary type="html">&lt;p&gt;====================================&lt;/p&gt;
+&lt;h1&gt;抓包工具 Scapy&lt;/h1&gt;
+&lt;hr /&gt;
+&lt;h2&gt;Content&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;1. IP 包结构， ICMP 包结构， TCP 包结构， UDP 包结构
+2. BPF(Berkeley Packet Filter)，学习使用 tcpdump
+3. Scapy 安装、使用、小例子
+4. GFW 观察
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;hr /&gt;
+&lt;h2&gt;Limit&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;1. 网络层之上
+2. 应用层之下
+2. IPv4
+3. No NAT
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;hr /&gt;
+&lt;h2&gt;推荐书目&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;1. TCP/IP 协议详解
+2. 超级安全工具集
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;hr /&gt;
+&lt;h3&gt;网络层以上常用包结构&lt;/h3&gt;
+&lt;h4&gt;IP&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;* 通常 20 个字节
+* 版本号 IPv4
+* IP 头部长度 以 **4字节** 为单位, 最小是*5*，最大是*15*
+* IP 报文全长
+* TTL time-to-live (Traceroute 就是在用这个)
+* 协议
+    * 1 ICMP
+    * 6 TCP
+    * 17 UDP
+    * 89 OSPF
+* checksum 经过每一跳路由都要经过重新计算，计算和校验步骤：
+    * checksum 初始值设为零
+    * 以两个字节为单位 相加
+    * 溢出位拿出来 高位补零相加
+    * 最后的和取反就是最终的 校验和
+    * 接收端收到后 拆成两两字节 相加 和为0
+* 源地址和目的地址
+* ![IP 包结构](http://7sbpck.com1.z0.glb.clouddn.com/ip.png)
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h4&gt;ICMP&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;* 头部有 4 个字节
+* Type 一个字节
+* Code 一个字节
+* CheckSum 两个字节 校验 ICMP Header 和 Body
+* ![ICMP 包结构](http://7sbpck.com1.z0.glb.clouddn.com/icmp.png)
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;blockquote&gt;
+&lt;h6&gt;ICMP-ECHO&lt;/h6&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;    * **捕捉实例**
+    * ID
+    * Sequence
+    * Timestamp
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/blockquote&gt;
+&lt;h4&gt;UDP&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;* 头部 8 个字节
+* 源端口 [0, 65535] 目的端口 [1, 65535] 分别两字节
+* Length UDP 包总长度
+* CheckSum UDP 包校验和 （pseudo-header）
+* ![UDP 包结构](http://7sbpck.com1.z0.glb.clouddn.com/udp.png)
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;blockquote&gt;
+&lt;h5&gt;DNS&lt;/h5&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;    * 无连接
+    * 实际操作抓包
+    * GFW 投毒、劫持
+    * GFW 双向劫持观察
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h5&gt;No TCP&lt;/h5&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;    &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="err"&gt;服务器间通信&lt;/span&gt;
+    &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="err"&gt;小包&lt;/span&gt; &lt;span class="err"&gt;数据少&lt;/span&gt; &lt;span class="err"&gt;频繁&lt;/span&gt;
+    &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;Replace&lt;/span&gt; &lt;span class="n"&gt;HTTP&lt;/span&gt; &lt;span class="n"&gt;with&lt;/span&gt; &lt;span class="n"&gt;Socket&lt;/span&gt;
+    &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;Replace&lt;/span&gt; &lt;span class="n"&gt;TCP&lt;/span&gt; &lt;span class="n"&gt;with&lt;/span&gt; &lt;span class="n"&gt;UDP&lt;/span&gt; &lt;span class="n"&gt;or&lt;/span&gt; &lt;span class="n"&gt;ICMP&lt;/span&gt;
+    &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="err"&gt;新浪微博&lt;/span&gt;
+    &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;BitTorrent&lt;/span&gt;  &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;BEP&lt;/span&gt; &lt;span class="mo"&gt;002&lt;/span&gt;&lt;span class="mi"&gt;9&lt;/span&gt;&lt;span class="p"&gt;](&lt;/span&gt;&lt;span class="nl"&gt;http&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//bittorrent.org/beps/bep_0029.html)&lt;/span&gt;
+    &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;No&lt;/span&gt; &lt;span class="n"&gt;TCP&lt;/span&gt;&lt;span class="p"&gt;](&lt;/span&gt;&lt;span class="nl"&gt;http&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="c1"&gt;//notcp.io/)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;/blockquote&gt;
+&lt;h4&gt;TCP&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;* 头部一般是 20 个字节 最多 60 字节
+* 源端口 目的端口 各 16 位
+* Sequence Acknowledgment 各 32 位
+* Header Length 4 bit [5, 15]
+* Fin Syn Rst Push Ack Urg
+* CheckSum
+* 建立连接 三次握手
+* 释放连接 四次挥手
+* 抓包观察 三次握手 flags and seq/ack
+* 抓包观察 四次挥手 flags and seq/ack
+* 抓包观察 数据传输 http-scapy 抓取 HTTP 报文
+* GFW 观察 TCP Reset
+* ![TCP 包结构](http://7sbpck.com1.z0.glb.clouddn.com/tcp.png)
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;hr /&gt;
+&lt;h3&gt;BGP 学习 使用&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;* type
+    * host
+        &amp;gt; host chashuibiao.org
+        &amp;gt; host 23.226.226.196
+    * net
+        &amp;gt; net 10.0.80
+        &amp;gt; net 10.0.80.154/24
+    * port
+        &amp;gt; port 80
+    * portrange
+        &amp;gt; protrange 100-200
+* dir
+    * src
+        &amp;gt; src host chashuibiao.org
+    * dst
+        &amp;gt; dst port 80
+* proto
+    * ip
+    * udp
+    * tcp
+    * icmp
+* len
+    * less than
+        &amp;gt; len &amp;lt;= length
+    * greater than
+        &amp;gt; len &amp;gt;= length
+* flags
+    * icmptype
+    * icmpcode
+    * tcpflags
+* logical operator
+    * and
+    * or
+    * not
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;hr /&gt;
+&lt;h3&gt;Scapy 安装 使用 帮助&lt;/h3&gt;
+&lt;h4&gt;我们为什么要使用 Scapy&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;* 能发包
+* 发包时能控制包的每一个细节
+* 能抓包
+* 抓完能看包的每一个细节 （多种图形化展示方式）
+* 能边抓边看 交互式发现、摸索
+* 放在脚本里面用
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h4&gt;安装&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;* sudo apt-get install tcpdump graphviz imagemagick python-gnuplot python-crypto python-pyx
+* sudo pip install scapy scapy-http
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h4&gt;帮助&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;ls&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;__builtin__&lt;/span&gt;
+&lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;pprint&lt;/span&gt; &lt;span class="nn"&gt;impor&lt;/span&gt; &lt;span class="nn"&gt;pprint&lt;/span&gt;
+&lt;span class="n"&gt;pprint&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;filter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;lambda&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;f&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;islower&lt;/span&gt;&lt;span class="p"&gt;(),&lt;/span&gt; &lt;span class="nb"&gt;dir&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;__builtin__&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
+
+&lt;span class="n"&gt;ls&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;IP&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;ls&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;ICMP&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;ls&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;UDP&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;ls&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;DNS&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;ls&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;DNSQR&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;ls&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;TCP&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h4&gt;魔法函数&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;scapy_http&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;http&lt;/span&gt;
+&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;traceroute&lt;/span&gt; 
+&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;tshark&lt;/span&gt; &lt;span class="n"&gt;wireshark&lt;/span&gt;
+&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;sniff&lt;/span&gt;
+&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;rdpcap&lt;/span&gt; &lt;span class="n"&gt;wrpcap&lt;/span&gt;
+&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;summary&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;show&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;send&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="n"&gt;sendp&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="n"&gt;sendpfast&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;sr1&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="n"&gt;sr&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; 
+&lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="n"&gt;promiscping&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="n"&gt;is_promisc&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h4&gt;实际上手操作&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;1. sniff use BPF and scapy_http
+2. Christmas-Scan (PFU) FIN-scan Null-scan
+&lt;/pre&gt;&lt;/div&gt;</summary></entry><entry><title>NMap 使用</title><link href="http://zhao-ji.github.io/2015/nmap-shi-yong.html" rel="alternate"></link><updated>2015-01-19T14:40:00+08:00</updated><author><name>p0f</name></author><id>tag:zhao-ji.github.io,2015-01-19:2015/nmap-shi-yong.html</id><summary type="html">&lt;p&gt;================================&lt;/p&gt;
 &lt;h2&gt;nmap 简介&lt;/h2&gt;
 &lt;h3&gt;概要&lt;/h3&gt;
 &lt;ul&gt;

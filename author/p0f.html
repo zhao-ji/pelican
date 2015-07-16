@@ -28,54 +28,218 @@ Released   : 20100928
         
 				<div id="content">
 					<div class="post">
-						<h2 class="title"><a href="http://zhao-ji.github.io/2015/php-da-hui.html">PHP 大会</a></h2>
-						<p class="meta"><span class="date">Le  </span><span class="posted">Par <a href="#">p0f</a></span><span>&nbsp; | Catégorie : <a href="http://zhao-ji.github.io/category/ji-zhu-ju-hui.html">技术聚会</a></span></p>
+						<h2 class="title"><a href="http://zhao-ji.github.io/2015/scapy.html">Scapy</a></h2>
+						<p class="meta"><span class="date">Le  </span><span class="posted">Par <a href="#">p0f</a></span><span>&nbsp; | Catégorie : <a href="http://zhao-ji.github.io/category/network.html">Network</a></span></p>
 					<p class="meta">Tags : </p>
 						<div style="clear: both;">&nbsp;</div>
 						<div class="entry">
-						 <p>================================</p>
-<h2>最靠谱的人组织的世界上最好的语言的技术大会</h2>
-<h4>开场</h4>
-<ul>
-<li>六月六号、六月七号两天，在鑫海久江大酒店。场地豪华宽敞，中午还有美女热舞。足见高春辉的人脉和拉赞助能力。</li>
-<li>开场高春辉就说我们跟CSDN不一样，他们是面向架构师的技术大会。我们希望能给一线开发工程师分享一些干货。</li>
-<li>靠谱的人做靠谱的事，do one thing and do it well.</li>
-</ul>
-<h4>第一讲</h4>
-<ul>
-<li>上午第一讲是新浪微博的哥们儿，原来新浪微博后台主要用PHP。</li>
-<li>那哥们儿坦言新浪微博后台接口有历史包袱，kjava接口有次更新被移除了，结果电话被打爆，背了个A级故障。</li>
-<li>创业公司源代码一穷二白一片荒芜，用户量也少，写起来没快感。像新浪微博这样，历史包袱太大搞起来又碍手碍脚。</li>
-<li>中等规模的公司，中等规模的项目，才是最适合程序员待的地方。</li>
-<li>这哥们在给手机端提供接口，新浪微博API早已实现分层，他们算是事物层API，原子层API还在下面</li>
-<li>由 Apache 换成了 NginX, PHP 由5.3升级到5.4，下一步还要升级到 PHP7。用的自己写的yaf yak.</li>
-<li>换成 NginX 遇到了返回验证码时没有 Content-Length 的坑</li>
-<li>PHP 是用 C 写的，每一次版本升级都能带来巨大的性能提升。</li>
-<li>这哥们最后说分布服务器和数据中心的通信要从HTTP换成SocketServer, 还要从TCP换成UDP。</li>
-</ul>
-<h4>第二讲</h4>
-<ul>
-<li>web安全相关的</li>
-<li>SQL注入 盲注 union注入 error注入</li>
-<li>正则注入</li>
-<li>CSRF注入 请求加token</li>
-<li>XSS注入 过滤标签</li>
-<li>webshell 注入</li>
-</ul>
-<h4>中午休息</h4>
-<ul>
-<li>再胡同里面绕了一圈，找了个饭店吃了个饭</li>
-<li>领了T-shirt</li>
-<li>中午美女热舞，看的出来主办方真的是在用心做事</li>
-</ul>
-<h4>第三讲</h4>
-<ul>
-<li>PHP并发并行编程</li>
-<li>进程池的用法 是为了避免单进程阻塞太厉害，而多进程相当吃内存的折中办法</li>
-<li>基于epoll的异步回调机制 用单进程单线程解决C10K问题</li>
-<li>演讲嘉宾原来再腾讯朋友网供职，他开发的框架是多进程多线程的事件驱动的异步回调</li>
-<li>现在每秒能抗70万并发</li>
-</ul>	
+						 <p>====================================</p>
+<h1>抓包工具 Scapy</h1>
+<hr />
+<h2>Content</h2>
+<div class="highlight"><pre>1. IP 包结构， ICMP 包结构， TCP 包结构， UDP 包结构
+2. BPF(Berkeley Packet Filter)，学习使用 tcpdump
+3. Scapy 安装、使用、小例子
+4. GFW 观察
+</pre></div>
+
+
+<hr />
+<h2>Limit</h2>
+<div class="highlight"><pre>1. 网络层之上
+2. 应用层之下
+2. IPv4
+3. No NAT
+</pre></div>
+
+
+<hr />
+<h2>推荐书目</h2>
+<div class="highlight"><pre>1. TCP/IP 协议详解
+2. 超级安全工具集
+</pre></div>
+
+
+<hr />
+<h3>网络层以上常用包结构</h3>
+<h4>IP</h4>
+<div class="highlight"><pre>* 通常 20 个字节
+* 版本号 IPv4
+* IP 头部长度 以 **4字节** 为单位, 最小是*5*，最大是*15*
+* IP 报文全长
+* TTL time-to-live (Traceroute 就是在用这个)
+* 协议
+    * 1 ICMP
+    * 6 TCP
+    * 17 UDP
+    * 89 OSPF
+* checksum 经过每一跳路由都要经过重新计算，计算和校验步骤：
+    * checksum 初始值设为零
+    * 以两个字节为单位 相加
+    * 溢出位拿出来 高位补零相加
+    * 最后的和取反就是最终的 校验和
+    * 接收端收到后 拆成两两字节 相加 和为0
+* 源地址和目的地址
+* ![IP 包结构](http://7sbpck.com1.z0.glb.clouddn.com/ip.png)
+</pre></div>
+
+
+<h4>ICMP</h4>
+<div class="highlight"><pre>* 头部有 4 个字节
+* Type 一个字节
+* Code 一个字节
+* CheckSum 两个字节 校验 ICMP Header 和 Body
+* ![ICMP 包结构](http://7sbpck.com1.z0.glb.clouddn.com/icmp.png)
+</pre></div>
+
+
+<blockquote>
+<h6>ICMP-ECHO</h6>
+<div class="highlight"><pre>    * **捕捉实例**
+    * ID
+    * Sequence
+    * Timestamp
+</pre></div>
+
+
+</blockquote>
+<h4>UDP</h4>
+<div class="highlight"><pre>* 头部 8 个字节
+* 源端口 [0, 65535] 目的端口 [1, 65535] 分别两字节
+* Length UDP 包总长度
+* CheckSum UDP 包校验和 （pseudo-header）
+* ![UDP 包结构](http://7sbpck.com1.z0.glb.clouddn.com/udp.png)
+</pre></div>
+
+
+<blockquote>
+<h5>DNS</h5>
+<div class="highlight"><pre>    * 无连接
+    * 实际操作抓包
+    * GFW 投毒、劫持
+    * GFW 双向劫持观察
+</pre></div>
+
+
+<h5>No TCP</h5>
+<div class="highlight"><pre>    <span class="o">*</span> <span class="err">服务器间通信</span>
+    <span class="o">*</span> <span class="err">小包</span> <span class="err">数据少</span> <span class="err">频繁</span>
+    <span class="o">*</span> <span class="n">Replace</span> <span class="n">HTTP</span> <span class="n">with</span> <span class="n">Socket</span>
+    <span class="o">*</span> <span class="n">Replace</span> <span class="n">TCP</span> <span class="n">with</span> <span class="n">UDP</span> <span class="n">or</span> <span class="n">ICMP</span>
+    <span class="o">*</span> <span class="err">新浪微博</span>
+    <span class="o">*</span> <span class="n">BitTorrent</span>  <span class="p">[</span><span class="n">BEP</span> <span class="mo">002</span><span class="mi">9</span><span class="p">](</span><span class="nl">http</span><span class="p">:</span><span class="c1">//bittorrent.org/beps/bep_0029.html)</span>
+    <span class="o">*</span> <span class="p">[</span><span class="n">No</span> <span class="n">TCP</span><span class="p">](</span><span class="nl">http</span><span class="p">:</span><span class="c1">//notcp.io/)</span>
+</pre></div>
+
+
+</blockquote>
+<h4>TCP</h4>
+<div class="highlight"><pre>* 头部一般是 20 个字节 最多 60 字节
+* 源端口 目的端口 各 16 位
+* Sequence Acknowledgment 各 32 位
+* Header Length 4 bit [5, 15]
+* Fin Syn Rst Push Ack Urg
+* CheckSum
+* 建立连接 三次握手
+* 释放连接 四次挥手
+* 抓包观察 三次握手 flags and seq/ack
+* 抓包观察 四次挥手 flags and seq/ack
+* 抓包观察 数据传输 http-scapy 抓取 HTTP 报文
+* GFW 观察 TCP Reset
+* ![TCP 包结构](http://7sbpck.com1.z0.glb.clouddn.com/tcp.png)
+</pre></div>
+
+
+<hr />
+<h3>BGP 学习 使用</h3>
+<div class="highlight"><pre>* type
+    * host
+        &gt; host chashuibiao.org
+        &gt; host 23.226.226.196
+    * net
+        &gt; net 10.0.80
+        &gt; net 10.0.80.154/24
+    * port
+        &gt; port 80
+    * portrange
+        &gt; protrange 100-200
+* dir
+    * src
+        &gt; src host chashuibiao.org
+    * dst
+        &gt; dst port 80
+* proto
+    * ip
+    * udp
+    * tcp
+    * icmp
+* len
+    * less than
+        &gt; len &lt;= length
+    * greater than
+        &gt; len &gt;= length
+* flags
+    * icmptype
+    * icmpcode
+    * tcpflags
+* logical operator
+    * and
+    * or
+    * not
+</pre></div>
+
+
+<hr />
+<h3>Scapy 安装 使用 帮助</h3>
+<h4>我们为什么要使用 Scapy</h4>
+<div class="highlight"><pre>* 能发包
+* 发包时能控制包的每一个细节
+* 能抓包
+* 抓完能看包的每一个细节 （多种图形化展示方式）
+* 能边抓边看 交互式发现、摸索
+* 放在脚本里面用
+</pre></div>
+
+
+<h4>安装</h4>
+<div class="highlight"><pre>* sudo apt-get install tcpdump graphviz imagemagick python-gnuplot python-crypto python-pyx
+* sudo pip install scapy scapy-http
+</pre></div>
+
+
+<h4>帮助</h4>
+<div class="highlight"><pre><span class="n">ls</span><span class="p">()</span>
+
+<span class="kn">import</span> <span class="nn">__builtin__</span>
+<span class="kn">from</span> <span class="nn">pprint</span> <span class="nn">impor</span> <span class="nn">pprint</span>
+<span class="n">pprint</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">f</span><span class="p">:</span> <span class="n">f</span><span class="o">.</span><span class="n">islower</span><span class="p">(),</span> <span class="nb">dir</span><span class="p">(</span><span class="n">__builtin__</span><span class="p">)))</span>
+
+<span class="n">ls</span><span class="p">(</span><span class="n">IP</span><span class="p">)</span>
+<span class="n">ls</span><span class="p">(</span><span class="n">ICMP</span><span class="p">)</span>
+<span class="n">ls</span><span class="p">(</span><span class="n">UDP</span><span class="p">)</span>
+<span class="n">ls</span><span class="p">(</span><span class="n">DNS</span><span class="p">)</span>
+<span class="n">ls</span><span class="p">(</span><span class="n">DNSQR</span><span class="p">)</span>
+<span class="n">ls</span><span class="p">(</span><span class="n">TCP</span><span class="p">)</span>
+</pre></div>
+
+
+<h4>魔法函数</h4>
+<div class="highlight"><pre><span class="o">*</span> <span class="kn">from</span> <span class="nn">scapy_http</span> <span class="kn">import</span> <span class="n">http</span>
+<span class="o">*</span> <span class="n">traceroute</span> 
+<span class="o">*</span> <span class="n">tshark</span> <span class="n">wireshark</span>
+<span class="o">*</span> <span class="n">sniff</span>
+<span class="o">*</span> <span class="n">rdpcap</span> <span class="n">wrpcap</span>
+<span class="o">*</span> <span class="o">.</span><span class="n">summary</span><span class="p">()</span> <span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<span class="o">*</span> <span class="n">send</span><span class="p">()</span> <span class="n">sendp</span><span class="p">()</span> <span class="n">sendpfast</span><span class="p">()</span>
+<span class="o">*</span> <span class="n">sr1</span><span class="p">()</span> <span class="n">sr</span><span class="p">()</span> 
+<span class="o">*</span> <span class="n">promiscping</span><span class="p">()</span> <span class="n">is_promisc</span><span class="p">()</span>
+</pre></div>
+
+
+<h4>实际上手操作</h4>
+<div class="highlight"><pre>1. sniff use BPF and scapy_http
+2. Christmas-Scan (PFU) FIN-scan Null-scan
+</pre></div>	
 <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="qinghecha">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 						</div>
 					</div>
@@ -83,6 +247,28 @@ Released   : 20100928
 			                <div class="post">
 			                        <h2 class="title">Autres articles</h2>
 			                </div>
+        
+ 
+			                <div class="post summary">
+						<h2 class="title"><a href="http://zhao-ji.github.io/2015/bash-bao-hu-xing-bian-cheng-ji-qiao.html">Bash 保护性编程技巧</a></h2>
+						<p class="meta"><span class="date">Le 二 30 六月 2015</span><span class="posted">Par <a href="#">p0f</a></span></p>
+						<div style="clear: both;">&nbsp;</div>
+						<div class="entry">
+						 <p>how to write bash scripts</p>	
+						 <a class="readmore" href="http://zhao-ji.github.io/2015/bash-bao-hu-xing-bian-cheng-ji-qiao.html">Lire la suite …</a>
+						</div>
+					</div>
+        
+ 
+			                <div class="post summary">
+						<h2 class="title"><a href="http://zhao-ji.github.io/2015/php-da-hui.html">PHP 大会</a></h2>
+						<p class="meta"><span class="date">Le 六 06 六月 2015</span><span class="posted">Par <a href="#">p0f</a></span></p>
+						<div style="clear: both;">&nbsp;</div>
+						<div class="entry">
+						 <p>PHP 技术大会见闻和分享</p>	
+						 <a class="readmore" href="http://zhao-ji.github.io/2015/php-da-hui.html">Lire la suite …</a>
+						</div>
+					</div>
         
  
 			                <div class="post summary">
@@ -196,12 +382,12 @@ Released   : 20100928
         
  
 			                <div class="post summary">
-						<h2 class="title"><a href="http://zhao-ji.github.io/2015/yue-dian-di-shou-ji.html">一月点滴收集</a></h2>
+						<h2 class="title"><a href="http://zhao-ji.github.io/2015/yi-yue-dian-di-shou-ji.html">一月点滴收集</a></h2>
 						<p class="meta"><span class="date">Le 二 13 一月 2015</span><span class="posted">Par <a href="#">p0f</a></span></p>
 						<div style="clear: both;">&nbsp;</div>
 						<div class="entry">
 						 <p>Tips in Jan</p>	
-						 <a class="readmore" href="http://zhao-ji.github.io/2015/yue-dian-di-shou-ji.html">Lire la suite …</a>
+						 <a class="readmore" href="http://zhao-ji.github.io/2015/yi-yue-dian-di-shou-ji.html">Lire la suite …</a>
 						</div>
 					</div>
         
@@ -352,9 +538,10 @@ Released   : 20100928
 								 <li ><a href="http://zhao-ji.github.io/category/re.html">Re</a></li>
 								 <li ><a href="http://zhao-ji.github.io/category/qian-duan.html">前端</a></li>
 								 <li ><a href="http://zhao-ji.github.io/category/python.html">Python</a></li>
-								 <li ><a href="http://zhao-ji.github.io/category/network.html">NetWork</a></li>
+								 <li ><a href="http://zhao-ji.github.io/category/network.html">Network</a></li>
 								 <li ><a href="http://zhao-ji.github.io/category/linux.html">Linux</a></li>
 								 <li ><a href="http://zhao-ji.github.io/category/ji-zhu-ju-hui.html">技术聚会</a></li>
+								 <li ><a href="http://zhao-ji.github.io/category/bash.html">bash</a></li>
 							</ul>
 						</li>
 						<li>

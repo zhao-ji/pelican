@@ -15,7 +15,7 @@ Released   : 20100928
 <meta name="keywords" content="" />
 <meta name="description" content="" />
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<title>正则表达式</title>
+<title>写博客也要讲基本法 - bash</title>
 <link href="http://zhao-ji.github.io/theme/css/style.css" rel="stylesheet" type="text/css" media="screen" />
 <link href="http://zhao-ji.github.io/" type="application/atom+xml" rel="alternate" title="写博客也要讲基本法 ATOM Feed" />
 </head>
@@ -24,79 +24,69 @@ Released   : 20100928
 	<div id="page">
 		<div id="page-bgtop">
 			<div id="page-bgbtm">
-    
-                        	<div id="content">
+ 
+        
+				<div id="content">
 					<div class="post">
-						<h2 class="title"><a href="2014/zheng-ze-biao-da-shi.html">正则表达式</a></h2>
-						<p class="meta"><span class="date">Le 日 10 八月 2014 </span><span class="posted">Par <a href="#">p0f</a></span><span>&nbsp; | Catégorie : <a href="http://zhao-ji.github.io/category/re.html">Re</a></span></p>
-					<p class="meta">Tags : </p>	
+						<h2 class="title"><a href="http://zhao-ji.github.io/2015/bash-bao-hu-xing-bian-cheng-ji-qiao.html">Bash 保护性编程技巧</a></h2>
+						<p class="meta"><span class="date">Le  </span><span class="posted">Par <a href="#">p0f</a></span><span>&nbsp; | Catégorie : <a href="http://zhao-ji.github.io/category/bash.html">bash</a></span></p>
+					<p class="meta">Tags : </p>
 						<div style="clear: both;">&nbsp;</div>
 						<div class="entry">
-						 <p>================</p>
-<h1>正则表达式</h1>
-<h2>元字符</h2>
+						 <p>================================</p>
+<h2>保护性编程技巧</h2>
+<h4>不可改变的全局变量</h4>
 <ul>
-<li><em>()</em>  <em>[]</em>  <em>{}</em>     捕获器 选择器  次数</li>
-<li><em>*</em> <em>+</em> <em>?</em>  零和任意多次  一次和任意多次  零次和一次</li>
-<li><em>^</em> <em>$</em> 匹配开始 匹配结束</li>
-<li><em>\</em> 转义</li>
-<li><em>|</em> 或</li>
-<li><em>.</em> 匹配任意字符  非换行符</li>
+<li>尽量少用全局变量</li>
+<li>大写 全局变量</li>
+<li>只读声明</li>
+<li>用全局变量来代替隐晦的$0, $1
+    &gt; readonly PROGNAME=$(basename $0)
+    &gt; readonly PROGDIR=$(readlink -m $(dirname $0))
+    &gt; readonly ARGS="$@"</li>
 </ul>
-<h2>匹配案例</h2>
-<h3>类型</h3>
+<h4>main()</h4>
 <ul>
-<li><em>\d</em> 匹配数字 </li>
-<li><em>\D</em> 匹配非数字</li>
-<li><em>\s</em> 匹配空白字符</li>
-<li><em>\S</em> 匹配非空白字符</li>
-<li><em>\w</em> 匹配字母和数字</li>
-<li><em>\W</em> 匹配非字母和数字</li>
+<li>有助于保持所有变量的局部性</li>
+<li>直观的函数式编程</li>
+<li>代码中唯一的全局命令是 main</li>
 </ul>
-<h3>次数</h3>
+<h4>一切都是局部的</h4>
 <ul>
-<li><em>{0,}</em> *</li>
-<li><em>{1,}</em> +</li>
-<li><em>{0,1}</em> ?</li>
+<li>所有变量都应为局部的</li>
+<li>自注释的参数</li>
+<li>通常作为循环用的变量i，把它声明为局部变量很重要</li>
+<li>局部变量不作用于全局域</li>
 </ul>
-<h3>消歧义</h3>
+<h4>一切皆函数</h4>
 <ul>
-<li>raw \不用转义</li>
+<li>唯一全局运行的代码是：<ul>
+<li>不可变的全局变量声明</li>
+<li>main()函数</li>
 </ul>
-<h2>Python Re 模块用法</h2>
-<ul>
-<li>Re 方法： search  match findall finditer</li>
-<li>RegexObject 方法 ： group start end span</li>
-<li>compile 选项 ： <blockquote>
-<ul>
-<li>DOTALL S .代表一切字符 包括换行符</li>
-<li>IGNORECASE I 忽略大小写、</li>
-<li>LOCALE L 本地化字符设置</li>
-<li>MULTILINE M 多行匹配 改变^$的行为</li>
-<li>VERBOSE V 分行写RE语句  并可以添加注释</li>
-</ul>
-</blockquote>
 </li>
-</ul>	
+</ul>
+<h4>调试函数</h4>
+<ul>
+<li>带 -x 标志运行程序</li>
+<li>代码块调试 使用 set -x 和 set +x</li>
+<li>打印函数名和参数 echo $FUNCTION $@</li>
+</ul>
+<h4>每行只做一件事</h4>
+<ul>
+<li>使用反斜杠做分隔符</li>
+<li>符号在缩进的开始</li>
+</ul>
+<h4>打印用法</h4>
+<ul>
+<li>把打印放在函数里</li>
+</ul>
+<p>source: <a href="http://blog.jobbole.com/73257/">保护性编程技巧</a></p>	
 <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="qinghecha">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 						</div>
 					</div>
-			      
 					<div style="clear: both;">&nbsp;</div>
-                                        <div class="post">
-                                        <h2 class="title">Commentaires !</h2>
-                                            <div id="disqus_thread"></div>
-                                            <script type="text/javascript">
-                                               var disqus_identifier = "2014/zheng-ze-biao-da-shi.html";
-                                               (function() {
-                                               var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                                               dsq.src = 'http://zhaoji.disqus.com/embed.js';
-                                               (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-                                              })();
-                                            </script>
-                                        </div>
 				</div>
-				<!-- end #content -->
 				<div id="sidebar">
 					<div id="logo">
 						<h1><a href="http://zhao-ji.github.io">写博客也要讲基本法</a></h1>
@@ -114,13 +104,13 @@ Released   : 20100928
 							<ul>
 								 <li ><a href="http://zhao-ji.github.io/category/tips.html">Tips</a></li>
 								 <li ><a href="http://zhao-ji.github.io/category/scripts.html">Scripts</a></li>
-								 <li class="active"><a href="http://zhao-ji.github.io/category/re.html">Re</a></li>
+								 <li ><a href="http://zhao-ji.github.io/category/re.html">Re</a></li>
 								 <li ><a href="http://zhao-ji.github.io/category/qian-duan.html">前端</a></li>
 								 <li ><a href="http://zhao-ji.github.io/category/python.html">Python</a></li>
 								 <li ><a href="http://zhao-ji.github.io/category/network.html">Network</a></li>
 								 <li ><a href="http://zhao-ji.github.io/category/linux.html">Linux</a></li>
 								 <li ><a href="http://zhao-ji.github.io/category/ji-zhu-ju-hui.html">技术聚会</a></li>
-								 <li ><a href="http://zhao-ji.github.io/category/bash.html">bash</a></li>
+								 <li class="active"><a href="http://zhao-ji.github.io/category/bash.html">bash</a></li>
 							</ul>
 						</li>
 						<li>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>写博客也要讲基本法</title><link href="http://zhao-ji.github.io/" rel="alternate"></link><link href="http://zhao-ji.github.io/feeds/bash.atom.xml" rel="self"></link><id>http://zhao-ji.github.io/</id><updated>2015-06-30T13:00:00+08:00</updated><entry><title>Bash 保护性编程技巧</title><link href="http://zhao-ji.github.io/2015/bash-bao-hu-xing-bian-cheng-ji-qiao.html" rel="alternate"></link><updated>2015-06-30T13:00:00+08:00</updated><author><name>p0f</name></author><id>tag:zhao-ji.github.io,2015-06-30:2015/bash-bao-hu-xing-bian-cheng-ji-qiao.html</id><summary type="html">&lt;p&gt;================================&lt;/p&gt;
+&lt;h2&gt;保护性编程技巧&lt;/h2&gt;
+&lt;h4&gt;不可改变的全局变量&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;尽量少用全局变量&lt;/li&gt;
+&lt;li&gt;大写 全局变量&lt;/li&gt;
+&lt;li&gt;只读声明&lt;/li&gt;
+&lt;li&gt;用全局变量来代替隐晦的$0, $1
+    &amp;gt; readonly PROGNAME=$(basename $0)
+    &amp;gt; readonly PROGDIR=$(readlink -m $(dirname $0))
+    &amp;gt; readonly ARGS="$@"&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;main()&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;有助于保持所有变量的局部性&lt;/li&gt;
+&lt;li&gt;直观的函数式编程&lt;/li&gt;
+&lt;li&gt;代码中唯一的全局命令是 main&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;一切都是局部的&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;所有变量都应为局部的&lt;/li&gt;
+&lt;li&gt;自注释的参数&lt;/li&gt;
+&lt;li&gt;通常作为循环用的变量i，把它声明为局部变量很重要&lt;/li&gt;
+&lt;li&gt;局部变量不作用于全局域&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;一切皆函数&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;唯一全局运行的代码是：&lt;ul&gt;
+&lt;li&gt;不可变的全局变量声明&lt;/li&gt;
+&lt;li&gt;main()函数&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;调试函数&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;带 -x 标志运行程序&lt;/li&gt;
+&lt;li&gt;代码块调试 使用 set -x 和 set +x&lt;/li&gt;
+&lt;li&gt;打印函数名和参数 echo $FUNCTION $@&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;每行只做一件事&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;使用反斜杠做分隔符&lt;/li&gt;
+&lt;li&gt;符号在缩进的开始&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;打印用法&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;把打印放在函数里&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;source: &lt;a href="http://blog.jobbole.com/73257/"&gt;保护性编程技巧&lt;/a&gt;&lt;/p&gt;</summary></entry></feed>
