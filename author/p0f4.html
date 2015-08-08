@@ -28,218 +28,40 @@ Released   : 20100928
         
 				<div id="content">
 					<div class="post">
-						<h2 class="title"><a href="http://zhao-ji.github.io/2015/scapy.html">Scapy</a></h2>
-						<p class="meta"><span class="date">Le  </span><span class="posted">Par <a href="#">p0f</a></span><span>&nbsp; | Catégorie : <a href="http://zhao-ji.github.io/category/network.html">Network</a></span></p>
+						<h2 class="title"><a href="http://zhao-ji.github.io/2015/zai-xing-yue-jian-ji-lu.html">在行约见记录</a></h2>
+						<p class="meta"><span class="date">Le  </span><span class="posted">Par <a href="#">p0f</a></span><span>&nbsp; | Catégorie : <a href="http://zhao-ji.github.io/category/other.html">Other</a></span></p>
 					<p class="meta">Tags : </p>
 						<div style="clear: both;">&nbsp;</div>
 						<div class="entry">
-						 <p>====================================</p>
-<h1>抓包工具 Scapy</h1>
-<hr />
-<h2>Content</h2>
-<div class="highlight"><pre>1. IP 包结构， ICMP 包结构， TCP 包结构， UDP 包结构
-2. BPF(Berkeley Packet Filter)，学习使用 tcpdump
-3. Scapy 安装、使用、小例子
-4. GFW 观察
-</pre></div>
-
-
-<hr />
-<h2>Limit</h2>
-<div class="highlight"><pre>1. 网络层之上
-2. 应用层之下
-2. IPv4
-3. No NAT
-</pre></div>
-
-
-<hr />
-<h2>推荐书目</h2>
-<div class="highlight"><pre>1. TCP/IP 协议详解
-2. 超级安全工具集
-</pre></div>
-
-
-<hr />
-<h3>网络层以上常用包结构</h3>
-<h4>IP</h4>
-<div class="highlight"><pre>* 通常 20 个字节
-* 版本号 IPv4
-* IP 头部长度 以 **4字节** 为单位, 最小是*5*，最大是*15*
-* IP 报文全长
-* TTL time-to-live (Traceroute 就是在用这个)
-* 协议
-    * 1 ICMP
-    * 6 TCP
-    * 17 UDP
-    * 89 OSPF
-* checksum 经过每一跳路由都要经过重新计算，计算和校验步骤：
-    * checksum 初始值设为零
-    * 以两个字节为单位 相加
-    * 溢出位拿出来 高位补零相加
-    * 最后的和取反就是最终的 校验和
-    * 接收端收到后 拆成两两字节 相加 和为0
-* 源地址和目的地址
-</pre></div>
-
-
-<p><img alt="IP 包结构" src="http://7sbpck.com1.z0.glb.clouddn.com/ip.png" /></p>
-<h4>ICMP</h4>
-<div class="highlight"><pre>* 头部有 4 个字节
-* Type 一个字节
-* Code 一个字节
-* CheckSum 两个字节 校验 ICMP Header 和 Body
-</pre></div>
-
-
-<p><img alt="ICMP 包结构" src="http://7sbpck.com1.z0.glb.clouddn.com/icmp.png" /></p>
-<blockquote>
-<h6>ICMP-ECHO</h6>
-<div class="highlight"><pre>    * **捕捉实例**
-    * ID
-    * Sequence
-    * Timestamp
-</pre></div>
-
-
-</blockquote>
-<h4>UDP</h4>
-<div class="highlight"><pre>* 头部 8 个字节
-* 源端口 [0, 65535] 目的端口 [1, 65535] 分别两字节
-* Length UDP 包总长度
-* CheckSum UDP 包校验和 （pseudo-header）
-</pre></div>
-
-
-<p><img alt="UDP 包结构" src="http://7sbpck.com1.z0.glb.clouddn.com/udp.png" /></p>
-<blockquote>
-<h5>DNS</h5>
-<div class="highlight"><pre>    * 无连接
-    * 实际操作抓包
-    * GFW 投毒、劫持
-    * GFW 双向劫持观察
-</pre></div>
-
-
-<h5>No TCP</h5>
-<div class="highlight"><pre>    <span class="o">*</span> <span class="err">服务器间通信</span>
-    <span class="o">*</span> <span class="err">小包</span> <span class="err">数据少</span> <span class="err">频繁</span>
-    <span class="o">*</span> <span class="n">Replace</span> <span class="n">HTTP</span> <span class="n">with</span> <span class="n">Socket</span>
-    <span class="o">*</span> <span class="n">Replace</span> <span class="n">TCP</span> <span class="n">with</span> <span class="n">UDP</span> <span class="n">or</span> <span class="n">ICMP</span>
-    <span class="o">*</span> <span class="err">新浪微博</span>
-    <span class="o">*</span> <span class="n">BitTorrent</span>  <span class="p">[</span><span class="n">BEP</span> <span class="mo">002</span><span class="mi">9</span><span class="p">](</span><span class="nl">http</span><span class="p">:</span><span class="c1">//bittorrent.org/beps/bep_0029.html)</span>
-    <span class="o">*</span> <span class="p">[</span><span class="n">No</span> <span class="n">TCP</span><span class="p">](</span><span class="nl">http</span><span class="p">:</span><span class="c1">//notcp.io/)</span>
-</pre></div>
-
-
-</blockquote>
-<h4>TCP</h4>
-<div class="highlight"><pre>* 头部一般是 20 个字节 最多 60 字节
-* 源端口 目的端口 各 16 位
-* Sequence Acknowledgment 各 32 位
-* Header Length 4 bit [5, 15]
-* Fin Syn Rst Push Ack Urg
-* CheckSum
-* 建立连接 三次握手
-* 释放连接 四次挥手
-* 抓包观察 三次握手 flags and seq/ack
-* 抓包观察 四次挥手 flags and seq/ack
-* 抓包观察 数据传输 http-scapy 抓取 HTTP 报文
-* GFW 观察 TCP Reset
-</pre></div>
-
-
-<p><img alt="TCP 包结构" src="http://7sbpck.com1.z0.glb.clouddn.com/tcp.png" /></p>
-<hr />
-<h3>BGP 学习 使用</h3>
-<div class="highlight"><pre>* type
-    * host
-        &gt; host chashuibiao.org
-        &gt; host 23.226.226.196
-    * net
-        &gt; net 10.0.80
-        &gt; net 10.0.80.154/24
-    * port
-        &gt; port 80
-    * portrange
-        &gt; protrange 100-200
-* dir
-    * src
-        &gt; src host chashuibiao.org
-    * dst
-        &gt; dst port 80
-* proto
-    * ip
-    * udp
-    * tcp
-    * icmp
-* len
-    * less than
-        &gt; len &lt;= length
-    * greater than
-        &gt; len &gt;= length
-* flags
-    * icmptype
-    * icmpcode
-    * tcpflags
-* logical operator
-    * and
-    * or
-    * not
-</pre></div>
-
-
-<hr />
-<h3>Scapy 安装 使用 帮助</h3>
-<h4>我们为什么要使用 Scapy</h4>
-<div class="highlight"><pre>* 能发包
-* 发包时能控制包的每一个细节
-* 能抓包
-* 抓完能看包的每一个细节 （多种图形化展示方式）
-* 能边抓边看 交互式发现、摸索
-* 放在脚本里面用
-</pre></div>
-
-
-<h4>安装</h4>
-<div class="highlight"><pre>* sudo apt-get install tcpdump graphviz imagemagick python-gnuplot python-crypto python-pyx
-* sudo pip install scapy scapy-http
-</pre></div>
-
-
-<h4>帮助</h4>
-<div class="highlight"><pre><span class="n">ls</span><span class="p">()</span>
-
-<span class="kn">import</span> <span class="nn">__builtin__</span>
-<span class="kn">from</span> <span class="nn">pprint</span> <span class="nn">impor</span> <span class="nn">pprint</span>
-<span class="n">pprint</span><span class="p">(</span><span class="nb">filter</span><span class="p">(</span><span class="k">lambda</span> <span class="n">f</span><span class="p">:</span> <span class="n">f</span><span class="o">.</span><span class="n">islower</span><span class="p">(),</span> <span class="nb">dir</span><span class="p">(</span><span class="n">__builtin__</span><span class="p">)))</span>
-
-<span class="n">ls</span><span class="p">(</span><span class="n">IP</span><span class="p">)</span>
-<span class="n">ls</span><span class="p">(</span><span class="n">ICMP</span><span class="p">)</span>
-<span class="n">ls</span><span class="p">(</span><span class="n">UDP</span><span class="p">)</span>
-<span class="n">ls</span><span class="p">(</span><span class="n">DNS</span><span class="p">)</span>
-<span class="n">ls</span><span class="p">(</span><span class="n">DNSQR</span><span class="p">)</span>
-<span class="n">ls</span><span class="p">(</span><span class="n">TCP</span><span class="p">)</span>
-</pre></div>
-
-
-<h4>魔法函数</h4>
-<div class="highlight"><pre><span class="o">*</span> <span class="kn">from</span> <span class="nn">scapy_http</span> <span class="kn">import</span> <span class="n">http</span>
-<span class="o">*</span> <span class="n">traceroute</span> 
-<span class="o">*</span> <span class="n">tshark</span> <span class="n">wireshark</span>
-<span class="o">*</span> <span class="n">sniff</span>
-<span class="o">*</span> <span class="n">rdpcap</span> <span class="n">wrpcap</span>
-<span class="o">*</span> <span class="o">.</span><span class="n">summary</span><span class="p">()</span> <span class="o">.</span><span class="n">show</span><span class="p">()</span>
-<span class="o">*</span> <span class="n">send</span><span class="p">()</span> <span class="n">sendp</span><span class="p">()</span> <span class="n">sendpfast</span><span class="p">()</span>
-<span class="o">*</span> <span class="n">sr1</span><span class="p">()</span> <span class="n">sr</span><span class="p">()</span> 
-<span class="o">*</span> <span class="n">promiscping</span><span class="p">()</span> <span class="n">is_promisc</span><span class="p">()</span>
-</pre></div>
-
-
-<h4>实际上手操作</h4>
-<div class="highlight"><pre>1. sniff use BPF and scapy_http
-2. Christmas-Scan (PFU) FIN-scan Null-scan
-</pre></div>	
+						 <p>======================</p>
+<h3>行家约见</h3>
+<ul>
+<li>7-29 晚上下班七点半赶往星巴克</li>
+<li>星巴克门口</li>
+<li>阿鹏叔 中央人民广播电台一线主播</li>
+</ul>
+<h3>第一个弱点 普通话不标准</h3>
+<ul>
+<li>听人民广播电台</li>
+<li>含枣说话</li>
+</ul>
+<h3>第二个弱点 气息不够强</h3>
+<ul>
+<li>跑步唱歌</li>
+<li>KTV </li>
+</ul>
+<h3>第三个弱点 不够自信</h3>
+<ul>
+<li>说话前打草稿</li>
+<li>常跟爸妈打电话</li>
+<li>常用微信语音功能</li>
+</ul>
+<h3>一些其他小技巧</h3>
+<ul>
+<li>理解清除对方意思 说完后复述一遍对方的话</li>
+<li>不断的训练说话 让自己想到的全部表达出来</li>
+<li>提交准备 做好彩排</li>
+</ul>	
 <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="qinghecha">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 						</div>
 					</div>
@@ -247,6 +69,17 @@ Released   : 20100928
 			                <div class="post">
 			                        <h2 class="title">Autres articles</h2>
 			                </div>
+        
+ 
+			                <div class="post summary">
+						<h2 class="title"><a href="http://zhao-ji.github.io/2015/scapy.html">Scapy</a></h2>
+						<p class="meta"><span class="date">Le 三 15 七月 2015</span><span class="posted">Par <a href="#">p0f</a></span></p>
+						<div style="clear: both;">&nbsp;</div>
+						<div class="entry">
+						 <p>The begining of Scapy</p>	
+						 <a class="readmore" href="http://zhao-ji.github.io/2015/scapy.html">Lire la suite …</a>
+						</div>
+					</div>
         
  
 			                <div class="post summary">
@@ -549,6 +382,7 @@ Released   : 20100928
 								 <li ><a href="http://zhao-ji.github.io/category/re.html">Re</a></li>
 								 <li ><a href="http://zhao-ji.github.io/category/qian-duan.html">前端</a></li>
 								 <li ><a href="http://zhao-ji.github.io/category/python.html">Python</a></li>
+								 <li ><a href="http://zhao-ji.github.io/category/other.html">Other</a></li>
 								 <li ><a href="http://zhao-ji.github.io/category/network.html">Network</a></li>
 								 <li ><a href="http://zhao-ji.github.io/category/linux.html">Linux</a></li>
 								 <li ><a href="http://zhao-ji.github.io/category/ji-zhu-ju-hui.html">技术聚会</a></li>
