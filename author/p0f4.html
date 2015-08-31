@@ -28,39 +28,35 @@ Released   : 20100928
         
 				<div id="content">
 					<div class="post">
-						<h2 class="title"><a href="http://zhao-ji.github.io/2015/zai-xing-yue-jian-ji-lu.html">在行约见记录</a></h2>
-						<p class="meta"><span class="date">Le  </span><span class="posted">Par <a href="#">p0f</a></span><span>&nbsp; | Catégorie : <a href="http://zhao-ji.github.io/category/other.html">Other</a></span></p>
+						<h2 class="title"><a href="http://zhao-ji.github.io/2015/yi-ge-chuan-fa-bu-yi-ding-dui.html">一个穿法，不一定对</a></h2>
+						<p class="meta"><span class="date">Le  </span><span class="posted">Par <a href="#">p0f</a></span><span>&nbsp; | Catégorie : <a href="http://zhao-ji.github.io/category/network.html">Network</a></span></p>
 					<p class="meta">Tags : </p>
 						<div style="clear: both;">&nbsp;</div>
 						<div class="entry">
-						 <p>======================</p>
-<h3>行家约见</h3>
+						 <p>================================</p>
+<h2>现象陈述</h2>
 <ul>
-<li>7-29 晚上下班七点半赶往星巴克</li>
-<li>星巴克门口</li>
-<li>阿鹏叔 中央人民广播电台一线主播</li>
+<li>在国内请求谷歌DNS，GFW会返回虚假DNS应答包，俗称 DNS劫持</li>
+<li>有时是一个，但目前大多时候是两个</li>
+<li>返回的 fake DNS responce 有一些特征</li>
+<li>fake responce 返回的IP是随机的</li>
+<li>返回的 TTL 是完全随机的</li>
+<li>返回的 ToS 字段固定的是 0x00 0x10</li>
 </ul>
-<h3>第一个弱点 普通话不标准</h3>
+<h2>过滤手段</h2>
 <ul>
-<li>听人民广播电台</li>
-<li>含枣说话</li>
+<li>根据 ToS 字段过滤掉 fake responce</li>
+<li>sudo iptables -A INPUT -s 8.8.8.8 -p udp -sport 53 -m tos --tos 0x0 -j DROP</li>
+<li>sudo iptables -A INPUT -s 8.8.8.8 -p udp -sport 53 -m tos --tos 0x10 -j DROP</li>
 </ul>
-<h3>第二个弱点 气息不够强</h3>
+<h2>过滤特点</h2>
 <ul>
-<li>跑步唱歌</li>
-<li>KTV </li>
-</ul>
-<h3>第三个弱点 不够自信</h3>
-<ul>
-<li>说话前打草稿</li>
-<li>常跟爸妈打电话</li>
-<li>常用微信语音功能</li>
-</ul>
-<h3>一些其他小技巧</h3>
-<ul>
-<li>理解清除对方意思 说完后复述一遍对方的话</li>
-<li>不断的训练说话 让自己想到的全部表达出来</li>
-<li>提交准备 做好彩排</li>
+<li>能拿到正确的DNS解析结果</li>
+<li>可能有时效性 过段时间就不行了</li>
+<li>被广泛传播后 可能会被封锁</li>
+<li>不能拿到最优的DNS解析结果</li>
+<li>想要拿到最优的解析结果还得从运营商或者国内 DNS 查询</li>
+<li>关于 DNS 分流现在只是有个初步的想法 还不成熟</li>
 </ul>	
 <a href="http://twitter.com/share" class="twitter-share-button" data-count="horizontal" data-via="qinghecha">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 						</div>
@@ -69,6 +65,17 @@ Released   : 20100928
 			                <div class="post">
 			                        <h2 class="title">Autres articles</h2>
 			                </div>
+        
+ 
+			                <div class="post summary">
+						<h2 class="title"><a href="http://zhao-ji.github.io/2015/zai-xing-yue-jian-ji-lu.html">在行约见记录</a></h2>
+						<p class="meta"><span class="date">Le 六 08 八月 2015</span><span class="posted">Par <a href="#">p0f</a></span></p>
+						<div style="clear: both;">&nbsp;</div>
+						<div class="entry">
+						 <p>阿鹏叔:如何重新认识自己的声音，让更多人喜欢</p>	
+						 <a class="readmore" href="http://zhao-ji.github.io/2015/zai-xing-yue-jian-ji-lu.html">Lire la suite …</a>
+						</div>
+					</div>
         
  
 			                <div class="post summary">
